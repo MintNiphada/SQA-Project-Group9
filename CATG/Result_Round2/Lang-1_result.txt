@@ -1,0 +1,45 @@
+CATG Round 2 - Defects4J Lang-1
+
+Project:
+- Apache Commons Lang
+- Bug: Lang-1
+- Target class: org.apache.commons.lang3.math.NumberUtils
+- Target method: NumberUtils.createNumber(String)
+
+Environment:
+- Java: 8
+- Solver: CVC4 1.8
+- CATG: 0.2
+- Defects4J project: Lang-1 buggy version
+
+Command:
+
+
+
+./dconcolic 5 tests.test_Lang1
+
+Generated inputs:
+1. 0x
+2. 0x
+3. [empty]
+4. -#
+5. -#X
+
+Execution result:
+- CATG executed successfully.
+- NumberUtils was instrumented.
+- CATG generated symbolic string inputs.
+- The generated inputs did not detect the Lang-1 defect.
+
+Baseline bug-triggering input:
+0x80000000
+
+Expected:
+Long.valueOf(0x80000000L)
+
+Buggy behavior:
+NumberFormatException
+
+Conclusion:
+CATG successfully generated test inputs for the target program, but
+the generated inputs in this run did not detect the Lang-1 defect.

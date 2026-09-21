@@ -1,0 +1,94 @@
+#!/bin/bash
+
+# CATG dconcolic launcher for the Gradle-built CATG
+
+CATG_ROOT="$(cd "$(dirname "$0")" && pwd)"
+
+# Java 8 is required by this old CATG version
+export JAVA_HOME="/c/Program Files/Eclipse Adoptium/jdk-8.0.504.1-hotspot"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# CATG configuration
+CATG_JAR="$CATG_ROOT/build/libs/CATG-0.2.jar"
+TEST_CLASSES="$CATG_ROOT/build/classes/java/integration"
+
+cd "$CATG_ROOT" || exit 1
+
+iter=$1
+YOURPGM=$2
+
+if [ -z "$iter" ] || [ -z "$YOURPGM" ]; then
+    echo "Usage: ./dconcolic <iterations> <main-class>"
+    echo "Example: ./dconcolic 5 tests.test_q1_q4_min"
+    exit 1
+fi
+
+if [ ! -f "$CATG_JAR" ]; then
+    echo "ERROR: CATG JAR not found: $CATG_JAR"
+    exit 1
+fi
+
+if [ ! -d "$TEST_CLASSES" ]; then
+    echo "ERROR: Integration classes not found: $TEST_CLASSES"
+    echo "Run: gradle integrationClasses"
+    exit 1
+fi
+
+# Start a fresh concolic search.
+rm -f history
+rm -f history.old
+rm -f test.log
+
+i=1
+
+echo "Now testing $YOURPGM"
+
+while [ $i -le $iter ]
+do
+    echo
+    echo "========== Input $i =========="
+
+    java \
+        -Djanala.loggerClass=janala.logger.DirectConcolicExecution \
+        -Djanala.conf="$CATG_ROOT/catg.conf" \
+        -Djanala.mainClass="$YOURPGM" \
+        -Djanala.iteration="$i" \
+        -javaagent:"$CATG_JAR" \
+        -cp "build/classes/java/integration;build/libs/CATG-0.2.jar;lib/*;D:/Lab_SQA/Defects4J_Projects/Lang_1_buggy/target/classes" \
+        -ea \
+        "$YOURPGM"
+
+    status=$?
+
+    if [ $status -ne 0 ]; then
+        echo "Java exited with status $status"
+        exit $status
+    fi
+
+    if [ -f inputs ]; then
+        echo "--- Generated input ---"
+        cat inputs
+    else
+        echo "No input file generated."
+        break
+    fi
+
+    if [ -f history ]; then
+        cp history history.old
+        echo "--- History generated ---"
+    else
+        echo "--- No more history ---"
+        break
+    fi
+
+    i=$((i+1))
+done
+
+echo
+echo "========== CATG finished =========="
+echo "Generated input file: $CATG_ROOT/inputs"
+
+if [ -f inputs ]; then
+    echo "Final inputs:"
+    cat inputs
+fi

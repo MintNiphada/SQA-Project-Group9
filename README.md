@@ -43,19 +43,15 @@ CP353201-ATCG/
 │   ├── Result_Round2/
 │   └── Test/
 │
-├── ChatGPT-GPT4o/
-│   ├── Code/
-│   ├── Configuration/
-│   ├── Result_Round1/
-│   ├── Result_Round2/
-│   └── Test/
+├── ChatGPT/
+│   ├── Prompt/
+│   ├── Result/
+│   ├── TestCode/
 │
-├── KKU-IntelSphere/
-│   ├── Code/
-│   ├── Configuration/
-│   ├── Result_Round1/
-│   ├── Result_Round2/
-│   └── Test/
+├── Gemini/
+│   ├── Prompt/
+│   ├── Result/
+│   ├── TestCode/
 │
 ├── Comparison/
 ├── Report/

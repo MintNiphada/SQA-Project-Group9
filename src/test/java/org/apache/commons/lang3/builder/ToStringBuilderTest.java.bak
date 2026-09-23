@@ -310,30 +310,27 @@ public class ToStringBuilderTest {
 
     // Reflection hierarchy tests
     @Test
-    public void testReflectionHierarchyArrayList() {}
-// Defects4J: flaky method
-//     @Test
-//     public void testReflectionHierarchyArrayList() {
-//         final List<Object> base = new ArrayList<Object>();
-//         final String baseStr = this.toBaseString(base);
-//         // note, the test data depends on the internal representation of the ArrayList, which may differ between JDK versions and vendors
-//         final String expectedWithTransients = baseStr + "[elementData={<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>},size=0,modCount=0]";
-//         final String toStringWithTransients = ToStringBuilder.reflectionToString(base, null, true);
-//         if (!expectedWithTransients.equals(toStringWithTransients)) {
-//             // representation different for IBM JDK 1.6.0, LANG-727
-//             if (!("IBM Corporation".equals(SystemUtils.JAVA_VENDOR) && "1.6".equals(SystemUtils.JAVA_SPECIFICATION_VERSION))) {
-//                 assertEquals(expectedWithTransients, toStringWithTransients);
-//             }
-//         }
-//         final String expectedWithoutTransients = baseStr + "[size=0]";
-//         final String toStringWithoutTransients = ToStringBuilder.reflectionToString(base, null, false);
-//         if (!expectedWithoutTransients.equals(toStringWithoutTransients)) {
-//             // representation different for IBM JDK 1.6.0, LANG-727
-//             if (!("IBM Corporation".equals(SystemUtils.JAVA_VENDOR) && "1.6".equals(SystemUtils.JAVA_SPECIFICATION_VERSION))) {
-//                 assertEquals(expectedWithoutTransients, toStringWithoutTransients);
-//             }
-//         }
-//     }
+    public void testReflectionHierarchyArrayList() {
+        final List<Object> base = new ArrayList<Object>();
+        final String baseStr = this.toBaseString(base);
+        // note, the test data depends on the internal representation of the ArrayList, which may differ between JDK versions and vendors
+        final String expectedWithTransients = baseStr + "[elementData={<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>,<null>},size=0,modCount=0]";
+        final String toStringWithTransients = ToStringBuilder.reflectionToString(base, null, true);
+        if (!expectedWithTransients.equals(toStringWithTransients)) {
+            // representation different for IBM JDK 1.6.0, LANG-727
+            if (!("IBM Corporation".equals(SystemUtils.JAVA_VENDOR) && "1.6".equals(SystemUtils.JAVA_SPECIFICATION_VERSION))) {
+                assertEquals(expectedWithTransients, toStringWithTransients);
+            }
+        }
+        final String expectedWithoutTransients = baseStr + "[size=0]";
+        final String toStringWithoutTransients = ToStringBuilder.reflectionToString(base, null, false);
+        if (!expectedWithoutTransients.equals(toStringWithoutTransients)) {
+            // representation different for IBM JDK 1.6.0, LANG-727
+            if (!("IBM Corporation".equals(SystemUtils.JAVA_VENDOR) && "1.6".equals(SystemUtils.JAVA_SPECIFICATION_VERSION))) {
+                assertEquals(expectedWithoutTransients, toStringWithoutTransients);
+            }
+        }
+    }
 
     @Test
     public void testReflectionHierarchy() {

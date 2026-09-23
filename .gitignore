@@ -1,1 +1,17 @@
 .gradle/
+build/
+
+# Derived archives: the pipeline rebuilds these from the committed .java
+# test sources, so they don't need to be in git.
+*.tar.bz2
+
+# NEVER commit secrets or keys.  The KKU IntelSphere API key is read from the
+# environment variable KKU_INTELSPHERE_API_KEY at runtime only — never from a
+# file in this repo.
+.env
+.secrets
+secrets.ini
+secrets.json
+*.key
+*.pem
+api_key*

@@ -1,0 +1,26 @@
+คุณคือระบบ Automatic Test Generation (LLM-based) สำหรับงานวิจัยเปรียบเทียบประสิทธิภาพระหว่าง LLMs (Gemini / ChatGPT) กับอัลกอริทึม Botsing (Crash Reproduction) และ CATG (Concolic Testing) บน Defects4J Benchmark
+
+จงสร้างคลาสทดสอบ JUnit 4 ภาษา Java ฉบับสมบูรณ์ (ห้ามย่อโค้ด) ชื่อคลาส NumberUtils_GeminiTest สำหรับคลาส org.apache.commons.lang3.math.NumberUtils โดยมุ่งเน้นเฉพาะบัก Defects4J: Lang-1 (LANG-747 / LANG-834) ในเมธอด createNumber()
+
+ข้อกำหนดในการสร้างชุดทดสอบ:
+
+1. **Header & Documentation:**
+   - มี Javadoc อ้างอิง Bug ID, LANG-747, LANG-834 และ Defects4J Lang-1 Dataset
+   - ใช้ Annotation `@Test(timeout = 4000)` ในทุกๆ Test Method
+
+2. **การครอบคลุมเคสทดสอบ (Test Coverage Requirements):**
+   - **กลุ่ม Crash Reproduction (Botsing Target):**
+     * 32-bit Hex Positive Overflow: "0x80000000" -> ขยายเป็น Long 2147483648L
+     * 32-bit Hex Negative Overflow: "-0x80000001" -> ขยายเป็น Long -2147483649L
+     * 64-bit Hex Overflow: "0x8000000000000000" -> ขยายเป็น BigInteger
+     * Hash Prefix Overflow: "#80000000" -> ขยายเป็น Long 2147483648L
+   - **กลุ่ม Path Constraints & Boundaries (CATG Target):**
+     * Exact Boundaries: "0x7FFFFFFF" (Integer.MAX_VALUE), "-0x80000000" (Integer.MIN_VALUE), "0x7FFFFFFFFFFFFFFF" (Long.MAX_VALUE)
+     * Prefix & Sign Variants: "0X80000000" (Prefix ตัวใหญ่ '0X') และ "-#80000000"
+   - **กลุ่ม Exception Paths:**
+     * Invalid Hex Format เช่น "0xG123" (ต้อง throw NumberFormatException)
+
+3. **รูปแบบของ Code:**
+   - มี Inline Comment อธิบาย Constraint Analysis และ Execution Flow เทียบกันระหว่าง Buggy Version กับ Fixed Version
+   - ใช้ org.junit.Assert (assertNotNull, assertEquals) พร้อมระบุ Failure Message ที่ชัดเจนทุกจุด
+   - ต้องเป็นโค้ด Java ที่สมบูรณ์ สามารถนำไปคอมไพล์และรันบน Defects4J ได้ทันที

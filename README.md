@@ -13,7 +13,7 @@
 
 ### AI-Assisting Tools / Generative AI
 
-1. **KKU IntelSphere**
+1. **Gemini**
 2. **ChatGPT (GPT-4o)**
 
 ## Dataset

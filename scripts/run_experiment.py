@@ -9,15 +9,15 @@ results/benchmark_results.csv.
 Usage examples:
 
   # Single bug, one tool, one budget, first repetition
-  python run_experiment.py --project Lang --bug 1 --tool ChatGPT \
-      --test-dir ../ChatGPT/TestCode/Lang_1 --budget default --rep 1
+  python run_experiment.py --project Lang --bug 1 --tool Claude \
+      --test-dir ../Claude/TestCode/Lang_1 --budget default --rep 1
 
   # Run a batch from a manifest (project,bug,tool,budget,test-dir)
   python run_experiment.py --manifest my_manifest.csv --rep 1
 
   # Dry run (just pack the archive and print paths)
-  python run_experiment.py --project Lang --bug 1 --tool ChatGPT \
-      --test-dir ../ChatGPT/TestCode/Lang_1 --dry-run
+  python run_experiment.py --project Lang --bug 1 --tool Claude \
+      --test-dir ../Claude/TestCode/Lang_1 --dry-run
 
 Resume: if a (project,bug,tool,budget,rep) row already exists in
 results/benchmark_results.csv it is skipped unless --force is given.

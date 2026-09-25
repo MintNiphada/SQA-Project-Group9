@@ -14,10 +14,10 @@
 |---|---|---|
 | Algorithm 1 | **CATG** (Concolic Testing) | Concolic execution + constraint solving (CVC4) |
 | Algorithm 2 | **Botsing** (Search-Based) | Search-based crash reproduction (อิง EvoSuite/DynaMOSA) |
-| AI Tool 1 | **ChatGPT (GPT-4o)** | Prompt-based unit test generation |
+| AI Tool 1 | **Claude** | Prompt-based unit test generation |
 | AI Tool 2 | **Gemini** | Prompt-based unit test generation |
 
-> ทั้ง ChatGPT และ Gemini ใช้โทเคนผ่านแพลตฟอร์ม KKU IntelSphere (ai.kku.ac.th)
+> ทั้ง Claude และ Gemini ใช้โทเคนผ่านแพลตฟอร์ม KKU IntelSphere (ai.kku.ac.th)
 
 ---
 
@@ -74,7 +74,7 @@ $env:PATH = "C:\Program Files\Git\bin;$env:PATH"   # Git Bash มาก่อน
 |---|---|---|
 | CATG | iterations: 10, 50, 100 | `./dconcolic <iter>` |
 | Botsing | search time: 60s, 120s, 240s | `-Dsearch_budget=...` |
-| ChatGPT / Gemini | effort: 1 pass, 1 feedback round | ตีความจากเวลาที่รันจริง |
+| Claude / Gemini | effort: 1 pass, 1 feedback round | ตีความจากเวลาที่รันจริง |
 
 ทุก config รันซ้ำ **3 ครั้ง** แล้วหาค่าเฉลี่ย (ตามข้อกำหนด 1.7)
 
@@ -93,7 +93,7 @@ $env:PATH = "C:\Program Files\Git\bin;$env:PATH"   # Git Bash มาก่อน
 5. **Test class ตั้งชื่อตาม convention:**
    - CATG: `*_CATGTest.java`
    - Botsing: `*_BotsingTest.java`
-   - ChatGPT: `*_ChatGPTTest.java`
+   - Claude: `*_ClaudeTest.java`
    - Gemini: `*_GeminiTest.java`
 
 ---
@@ -163,7 +163,7 @@ SQA_Project_Group9/
 │   ├── Result_Round2/
 │   └── Test/
 │
-├── ChatGPT/
+├── Claude/
 │   ├── Prompt/
 │   ├── Result/
 │   └── TestCode/

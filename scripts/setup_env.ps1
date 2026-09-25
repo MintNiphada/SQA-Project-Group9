@@ -65,7 +65,7 @@ Write-Host ""
 Write-Host "[SAVED] $envFile"
 
 # ============================ สร้างโฟลเดอร์ ============================
-$dirs = @("results", "ChatGPT\TestCode", "CATG\TestCode", "Gemini\TestCode", "Botsing\TestCode")
+$dirs = @("results", "Claude\TestCode", "CATG\TestCode", "Gemini\TestCode", "Botsing\TestCode")
 foreach ($d in $dirs) {
     $p = Join-Path (Split-Path $PSScriptRoot -Parent) $d
     New-Item -ItemType Directory -Path $p -Force | Out-Null

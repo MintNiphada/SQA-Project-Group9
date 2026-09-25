@@ -33,6 +33,7 @@ from pathlib import Path
 from d4j_helpers import (
     build_test_archive,
     checkout,
+    cleanup_generated_sources,
     compile_version,
     count_tests,
     has_result,
@@ -53,7 +54,9 @@ def discover_java(test_dir: Path) -> list[Path]:
 
 
 def run_one(project: str, bug: int, tool: str, budget: str, rep: int,
-            test_dir: Path, dry_run: bool = False, force: bool = False) -> dict:
+            test_dir: Path, dry_run: bool = False, force: bool = False,
+            generation_time_sec: float | None = None,
+            extra_notes: str = "") -> dict:
     if has_result(project, bug, tool, budget, rep) and not force:
         print(f"[skip] {project}-{bug} {tool} {budget} rep{rep} (already in results)")
         return {}
@@ -72,6 +75,8 @@ def run_one(project: str, bug: int, tool: str, budget: str, rep: int,
     # Make sure both versions are checked out and compiled once.
     w_buggy = checkout(project, bug, "b")
     w_fixed = checkout(project, bug, "f")
+    cleanup_generated_sources(w_buggy)
+    cleanup_generated_sources(w_fixed)
     compile_version(w_buggy)
     compile_version(w_fixed)
 
@@ -93,6 +98,9 @@ def run_one(project: str, bug: int, tool: str, budget: str, rep: int,
     failing_fixed = res_f.failing_on_fixed
     fault_detected = failing_buggy > 0 and failing_fixed == 0
 
+    notes = f"modified={';'.join(info.modified_classes)}"
+    if extra_notes:
+        notes = f"{notes};{extra_notes}"
     row = {
         "project": project,
         "bug": bug,
@@ -101,6 +109,7 @@ def run_one(project: str, bug: int, tool: str, budget: str, rep: int,
         "repetition": rep,
         "test_count": n_tests,
         "compile_ok": True,
+        "status": "completed",
         "failing_on_buggy": failing_buggy,
         "failing_on_fixed": failing_fixed,
         "fault_detected": fault_detected,
@@ -110,8 +119,8 @@ def run_one(project: str, bug: int, tool: str, budget: str, rep: int,
         "branches_total": res_b.branches_total,
         "branches_covered": res_b.branches_covered,
         "branch_cov_pct": round(branch_pct, 2),
-        "generation_time_sec": elapsed,
-        "notes": f"modified={';'.join(info.modified_classes)}",
+        "generation_time_sec": elapsed if generation_time_sec is None else round(generation_time_sec, 2),
+        "notes": notes,
     }
     append_result(row)
     print(f"[done] {project}-{bug} {tool} {budget} rep{rep} -> "
@@ -138,6 +147,7 @@ def run_manifest(manifest: Path, rep: int, dry_run: bool, force: bool) -> None:
                     "project": project, "bug": bug, "tool": tool,
                     "budget": budget, "repetition": rep,
                     "test_count": 0, "compile_ok": False,
+                    "status": "error",
                     "failing_on_buggy": 0, "failing_on_fixed": 0,
                     "fault_detected": False,
                     "lines_total": 0, "lines_covered": 0, "line_cov_pct": 0,

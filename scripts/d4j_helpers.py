@@ -17,6 +17,7 @@ import csv
 import os
 import re
 import shutil
+import stat
 import subprocess
 import tarfile
 import tempfile
@@ -30,9 +31,13 @@ GIT_BIN = Path(r"C:\Program Files\Git\bin")
 GIT_USR_BIN = Path(r"C:\Program Files\Git\usr\bin")
 D4J_HOME = Path(r"D:\Lab_SQA\defects4j")
 D4J_DEFECTS4J = D4J_HOME / "framework" / "bin" / "defects4j"
+PERL_EXE = STRAWBERRY_PERL_BIN / "perl.exe"
 PROJECTS_DIR = Path(r"D:\Lab_SQA\Defects4J_Projects")
 
-RESULTS_CSV = Path(__file__).resolve().parent.parent / "results" / "benchmark_results.csv"
+RESULTS_CSV = Path(os.environ.get(
+    "SQA_RESULTS_CSV",
+    str(Path(__file__).resolve().parent.parent / "results" / "benchmark_results.csv"),
+))
 RESULTS_CSV.parent.mkdir(parents=True, exist_ok=True)
 
 
@@ -53,15 +58,23 @@ def build_env(path_prepend: list[Path] | None = None) -> dict:
     env["JAVA_HOME"] = str(JAVA11)
     env["D4J_HOME"] = str(D4J_HOME)
     env["TZ"] = "America/Los_Angeles"
+    for key in ("JAVA_TOOL_OPTIONS", "ANT_OPTS"):
+        value = env.get(key, "")
+        if "-Dfile.encoding=UTF-8" not in value:
+            env[key] = f"{value} -Dfile.encoding=UTF-8".strip()
     return env
 
 
 def run_cmd(cmd: list[str], cwd: Path | None = None, timeout: int = 1800,
-            extra_path: list[Path] | None = None) -> subprocess.CompletedProcess:
+            extra_path: list[Path] | None = None,
+            env_overrides: dict[str, str] | None = None) -> subprocess.CompletedProcess:
+    env = build_env(extra_path)
+    if env_overrides:
+        env.update(env_overrides)
     return subprocess.run(
         cmd,
         cwd=str(cwd) if cwd else None,
-        env=build_env(extra_path),
+        env=env,
         capture_output=True,
         text=True,
         encoding="utf-8",
@@ -70,9 +83,39 @@ def run_cmd(cmd: list[str], cwd: Path | None = None, timeout: int = 1800,
     )
 
 
-def defects4j(args: list[str], cwd: Path | None = None, timeout: int = 1800) -> subprocess.CompletedProcess:
+def defects4j(args: list[str], cwd: Path | None = None, timeout: int = 1800,
+              env_overrides: dict[str, str] | None = None) -> subprocess.CompletedProcess:
     """Invoke the defects4j CLI (perl) with the standard env."""
-    return run_cmd(["perl", str(D4J_DEFECTS4J)] + args, cwd=cwd, timeout=timeout)
+    return run_cmd([str(PERL_EXE), str(D4J_DEFECTS4J)] + args, cwd=cwd, timeout=timeout,
+                   env_overrides=env_overrides)
+
+
+def export_classpath(w: Path, property_name: str = "cp.compile") -> str:
+    build_file = D4J_HOME / "framework" / "projects" / "defects4j.build.xml"
+    ant = D4J_HOME / "major" / "bin" / "ant.cmd"
+    output = w / f".catg-export-{property_name.replace('.', '-')}"
+    args = [
+        str(ant),
+        "-f", str(build_file),
+        f"-Dd4j.home={D4J_HOME}",
+        f"-Dd4j.dir.projects={D4J_HOME / 'framework' / 'projects'}",
+        f"-Dbasedir={w}",
+        f"-Dfile.export={output}",
+        f"export.{property_name}",
+    ]
+    res = run_cmd(args, cwd=w, extra_path=[ant.parent])
+    if res.returncode != 0 or not output.exists():
+        detail = (res.stdout + res.stderr).strip()
+        raise RuntimeError(
+            f"export {property_name} failed for {w}: exit={res.returncode}\n{detail}"
+        )
+    try:
+        value = output.read_text(encoding="utf-8", errors="replace").strip()
+    finally:
+        output.unlink(missing_ok=True)
+    if not value:
+        raise RuntimeError(f"export {property_name} returned an empty value for {w}")
+    return value
 
 
 def workdir(project: str, bug: int, version: str) -> Path:
@@ -80,28 +123,55 @@ def workdir(project: str, bug: int, version: str) -> Path:
     return PROJECTS_DIR / f"{project}_{bug}_{version}"
 
 
-def checkout(project: str, bug: int, version: str) -> Path:
-    """
-    Checkout (or reuse) a Defects4J version.  A directory is only considered
-    complete when both `.defects4j.config` and `defects4j.build.properties`
-    exist (the latter is written last by Defects4J); anything left over from an
-    interrupted checkout is deleted and re-created.
-    """
-    w = workdir(project, bug, version)
+def _remove_checkout_tree(path: Path) -> None:
+    def retry(func, target, _exc):
+        os.chmod(target, stat.S_IWRITE)
+        func(target)
+
+    if path.exists():
+        shutil.rmtree(path, onerror=retry)
+
+
+def _checkout_matches(w: Path, project: str, bug: int, version: str) -> bool:
     cfg = w / ".defects4j.config"
     props = w / "defects4j.build.properties"
-    if cfg.exists() and props.exists():
+    if not cfg.exists() or not props.exists():
+        return False
+    values: dict[str, str] = {}
+    for line in cfg.read_text(encoding="utf-8", errors="replace").splitlines():
+        if "=" in line:
+            key, value = line.split("=", 1)
+            values[key.strip()] = value.strip()
+    return values.get("pid") == project and values.get("vid") == f"{bug}{version}"
+
+
+def checkout_at(project: str, bug: int, version: str, destination: Path) -> Path:
+    w = Path(destination)
+    cfg = w / ".defects4j.config"
+    props = w / "defects4j.build.properties"
+    if _checkout_matches(w, project, bug, version):
         return w
 
-    if w.exists():
-        shutil.rmtree(w, ignore_errors=True)
+    _remove_checkout_tree(w)
     w.parent.mkdir(parents=True, exist_ok=True)
     res = defects4j(["checkout", "-p", project, "-v", f"{bug}{version}", "-w", str(w)])
-    if res.returncode != 0 or not cfg.exists():
+    if res.returncode != 0 or not cfg.exists() or not props.exists():
+        detail = (res.stdout + res.stderr).strip()
         raise RuntimeError(
-            f"checkout {project}-{bug}{version} failed:\n{res.stdout}\n{res.stderr}"
+            f"checkout {project}-{bug}{version} failed at {w}: "
+            f"exit={res.returncode}\n{detail}"
         )
     return w
+
+
+def checkout(project: str, bug: int, version: str) -> Path:
+    return checkout_at(project, bug, version, workdir(project, bug, version))
+
+
+def cleanup_generated_sources(w: Path) -> None:
+    for pattern in ("CATG_*Test.java", "CATG_CoverageSuite_*.java"):
+        for path in w.rglob(pattern):
+            path.unlink(missing_ok=True)
 
 
 def compile_version(w: Path) -> None:
@@ -238,7 +308,11 @@ def _test_source_root(w: Path) -> Path:
     return w / "src" / "test" / "java"
 
 
-def _test_ids_from_archive_native(w: Path, archive: Path) -> list[tuple[str, str]]:
+def _test_ids_from_archive_native(
+    w: Path,
+    archive: Path,
+    extracted: list[Path] | None = None,
+) -> list[tuple[str, str]]:
     """
     Extract an external-suite .tar.bz2 into the workdir's test source dir.
 
@@ -259,99 +333,137 @@ def _test_ids_from_archive_native(w: Path, archive: Path) -> list[tuple[str, str
         for member in tar.getmembers():
             if not member.isfile() or not member.name.endswith(".java"):
                 continue
+            member_path = Path(member.name.replace("\\", "/"))
+            if member_path.is_absolute() or ".." in member_path.parts:
+                raise RuntimeError(f"unsafe test archive member: {member.name}")
             data = tar.extractfile(member).read()
 
             # Place preserving the package layout already baked into the archive.
-            dest = test_root / Path(member.name.replace("\\", "/"))
+            dest = (test_root / member_path).resolve()
+            if test_root.resolve() not in dest.parents:
+                raise RuntimeError(f"unsafe test archive member: {member.name}")
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(data)
+            if extracted is not None:
+                extracted.append(dest)
 
             text = data.decode("utf-8", errors="replace")
             pkg = ""
             m_pkg = re.search(r"^\s*package\s+([\w.]+)\s*;", text, flags=re.MULTILINE)
             if m_pkg:
                 pkg = m_pkg.group(1)
-            cls_name = member.name.replace("\\", "/").rstrip("/").split("/")[-1].replace(".java", "")
+            cls_name = member_path.stem
             fqcn = f"{pkg}.{cls_name}" if pkg else cls_name
             for m_method in re.finditer(r"@Test\b[^\{]*?\bvoid\s+(\w+)\s*\(", text, flags=re.DOTALL):
                 test_ids.append((fqcn, m_method.group(1)))
     return test_ids
 
 
+def _coverage_values(w: Path, result: subprocess.CompletedProcess) -> tuple[int, int, int, int] | None:
+    summary = w / "summary.csv"
+    if summary.exists():
+        with summary.open(newline="", encoding="utf-8") as fh:
+            row = next(csv.DictReader(fh), None)
+        if row is not None:
+            return tuple(int(row.get(key, 0) or 0) for key in (
+                "LinesTotal", "LinesCovered", "ConditionsTotal", "ConditionsCovered"
+            ))
+    output = result.stdout + result.stderr
+    values: list[int] = []
+    for label in ("Lines total", "Lines covered", "Conditions total", "Conditions covered"):
+        match = re.search(rf"{re.escape(label)}:\s*(\d+)", output)
+        values.append(int(match.group(1)) if match else 0)
+    return tuple(values) if any(values) or "Lines total:" in output else None
+
+
+def _write_coverage_suite(w: Path, test_ids: list[tuple[str, str]], name: str) -> str:
+    test_root = _test_source_root(w)
+    suite_dir = test_root / "catg" / "generated"
+    suite_dir.mkdir(parents=True, exist_ok=True)
+    suite_name = re.sub(r"[^A-Za-z0-9_$]", "_", name)
+    class_name = f"catg.generated.{suite_name}"
+    classes = list(dict.fromkeys(fqcn for fqcn, _ in test_ids))
+    source_lines = [
+        "package catg.generated;",
+        "import org.junit.Test;",
+        "import org.junit.runner.JUnitCore;",
+        f"public class {suite_name} {{",
+        "    @Test(timeout=120000)",
+        "    public void runAll() throws Exception {",
+        "        Class<?>[] classes = new Class<?>[] {",
+    ]
+    for fqcn in classes:
+        source_lines.append(f"            {fqcn}.class,")
+    source_lines.extend([
+        "        };",
+        "        JUnitCore.runClasses(classes);",
+        "    }",
+        "}",
+    ])
+    (suite_dir / f"{suite_name}.java").write_text("\n".join(source_lines) + "\n", encoding="utf-8")
+    return f"{class_name}::runAll"
+
+
 def run_external_suite(project: str, bug: int, version: str, archive: Path) -> TestRunResult:
-    """
-    Run a generated external suite on the given version (b/f).
-
-    Bypass (used here): `defects4j coverage/test -s` is unreliable on Windows
-    (the suite never extracts/compiles/runs -> bogus 0% / no fault detection),
-    so we extract the archive with python tarfile into the workdir's test source
-    dir and then drive Defects4J per test method (`defects4j test/coverage -t
-    <Class>::<method>`), aggregating failing tests and line/branch coverage.
-    """
     w = checkout(project, bug, version)
-    compile_version(w)
+    cleanup_generated_sources(w)
+    extracted: list[Path] = []
+    suite_source: Path | None = None
+    try:
+        test_ids = _test_ids_from_archive_native(w, archive, extracted)
+        if not test_ids:
+            raise RuntimeError(f"no @Test methods extracted from {archive}")
 
-    test_ids = _test_ids_from_archive_native(w, archive)
-    if not test_ids:
-        raise RuntimeError(f"no @Test methods extracted from {archive}")
+        suite_name = f"CATG_CoverageSuite_{project}_{bug}"
+        suite_id = _write_coverage_suite(w, test_ids, suite_name)
+        suite_source = _test_source_root(w) / "catg" / "generated" / f"{suite_name}.java"
+        compile_version(w)
 
-    failing = 0
-    lines_total = lines_cov = branches_total = branches_cov = 0
-    ran_coverage = False
+        clean_runner_env = {"JAVA_TOOL_OPTIONS": "", "ANT_OPTS": ""}
+        failing = 0
+        for fqcn, method in test_ids:
+            tid = f"{fqcn}::{method}"
+            failing_file = w / "failing_tests"
+            failing_file.unlink(missing_ok=True)
+            res = defects4j(["test", "-w", str(w), "-t", tid], env_overrides=clean_runner_env)
+            failing_count = _parse_failing_tests(w)
+            if res.returncode != 0 and failing_count == 0:
+                detail = (res.stdout + res.stderr).strip()
+                raise RuntimeError(f"test {tid} failed without test results:\n{detail}")
+            failing += failing_count
 
-    for fqcn, method in test_ids:
-        tid = f"{fqcn}::{method}"
-
-        # --- Fault detection: run the single test ---
-        res = defects4j(["test", "-w", str(w), "-t", tid])
-        failing += _parse_failing_tests(w)
-
-        # --- Coverage: run coverage for the same single test ---
-        res_cov = defects4j(["coverage", "-w", str(w), "-t", tid])
-        ran_coverage = True
-
-        summary = w / "summary.csv"
-        if summary.exists():
-            with summary.open(newline="", encoding="utf-8") as fh:
-                reader = csv.DictReader(fh)
-                for row in reader:
-                    lines_total = max(lines_total, int(row.get("LinesTotal", 0) or 0))
-                    lines_cov = max(lines_cov, int(row.get("LinesCovered", 0) or 0))
-                    branches_total = max(branches_total, int(row.get("ConditionsTotal", 0) or 0))
-                    branches_cov = max(branches_cov, int(row.get("ConditionsCovered", 0) or 0))
-                    break
-        else:
-            import re as _re
-            out = res_cov.stdout + res_cov.stderr
-            m = _re.search(r"Lines total:\s*(\d+)", out)
-            if m:
-                lines_total = max(lines_total, int(m.group(1)))
-            m = _re.search(r"Lines covered:\s*(\d+)", out)
-            if m:
-                lines_cov = max(lines_cov, int(m.group(1)))
-            m = _re.search(r"Conditions total:\s*(\d+)", out)
-            if m:
-                branches_total = max(branches_total, int(m.group(1)))
-            m = _re.search(r"Conditions covered:\s*(\d+)", out)
-            if m:
-                branches_cov = max(branches_cov, int(m.group(1)))
-
-    if not ran_coverage:
-        raise RuntimeError("coverage never ran")
-
-    return TestRunResult(
-        failing_on_buggy=failing if version == "b" else 0,
-        failing_on_fixed=failing if version == "f" else 0,
-        lines_total=lines_total,
-        lines_covered=lines_cov,
-        branches_total=branches_total,
-        branches_covered=branches_cov,
-    )
+        (w / "failing_tests").unlink(missing_ok=True)
+        (w / "summary.csv").unlink(missing_ok=True)
+        res_cov = defects4j(["coverage", "-w", str(w), "-t", suite_id], env_overrides=clean_runner_env)
+        if res_cov.returncode != 0:
+            detail = (res_cov.stdout + res_cov.stderr).strip()
+            raise RuntimeError(f"coverage {suite_id} failed:\n{detail}")
+        coverage = _coverage_values(w, res_cov)
+        if coverage is None:
+            raise RuntimeError(f"coverage {suite_id} produced no metrics")
+        lines_total, lines_cov, branches_total, branches_cov = coverage
+        return TestRunResult(
+            failing_on_buggy=failing if version == "b" else 0,
+            failing_on_fixed=failing if version == "f" else 0,
+            lines_total=lines_total,
+            lines_covered=lines_cov,
+            branches_total=branches_total,
+            branches_covered=branches_cov,
+        )
+    finally:
+        for source in extracted:
+            source.unlink(missing_ok=True)
+            for compiled in w.rglob(f"{source.stem}.class"):
+                compiled.unlink(missing_ok=True)
+        if suite_source is not None:
+            suite_source.unlink(missing_ok=True)
+            for compiled in w.rglob(f"{suite_source.stem}.class"):
+                compiled.unlink(missing_ok=True)
 
 
 RESULT_FIELDS = [
     "project", "bug", "tool", "budget", "repetition",
-    "test_count", "compile_ok",
+    "test_count", "compile_ok", "status",
     "failing_on_buggy", "failing_on_fixed", "fault_detected",
     "lines_total", "lines_covered", "line_cov_pct",
     "branches_total", "branches_covered", "branch_cov_pct",
@@ -359,28 +471,79 @@ RESULT_FIELDS = [
 ]
 
 
+def _result_key(row: dict) -> tuple[str, str, str, str, str]:
+    return tuple(str(row.get(field, "")).strip() for field in (
+        "project", "bug", "tool", "budget", "repetition"
+    ))
+
+
+def result_is_terminal(row: dict) -> bool:
+    status = str(row.get("status", "")).strip().lower()
+    if status in {"completed", "unsupported"}:
+        return True
+    if status == "error":
+        return False
+    compile_ok = str(row.get("compile_ok", "")).strip().lower()
+    if compile_ok in {"true", "1", "yes"}:
+        return True
+    notes = str(row.get("notes", "")).strip()
+    return notes.startswith("STATUS:") and not notes.startswith("STATUS:ERROR")
+
+
 def append_result(row: dict) -> None:
-    write_header = not RESULTS_CSV.exists()
-    with RESULTS_CSV.open("a", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=RESULT_FIELDS, extrasaction="ignore")
-        if write_header:
+    normalized = {field: row.get(field, "") for field in RESULT_FIELDS}
+    if not normalized["status"]:
+        normalized["status"] = "completed" if normalized["compile_ok"] else (
+            "error" if str(normalized["notes"]).startswith("STATUS:ERROR") else "unsupported"
+        )
+    key = _result_key(normalized)
+    if not RESULTS_CSV.exists():
+        with RESULTS_CSV.open("w", newline="", encoding="utf-8") as fh:
+            writer = csv.DictWriter(fh, fieldnames=RESULT_FIELDS, extrasaction="ignore")
             writer.writeheader()
-        writer.writerow(row)
+            writer.writerow(normalized)
+        return
+
+    with RESULTS_CSV.open(newline="", encoding="utf-8-sig") as fh:
+        reader = csv.DictReader(fh)
+        fieldnames = list(dict.fromkeys([*(reader.fieldnames or []), *RESULT_FIELDS]))
+        existing = list(reader)
+    for item in existing:
+        if not item.get("status"):
+            item["status"] = "completed" if str(item.get("compile_ok", "")).lower() == "true" else (
+                "error" if str(item.get("notes", "")).startswith("STATUS:ERROR") else "unsupported"
+            )
+    matching = [item for item in existing if _result_key(item) == key]
+    kept: list[dict] = []
+    replaced = False
+    for item in existing:
+        if _result_key(item) != key:
+            kept.append(item)
+        elif not replaced:
+            kept.append(normalized)
+            replaced = True
+    if not matching:
+        kept.append(normalized)
+
+    fd, temp_name = tempfile.mkstemp(prefix=".benchmark-", suffix=".tmp", dir=RESULTS_CSV.parent)
+    os.close(fd)
+    try:
+        with open(temp_name, "w", newline="", encoding="utf-8") as fh:
+            writer = csv.DictWriter(fh, fieldnames=fieldnames, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(kept)
+        os.replace(temp_name, RESULTS_CSV)
+    finally:
+        if os.path.exists(temp_name):
+            os.unlink(temp_name)
 
 
 def has_result(project: str, bug: int, tool: str, budget: str, rep: int) -> bool:
-    """Resume support: skip work that already has a row in the results CSV."""
+    """Return whether a run is complete or a terminal unsupported status exists."""
     if not RESULTS_CSV.exists():
         return False
-    with RESULTS_CSV.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        for row in reader:
-            if (
-                row.get("project") == str(project)
-                and row.get("bug") == str(bug)
-                and row.get("tool") == tool
-                and row.get("budget") == budget
-                and row.get("repetition") == str(rep)
-            ):
-                return True
+    with RESULTS_CSV.open(newline="", encoding="utf-8-sig") as fh:
+        for row in csv.DictReader(fh):
+            if _result_key(row) == (str(project), str(bug), tool, budget, str(rep)):
+                return result_is_terminal(row)
     return False

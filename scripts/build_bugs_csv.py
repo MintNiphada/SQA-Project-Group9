@@ -23,7 +23,7 @@ csv_out = ROOT / "results" / "defects4j_bugs.csv"
 rows: list[tuple[str, str]] = []
 ok_projects = 0
 for p in PROJECTS:
-    r = defects4j(["active-bugs", "-p", p])
+    r = defects4j(["bids", "-p", p])
     if r.returncode != 0:
         print(f"[ERR] {p}: rc={r.returncode} {(r.stderr or '').splitlines()[-1] if (r.stderr or '').splitlines() else ''}")
         continue

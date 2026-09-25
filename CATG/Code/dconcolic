@@ -2,79 +2,392 @@
 
 # CATG dconcolic launcher for the Gradle-built CATG
 
-CATG_ROOT="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+PARENT_ROOT="$(cd "$PROJECT_ROOT/../.." && pwd)"
 
-# Java 8 is required by this old CATG version
-export JAVA_HOME="/c/Program Files/Eclipse Adoptium/jdk-8.0.504.1-hotspot"
-export PATH="$JAVA_HOME/bin:$PATH"
+if [ -n "${CATG_HOME:-}" ]; then
+    if command -v cygpath >/dev/null 2>&1; then
+        CATG_ROOT="$(cygpath -u "$CATG_HOME")"
+    else
+        CATG_ROOT="$CATG_HOME"
+    fi
+else
+    CATG_ROOT=""
+    for candidate in "$PROJECT_ROOT/Configuration" "$PROJECT_ROOT" "$PARENT_ROOT/CATG"; do
+        if [ -f "$candidate/build/libs/CATG-0.2.jar" ] && [ -d "$candidate/build/classes/java/integration" ]; then
+            CATG_ROOT="$candidate"
+            break
+        fi
+    done
+    CATG_ROOT="${CATG_ROOT:-$PROJECT_ROOT/Configuration}"
+fi
 
-# CATG configuration
+if [ -n "${CATG_JAVA_HOME:-}" ]; then
+    if command -v cygpath >/dev/null 2>&1; then
+        JAVA_HOME="$(cygpath -u "$CATG_JAVA_HOME")"
+    else
+        JAVA_HOME="$CATG_JAVA_HOME"
+    fi
+elif [ -x "/c/Program Files/Eclipse Adoptium/jdk-8.0.504.1-hotspot/bin/java" ]; then
+    JAVA_HOME="/c/Program Files/Eclipse Adoptium/jdk-8.0.504.1-hotspot"
+elif [ -n "${JAVA_HOME:-}" ] && [ -x "$JAVA_HOME/bin/java" ]; then
+    JAVA_HOME="$JAVA_HOME"
+else
+    echo "ERROR: Java 8 not found; set CATG_JAVA_HOME" >&2
+    exit 1
+fi
+export JAVA_HOME
+export PATH="$JAVA_HOME/bin:$CATG_ROOT/tools/cvc4:$PATH"
+
 CATG_JAR="$CATG_ROOT/build/libs/CATG-0.2.jar"
 TEST_CLASSES="$CATG_ROOT/build/classes/java/integration"
+CATG_CONFIG="$CATG_ROOT/catg.conf"
 
-cd "$CATG_ROOT" || exit 1
+iter=${CATG_DEFAULT_BUDGET:-5}
+YOURPGM="tests.test_Lang1"
+OUT_FILE=""
+WORKDIR=""
+PROJECT="Lang"
+INPUT_FILE=""
+SNAPSHOT_DIR=""
+STATE_DIR=""
+EXTRA_CLASSPATH=""
+CLASSPATH_FILE=""
+HARNESS_CLASSES_ARG=""
+PROJECT_CLASSES_ARG=""
+ALLOW_EMPTY_INPUT=0
 
-iter=$1
-YOURPGM=$2
-
-if [ -z "$iter" ] || [ -z "$YOURPGM" ]; then
+usage() {
     echo "Usage: ./dconcolic <iterations> <main-class>"
-    echo "Example: ./dconcolic 5 tests.test_q1_q4_min"
-    exit 1
+    echo "   or: ./dconcolic --budget 5 --project Lang --workdir /d/... --out /d/.../inputs.txt"
+    echo "      --input-file /d/.../seed.txt --snapshot-dir /d/.../snapshots --state-dir /d/.../state"
+    echo "      --harness-classes /d/.../classes --classes-dir /d/.../classes"
+    echo "      --classpath-file /d/.../classpath.txt [--allow-empty-input]"
+}
+
+if [ "$#" -gt 0 ]; then
+    case "$1" in
+        --*) ;;
+        *)
+            if [ "$#" -ne 2 ]; then
+                usage >&2
+                exit 2
+            fi
+            iter=$1
+            YOURPGM=$2
+            shift 2
+            ;;
+    esac
+fi
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --budget)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            if [ "$2" = "default" ]; then
+                iter=${CATG_DEFAULT_BUDGET:-5}
+            else
+                iter=$2
+            fi
+            shift 2
+            ;;
+        --iterations)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            iter=$2
+            shift 2
+            ;;
+        --out)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            OUT_FILE=$2
+            shift 2
+            ;;
+        --workdir)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            WORKDIR=$2
+            shift 2
+            ;;
+        --classes-dir)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            PROJECT_CLASSES_ARG=$2
+            shift 2
+            ;;
+        --project)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            PROJECT=$2
+            shift 2
+            ;;
+        --main-class)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            YOURPGM=$2
+            shift 2
+            ;;
+        --input-file)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            INPUT_FILE=$2
+            shift 2
+            ;;
+        --snapshot-dir)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            SNAPSHOT_DIR=$2
+            shift 2
+            ;;
+        --state-dir)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            STATE_DIR=$2
+            shift 2
+            ;;
+        --harness-classes)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            HARNESS_CLASSES_ARG=$2
+            shift 2
+            ;;
+        --classpath)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            EXTRA_CLASSPATH=$2
+            shift 2
+            ;;
+        --classpath-file)
+            [ "$#" -ge 2 ] || { usage >&2; exit 2; }
+            CLASSPATH_FILE=$2
+            shift 2
+            ;;
+        --allow-empty-input)
+            ALLOW_EMPTY_INPUT=1
+            shift
+            ;;
+        *)
+            echo "ERROR: unknown argument: $1" >&2
+            exit 2
+            ;;
+    esac
+done
+
+case "$iter" in
+    ''|*[!0-9]*)
+        usage >&2
+        echo "ERROR: iterations must be a positive integer" >&2
+        exit 2
+        ;;
+esac
+if [ "$iter" -lt 1 ]; then
+    echo "ERROR: iterations must be greater than zero" >&2
+    exit 2
+fi
+
+if [ -n "$OUT_FILE" ]; then
+    case "$OUT_FILE" in
+        /*|[A-Za-z]:/*) ;;
+        *) OUT_FILE="$(pwd)/$OUT_FILE" ;;
+    esac
+fi
+if [ -n "$INPUT_FILE" ]; then
+    case "$INPUT_FILE" in
+        /*|[A-Za-z]:/*) ;;
+        *) INPUT_FILE="$(pwd)/$INPUT_FILE" ;;
+    esac
+fi
+if [ -n "$SNAPSHOT_DIR" ]; then
+    case "$SNAPSHOT_DIR" in
+        /*|[A-Za-z]:/*) ;;
+        *) SNAPSHOT_DIR="$(pwd)/$SNAPSHOT_DIR" ;;
+    esac
+fi
+if [ -n "$STATE_DIR" ]; then
+    case "$STATE_DIR" in
+        /*|[A-Za-z]:/*) ;;
+        *) STATE_DIR="$(pwd)/$STATE_DIR" ;;
+    esac
+fi
+if [ -n "$CLASSPATH_FILE" ]; then
+    case "$CLASSPATH_FILE" in
+        /*|[A-Za-z]:/*) ;;
+        *) CLASSPATH_FILE="$(pwd)/$CLASSPATH_FILE" ;;
+    esac
+fi
+if [ -n "$PROJECT_CLASSES_ARG" ]; then
+    case "$PROJECT_CLASSES_ARG" in
+        /*|[A-Za-z]:/*) ;;
+        *) PROJECT_CLASSES_ARG="$(pwd)/$PROJECT_CLASSES_ARG" ;;
+    esac
+fi
+
+if [ -n "$WORKDIR" ]; then
+    if [ ! -d "$WORKDIR" ]; then
+        echo "ERROR: workdir not found: $WORKDIR" >&2
+        exit 1
+    fi
+    if [ -n "$PROJECT_CLASSES_ARG" ]; then
+        PROJECT_CLASSES="$PROJECT_CLASSES_ARG"
+    elif [ -d "$WORKDIR/target/classes" ]; then
+        PROJECT_CLASSES="$WORKDIR/target/classes"
+    elif [ -d "$WORKDIR/build/classes/java/main" ]; then
+        PROJECT_CLASSES="$WORKDIR/build/classes/java/main"
+    elif [ -d "$WORKDIR/build/classes" ]; then
+        PROJECT_CLASSES="$WORKDIR/build/classes"
+    elif [ -d "$WORKDIR/build" ]; then
+        PROJECT_CLASSES="$WORKDIR/build"
+    elif [ -d "$WORKDIR/classes" ]; then
+        PROJECT_CLASSES="$WORKDIR/classes"
+    elif [ -d "$WORKDIR/bin" ]; then
+        PROJECT_CLASSES="$WORKDIR/bin"
+    else
+        PROJECT_CLASSES="$WORKDIR/target/classes"
+    fi
+    if [ ! -d "$PROJECT_CLASSES" ]; then
+        echo "ERROR: compiled classes not found: $PROJECT_CLASSES" >&2
+        exit 1
+    fi
+else
+    PROJECT_CLASSES=""
 fi
 
 if [ ! -f "$CATG_JAR" ]; then
-    echo "ERROR: CATG JAR not found: $CATG_JAR"
+    echo "ERROR: CATG JAR not found: $CATG_JAR" >&2
     exit 1
 fi
 
 if [ ! -d "$TEST_CLASSES" ]; then
-    echo "ERROR: Integration classes not found: $TEST_CLASSES"
-    echo "Run: gradle integrationClasses"
+    echo "ERROR: Integration classes not found: $TEST_CLASSES" >&2
+    echo "Run: gradle integrationClasses" >&2
     exit 1
 fi
 
-# Start a fresh concolic search.
-rm -f history
-rm -f history.old
-rm -f test.log
+if [ ! -f "$CATG_CONFIG" ]; then
+    echo "ERROR: CATG configuration not found: $CATG_CONFIG" >&2
+    exit 1
+fi
+
+if [ -z "$STATE_DIR" ]; then
+    STATE_DIR="$CATG_ROOT"
+fi
+mkdir -p "$STATE_DIR" || exit 1
+
+to_windows_path() {
+    if command -v cygpath >/dev/null 2>&1; then
+        cygpath -w "$1"
+    else
+        printf '%s' "$1"
+    fi
+}
+
+CATG_JAR_WIN="$(to_windows_path "$CATG_JAR")"
+TEST_CLASSES_WIN="$(to_windows_path "$TEST_CLASSES")"
+CATG_CONFIG_WIN="$(to_windows_path "$CATG_CONFIG")"
+CATG_LIB_WIN="$(to_windows_path "$CATG_ROOT/lib/*")"
+if [ -n "$CLASSPATH_FILE" ]; then
+    if [ ! -f "$CLASSPATH_FILE" ]; then
+        echo "ERROR: classpath file not found: $CLASSPATH_FILE" >&2
+        exit 1
+    fi
+    EXTRA_CLASSPATH="$(cat "$CLASSPATH_FILE")"
+fi
+HARNESS_CLASSES=""
+HARNESS_CLASSES_WIN=""
+
+if [ "$YOURPGM" = "tests.test_Lang1" ]; then
+    if [ -z "$PROJECT_CLASSES" ]; then
+        echo "ERROR: --workdir with compiled target/classes is required for tests.test_Lang1" >&2
+        exit 2
+    fi
+    HARNESS_SOURCE="$PROJECT_ROOT/Test/test_Lang1.java"
+    if [ ! -f "$HARNESS_SOURCE" ]; then
+        echo "ERROR: CATG harness not found: $HARNESS_SOURCE" >&2
+        exit 1
+    fi
+    HARNESS_CLASSES="$CATG_ROOT/.generated-classes"
+    mkdir -p "$HARNESS_CLASSES" || exit 1
+    HARNESS_CLASSES_WIN="$(to_windows_path "$HARNESS_CLASSES")"
+    HARNESS_CP="$CATG_JAR_WIN;$(to_windows_path "$PROJECT_CLASSES");$CATG_LIB_WIN"
+    if [ -n "$EXTRA_CLASSPATH" ]; then
+        HARNESS_CP="$HARNESS_CP;$EXTRA_CLASSPATH"
+    fi
+    javac -cp "$HARNESS_CP" \
+          -d "$(to_windows_path "$HARNESS_CLASSES")" \
+          "$(to_windows_path "$HARNESS_SOURCE")"
+    status=$?
+    if [ "$status" -ne 0 ]; then
+        echo "Harness compilation failed with status $status" >&2
+        exit "$status"
+    fi
+elif [ -n "$HARNESS_CLASSES_ARG" ]; then
+    HARNESS_CLASSES="$HARNESS_CLASSES_ARG"
+    if [ ! -d "$HARNESS_CLASSES" ]; then
+        echo "ERROR: --harness-classes directory not found: $HARNESS_CLASSES" >&2
+        exit 1
+    fi
+    HARNESS_CLASSES_WIN="$(to_windows_path "$HARNESS_CLASSES")"
+fi
+
+if [ -z "$HARNESS_CLASSES_WIN" ]; then
+    CLASSPATH="$TEST_CLASSES_WIN;$CATG_JAR_WIN;$CATG_LIB_WIN"
+else
+    CLASSPATH="$HARNESS_CLASSES_WIN;$TEST_CLASSES_WIN;$CATG_JAR_WIN;$CATG_LIB_WIN"
+fi
+if [ -n "$PROJECT_CLASSES" ]; then
+    CLASSPATH="$CLASSPATH;$(to_windows_path "$PROJECT_CLASSES")"
+fi
+if [ -n "$EXTRA_CLASSPATH" ]; then
+    CLASSPATH="$CLASSPATH;$EXTRA_CLASSPATH"
+fi
+
+cd "$STATE_DIR" || exit 1
+
+rm -f inputs history history.old test.log trace trace.aux formula coverage.catg oldStates
+if [ -n "$INPUT_FILE" ]; then
+    if [ ! -f "$INPUT_FILE" ]; then
+        echo "ERROR: input file not found: $INPUT_FILE" >&2
+        exit 1
+    fi
+    cp "$INPUT_FILE" inputs || exit 1
+fi
+if [ -n "$SNAPSHOT_DIR" ]; then
+    mkdir -p "$SNAPSHOT_DIR" || exit 1
+fi
 
 i=1
 
 echo "Now testing $YOURPGM"
 
-while [ $i -le $iter ]
+while [ "$i" -le "$iter" ]
 do
     echo
     echo "========== Input $i =========="
 
     java \
         -Djanala.loggerClass=janala.logger.DirectConcolicExecution \
-        -Djanala.conf="$CATG_ROOT/catg.conf" \
+        -Djanala.conf="$CATG_CONFIG_WIN" \
         -Djanala.mainClass="$YOURPGM" \
         -Djanala.iteration="$i" \
-        -javaagent:"$CATG_JAR" \
-        -cp "build/classes/java/integration;build/libs/CATG-0.2.jar;lib/*;D:/Lab_SQA/Defects4J_Projects/Lang_1_buggy/target/classes" \
+        -javaagent:"$CATG_JAR_WIN" \
+        -cp "$CLASSPATH" \
         -ea \
         "$YOURPGM"
 
     status=$?
 
-    if [ $status -ne 0 ]; then
-        echo "Java exited with status $status"
-        exit $status
+    if [ "$status" -ne 0 ]; then
+        echo "Java exited with status $status" >&2
+        exit "$status"
     fi
 
-    if [ -f inputs ]; then
-        echo "--- Generated input ---"
-        cat inputs
-    else
-        echo "No input file generated."
-        break
+    if [ ! -f inputs ]; then
+        echo "ERROR: CATG produced no input file" >&2
+        exit 4
     fi
+    if [ "$ALLOW_EMPTY_INPUT" -eq 0 ] && [ ! -s inputs ]; then
+        echo "ERROR: CATG produced an empty input file" >&2
+        exit 4
+    fi
+    if [ -n "$SNAPSHOT_DIR" ]; then
+        cp inputs "$SNAPSHOT_DIR/input-$i.txt" || exit 1
+    fi
+
+    echo "--- Generated input ---"
+    cat inputs || exit 1
 
     if [ -f history ]; then
-        cp history history.old
+        cp history history.old || exit 1
         echo "--- History generated ---"
     else
         echo "--- No more history ---"
@@ -86,9 +399,22 @@ done
 
 echo
 echo "========== CATG finished =========="
-echo "Generated input file: $CATG_ROOT/inputs"
+echo "Generated input file: $STATE_DIR/inputs"
 
-if [ -f inputs ]; then
-    echo "Final inputs:"
-    cat inputs
+if [ ! -f inputs ]; then
+    echo "ERROR: CATG finished without an input file" >&2
+    exit 4
 fi
+if [ "$ALLOW_EMPTY_INPUT" -eq 0 ] && [ ! -s inputs ]; then
+    echo "ERROR: CATG finished with an empty input file" >&2
+    exit 4
+fi
+
+echo "Final inputs:"
+cat inputs || exit 1
+if [ -n "$OUT_FILE" ]; then
+    mkdir -p "$(dirname "$OUT_FILE")" || exit 1
+    cp inputs "$OUT_FILE" || exit $?
+    echo "Copied inputs to: $OUT_FILE"
+fi
+exit 0

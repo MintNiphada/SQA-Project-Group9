@@ -23,7 +23,7 @@ Usage:
   python catg_to_junit.py --project Lang --bug 1 \
       --target-method org.apache.commons.lang3.math.NumberUtils::createNumber \
       --inputs-file ../CATG/Result_Round2/Lang-1_generated_inputs.txt \
-      --out-dir ../CATG/TestCode\Lang_1
+      --out-dir ../CATG/TestCode/Lang_1
 """
 from __future__ import annotations
 
@@ -38,11 +38,15 @@ TYPE_BY_PROJECT = {
 
 
 def _parse_inputs(text: str) -> list[str]:
-    """Split the CATG generated-inputs file into one string per input."""
     raw = text.replace("\r\n", "\n").replace("\r", "\n")
-    # CATG writes one value per line; blank trailing line is normal.
-    vals = [ln.strip() for ln in raw.split("\n") if ln.strip()]
-    return vals
+    values: list[str] = []
+    for line in raw.split("\n"):
+        if line == "":
+            continue
+        value = line.replace("\x00", "").strip()
+        if "\x00" in line or value:
+            values.append(value)
+    return values
 
 
 def _java_escape(s: str) -> str:
@@ -57,6 +61,9 @@ def _java_escape(s: str) -> str:
 
 def generate(project: str, bug: int, target: str, inputs: list[str]) -> str:
     cls, meth, _kind = TYPE_BY_PROJECT[project]
+    expected_target = f"{cls}::{meth}"
+    if target != expected_target:
+        raise ValueError(f"unsupported target {target!r}; expected {expected_target!r}")
     pkg = ".".join(cls.split(".")[:-1])
     simple = cls.split(".")[-1]
 

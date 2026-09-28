@@ -14,7 +14,7 @@
 ### AI-Assisting Tools / Generative AI
 
 1. **Gemini**
-2. **Deepseek**
+2. **Claude**
 
 ## Dataset
 
@@ -27,36 +27,36 @@
 ## Project Structure
 
 ```text
-CP353201-ATCG/
+SQA-Project-Group9/
 │
-├── Botsing/
-│   ├── Code/
-│   ├── Configuration/
-│   ├── Result_Round1/
-│   ├── Result_Round2/
-│   └── Test/
+├── Botsing/                  # ผลการทดลอง Automated Test Case Generation ด้วย Botsing
+│   ├── Code/                 # Source code และสคริปต์ที่เกี่ยวข้องกับ Botsing
+│   ├── Configuration/       # Configuration และพารามิเตอร์สำหรับการรัน Botsing
+│   ├── Result_Round1/       # ผลงานและผลการทดลองสำหรับการส่งงานรอบที่ 1
+│   ├── Result_Round2/       # ผลงานและผลการทดลองสำหรับการส่งงานรอบที่ 2
+│   └── Test/                # Test cases / test suites ที่ Botsing สร้างขึ้น
 │
-├── CATG/
-│   ├── Code/
-│   ├── Configuration/
-│   ├── Result_Round1/
-│   ├── Result_Round2/
-│   └── Test/
+├── CATG/                    # ผลการทดลอง Automated Test Case Generation ด้วย CATG
+│   ├── Code/                 # Source code และสคริปต์ที่เกี่ยวข้องกับ CATG
+│   ├── Configuration/       # Configuration และพารามิเตอร์สำหรับการรัน CATG
+│   ├── Result_Round1/       # ผลงานและผลการทดลองสำหรับการส่งงานรอบที่ 1
+│   ├── Result_Round2/       # ผลงานและผลการทดลองสำหรับการส่งงานรอบที่ 2
+│   └── Test/                # Test cases / test suites ที่ CATG สร้างขึ้น
 │
-├── Deepseek/
-│   ├── Prompt/
-│   ├── Result/
-│   ├── TestCode/
+├── Claude/                  # ผลการทดลอง AI-assisted Test Generation ด้วย Claude
+│   ├── Prompt/              # Prompt ที่ใช้ส่งให้ Claude
+│   ├── Result/              # ผลลัพธ์และ Log จากการประมวลผลของ Claude
+│   └── TestCode/            # Java Unit Test ที่ Claude สร้างขึ้น
 │
-├── Gemini/
-│   ├── Prompt/
-│   ├── Result/
-│   ├── TestCode/
+├── Gemini/                  # ผลการทดลอง AI-assisted Test Generation ด้วย Gemini
+│   ├── Prompt/              # Prompt ที่ใช้ส่งให้ Gemini
+│   ├── Result/              # ผลลัพธ์และ Log จากการประมวลผลของ Gemini
+│   └── TestCode/            # Java Unit Test ที่ Gemini สร้างขึ้น
 │
-├── Comparison/
-├── Report/
-├── Presentation/
-└── README.md
+├── Comparison/              # ผลการเปรียบเทียบ Botsing, CATG, Claude และ Gemini
+├── Report/                  # เอกสารรายงานโครงงาน
+├── Presentation/            # สไลด์สำหรับการนำเสนอ
+└── README.md                # ภาพรวมโครงงาน โครงสร้างโปรเจกต์ และวิธีการใช้งาน
 ```
 
 ## รายละเอียดโฟลเดอร์
@@ -79,7 +79,7 @@ CP353201-ATCG/
 
 ## Experiment Results
 
-ผลการทดลองและการเปรียบเทียบระหว่าง Botsing, CATG, Deepseek และ Gemini อยู่ที่
+ผลการทดลองและการเปรียบเทียบระหว่าง Botsing, CATG, Claude และ Gemini อยู่ที่
 
 ```text
 Comparison/

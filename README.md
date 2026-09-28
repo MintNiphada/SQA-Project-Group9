@@ -14,7 +14,7 @@
 ### AI-Assisting Tools / Generative AI
 
 1. **Gemini**
-2. **Claude**
+2. **Deepseek**
 
 ## Dataset
 
@@ -43,7 +43,7 @@ CP353201-ATCG/
 │   ├── Result_Round2/
 │   └── Test/
 │
-├── Claude/
+├── Deepseek/
 │   ├── Prompt/
 │   ├── Result/
 │   ├── TestCode/
@@ -79,7 +79,7 @@ CP353201-ATCG/
 
 ## Experiment Results
 
-ผลการทดลองและการเปรียบเทียบระหว่าง Botsing, CATG, Claude และ Gemini อยู่ที่
+ผลการทดลองและการเปรียบเทียบระหว่าง Botsing, CATG, Deepseek และ Gemini อยู่ที่
 
 ```text
 Comparison/

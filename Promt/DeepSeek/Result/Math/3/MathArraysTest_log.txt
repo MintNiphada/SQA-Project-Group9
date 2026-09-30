@@ -1,0 +1,55 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 478 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/util/MathArraysTest.java:363: error: incompatible types: <null> cannot be converted to double
+    [javac]         MathArrays.sortInPlace(new double[]{1.0}, new double[]{null});
+    [javac]                                                                ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/util/MathArraysTest.java:472: error: reference to equals is ambiguous
+    [javac]         Assert.assertTrue(MathArrays.equals(null, null));
+    [javac]                                     ^
+    [javac]   both method equals(float[],float[]) in MathArrays and method equals(double[],double[]) in MathArrays match
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/util/MathArraysTest.java:512: error: reference to equals is ambiguous
+    [javac]         Assert.assertTrue(MathArrays.equals(null, null));
+    [javac]                                     ^
+    [javac]   both method equals(float[],float[]) in MathArrays and method equals(double[],double[]) in MathArrays match
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/util/MathArraysTest.java:647: error: DummyField is not abstract and does not override abstract method getRuntimeClass() in Field
+    [javac]     private static class DummyField implements Field<DummyFieldElement> {
+    [javac]                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/util/MathArraysTest.java:650: error: getRuntimeClass() in DummyField cannot implement getRuntimeClass() in Field
+    [javac]         public Class<? extends DummyFieldElement> getRuntimeClass() { return DummyFieldElement.class; }
+    [javac]                                                   ^
+    [javac]   return type Class<? extends DummyFieldElement> is not compatible with Class<? extends FieldElement<DummyFieldElement>>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in interface Field
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/src/test/java/org/apache/commons/math3/PerfTestUtils.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Math_3/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

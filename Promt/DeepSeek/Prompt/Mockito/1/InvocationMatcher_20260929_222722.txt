@@ -1,0 +1,370 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright (c) 2007 Mockito contributors
+ * This program is made available under the terms of the MIT License.
+ */
+
+package org.mockito.internal.invocation;
+
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import org.hamcrest.Matcher;
+import org.mockito.internal.matchers.CapturesArguments;
+import org.mockito.internal.matchers.MatcherDecorator;
+import org.mockito.internal.matchers.VarargMatcher;
+import org.mockito.internal.reporting.PrintSettings;
+import org.mockito.invocation.DescribedInvocation;
+import org.mockito.invocation.Invocation;
+import org.mockito.invocation.Location;
+
+@SuppressWarnings("unchecked")
+public class InvocationMatcher implements DescribedInvocation, CapturesArgumensFromInvocation, Serializable {
+
+    private static final long serialVersionUID = -3047126096857467610L;
+    private final Invocation invocation;
+    private final List<Matcher> matchers;
+
+    public InvocationMatcher(Invocation invocation, List<Matcher> matchers) {
+        this.invocation = invocation;
+        if (matchers.isEmpty()) {
+            this.matchers = ArgumentsProcessor.argumentsToMatchers(invocation.getArguments());
+        } else {
+            this.matchers = matchers;
+        }
+    }
+    
+    public InvocationMatcher(Invocation invocation) {
+        this(invocation, Collections.<Matcher>emptyList());
+    }
+
+    public Method getMethod() {
+        return invocation.getMethod();
+    }
+    
+    public Invocation getInvocation() {
+        return this.invocation;
+    }
+    
+    public List<Matcher> getMatchers() {
+        return this.matchers;
+    }
+    
+    public String toString() {
+        return new PrintSettings().print(matchers, invocation);
+    }
+
+    public boolean matches(Invocation actual) {
+        return invocation.getMock().equals(actual.getMock())
+                && hasSameMethod(actual)
+                && new ArgumentsComparator().argumentsMatch(this, actual);
+    }
+
+    private boolean safelyArgumentsMatch(Object[] actualArgs) {
+        try {
+            return new ArgumentsComparator().argumentsMatch(this, actualArgs);
+        } catch (Throwable t) {
+            return false;
+        }
+    }
+
+    /**
+     * similar means the same method name, same mock, unverified 
+     * and: if arguments are the same cannot be overloaded
+     */
+    public boolean hasSimilarMethod(Invocation candidate) {
+        String wantedMethodName = getMethod().getName();
+        String currentMethodName = candidate.getMethod().getName();
+        
+        final boolean methodNameEquals = wantedMethodName.equals(currentMethodName);
+        final boolean isUnverified = !candidate.isVerified();
+        final boolean mockIsTheSame = getInvocation().getMock() == candidate.getMock();
+        final boolean methodEquals = hasSameMethod(candidate);
+
+        if (!methodNameEquals || !isUnverified || !mockIsTheSame) {
+            return false;
+        }
+
+        final boolean overloadedButSameArgs = !methodEquals && safelyArgumentsMatch(candidate.getArguments());
+
+        return !overloadedButSameArgs;
+    }
+
+    public boolean hasSameMethod(Invocation candidate) {
+        //not using method.equals() for 1 good reason:
+        //sometimes java generates forwarding methods when generics are in play see JavaGenericsForwardingMethodsTest
+        Method m1 = invocation.getMethod();
+        Method m2 = candidate.getMethod();
+        
+        if (m1.getName() != null && m1.getName().equals(m2.getName())) {
+            /* Avoid unnecessary cloning */
+            Class[] params1 = m1.getParameterTypes();
+            Class[] params2 = m2.getParameterTypes();
+            if (params1.length == params2.length) {
+                for (int i = 0; i < params1.length; i++) {
+                if (params1[i] != params2[i])
+                    return false;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public Location getLocation() {
+        return invocation.getLocation();
+    }
+
+    public void captureArgumentsFrom(Invocation invocation) {
+        if (invocation.getMethod().isVarArgs()) {
+            int indexOfVararg = invocation.getRawArguments().length - 1;
+            throw new UnsupportedOperationException();
+
+        } else {
+            for (int position = 0; position < matchers.size(); position++) {
+                Matcher m = matchers.get(position);
+                if (m instanceof CapturesArguments) {
+                    ((CapturesArguments) m).captureFrom(invocation.getArgumentAt(position, Object.class));
+                }
+            }
+        }
+
+//        for (int position = 0; position < matchers.size(); position++) {
+//            Matcher m = matchers.get(position);
+//            if (m instanceof CapturesArguments && invocation.getRawArguments().length > position) {
+//                //TODO SF - this whole lot can be moved captureFrom implementation
+//                if(isVariableArgument(invocation, position) && isVarargMatcher(m)) {
+//                    Object array = invocation.getRawArguments()[position];
+//                    for (int i = 0; i < Array.getLength(array); i++) {
+//                        ((CapturesArguments) m).captureFrom(Array.get(array, i));
+//                    }
+//                    //since we've captured all varargs already, it does not make sense to process other matchers.
+//                    return;
+//                } else {
+//                    ((CapturesArguments) m).captureFrom(invocation.getRawArguments()[position]);
+//                }
+//            }
+//        }
+    }
+
+    private boolean isVarargMatcher(Matcher matcher) {
+        Matcher actualMatcher = matcher;
+        if (actualMatcher instanceof MatcherDecorator) {
+            actualMatcher = ((MatcherDecorator) actualMatcher).getActualMatcher();
+        }
+        return actualMatcher instanceof VarargMatcher;
+    }
+
+    private boolean isVariableArgument(Invocation invocation, int position) {
+        return invocation.getRawArguments().length - 1 == position
+                && invocation.getRawArguments()[position] != null
+                && invocation.getRawArguments()[position].getClass().isArray()
+                && invocation.getMethod().isVarArgs();
+    }
+
+    public static List<InvocationMatcher> createFrom(List<Invocation> invocations) {
+        LinkedList<InvocationMatcher> out = new LinkedList<InvocationMatcher>();
+
+        for (Invocation i : invocations) {
+            out.add(new InvocationMatcher(i));
+        }
+
+        return out;
+    }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.12-beta
+     [exec] 
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 3s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.12-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:117: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method otherMethod = String.class.getMethod("length");
+     [exec]                                                    ^
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:154: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method otherMethod = String.class.getMethod("length");
+     [exec]                                                    ^
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:191: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method method1 = String.class.getMethod("indexOf", String.class);
+     [exec]                                                ^
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:192: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method method2 = String.class.getMethod("indexOf", String.class, int.class);
+     [exec]                                                ^
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:207: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method method1 = String.class.getMethod("indexOf", String.class);
+     [exec]                                                ^
+     [exec] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Mockito_1/test/org/mockito/internal/invocation/InvocationMatcherTest.java:208: error: unreported exception NoSuchMethodException; must be caught or declared to be thrown
+     [exec]         Method method2 = String.class.getMethod("indexOf", String.class, int.class);
+     [exec]                                                ^
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 6 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 5s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 15 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

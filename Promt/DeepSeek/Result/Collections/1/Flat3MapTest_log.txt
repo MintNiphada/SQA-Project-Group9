@@ -1,0 +1,37 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections 3.3-SNAPSHOT --------
+
+prepare:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1/build.xml:127: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1/build.xml:270: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 46 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1/build/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1/src/test/org/apache/commons/collections/map/Flat3MapTest.java:37: error: diamond operator is not supported in -source 6
+    [javac]         Map<String, String> m = new HashMap<>();
+    [javac]                                             ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Collections_1/build.xml:270: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

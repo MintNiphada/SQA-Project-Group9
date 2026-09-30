@@ -1,0 +1,1032 @@
+=== METHOD: testInitialState ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSimpleText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyElement ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAttributes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testArrayHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVirtualWrapping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyTextInArray ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTextValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetValueAsString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetBinaryValueInvalid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClose ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOverrideCurrentName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextCharacters ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumericAccessors ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetEmbeddedObject ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRequiresCustomCodec ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetCodec ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFormatFeatures ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsClosed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTokenLocation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetXMLTextElementName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVersion ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetStaxReader ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonXml_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonXml_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonXml_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.ContentReference;
+    [javac]                                     ^
+    [javac]   symbol:   class ContentReference
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(ContentReference.rawReference("dummy"), false);
+    [javac]                                        ^
+    [javac]   symbol:   variable ContentReference
+    [javac]   location: class FromXmlParserTest
+    [javac] /private/tmp/defects4j_checkout/JacksonXml_3/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:297: error: <anonymous com.fasterxml.jackson.dataformat.xml.deser.FromXmlParserTest$1> is not abstract and does not override abstract method <T>treeToValue(TreeNode,Class<T>) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonXml_3/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

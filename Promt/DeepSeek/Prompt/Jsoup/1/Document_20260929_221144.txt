@@ -1,0 +1,189 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+package org.jsoup.nodes;
+
+import org.apache.commons.lang.Validate;
+import org.jsoup.parser.Tag;
+
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ A HTML Document.
+
+ @author Jonathan Hedley, jonathan@hedley.net */
+public class Document extends Element {
+
+    /**
+     Create a new, empty Document.
+     @param baseUri base URI of document
+     @see org.jsoup.Jsoup#parse
+     @see #createShell
+     */
+    public Document(String baseUri) {
+        super(Tag.valueOf("#root"), baseUri);
+    }
+
+    /**
+     Create a valid, empty shell of a document, suitable for adding more elements to.
+     @param baseUri baseUri of document
+     @return document with html, head, and body elements.
+     */
+    static public Document createShell(String baseUri) {
+        Validate.notNull(baseUri);
+
+        Document doc = new Document(baseUri);
+        Element html = doc.appendElement("html");
+        html.appendElement("head");
+        html.appendElement("body");
+
+        return doc;
+    }
+
+    /**
+     Accessor to the document's {@code head} element.
+     @return {@code head}
+     */
+    public Element head() {
+        return getElementsByTag("head").first();
+    }
+
+    /**
+     Accessor to the document's {@code body} element.
+     @return {@code body}
+     */
+    public Element body() {
+        return getElementsByTag("body").first();
+    }
+
+    /**
+     Get the string contents of the document's {@code title} element.
+     @return Trimed title, or empty string if none set.
+     */
+    public String title() {
+        Element titleEl = getElementsByTag("title").first();
+        return titleEl != null ? titleEl.text().trim() : "";
+    }
+
+    /**
+     Set the document's {@code title} element. Updates the existing element, or adds {@code title} to {@code head} if
+     not present
+     @param title string to set as title
+     */
+    public void title(String title) {
+        Validate.notNull(title);
+        Element titleEl = getElementsByTag("title").first();
+        if (titleEl == null) { // add to head
+            head().appendElement("title").text(title);
+        } else {
+            titleEl.text(title);
+        }
+    }
+
+    /**
+     Create a new Element, with this document's base uri. Does not make the new element a child of this document.
+     @param tagName element tag name (e.g. {@code a})
+     @return new element
+     */
+    public Element createElement(String tagName) {
+        return new Element(Tag.valueOf(tagName), this.baseUri());
+    }
+
+    /**
+     Normalise the document. This happens after the parse phase so generally does not need to be called.
+     Moves any text content that is not in the body element into the body.
+     @return this document after normalisation
+     */
+    public Document normalise() {
+        if (select("html").isEmpty())
+            appendElement("html");
+        if (head() == null)
+            select("html").first().prependElement("head");
+        if (body() == null)
+            select("html").first().appendElement("body");
+
+        // pull text nodes out of root, html, and head els, and push into body. non-text nodes are already taken care
+        // of. do in inverse order to maintain text order.
+        normalise(head());
+        normalise(select("html").first());
+        normalise(this);        
+
+        return this;
+    }
+
+    // does not recurse.
+    private void normalise(Element element) {
+        List<Node> toMove = new ArrayList<Node>();
+        for (Node node: element.childNodes) {
+            if (node instanceof TextNode) {
+                TextNode tn = (TextNode) node;
+                if (!tn.isBlank())
+                    toMove.add(tn);
+            }
+        }
+
+        for (Node node: toMove) {
+            element.removeChild(node);
+            body().appendChild(new TextNode(" ", ""));
+            body().appendChild(node);
+        }
+    }
+
+    @Override
+    public String outerHtml() {
+        return super.html(); // no outer wrapper tag
+    }
+
+    /**
+     Set the text of the {@code body} of this document. Any existing nodes within the body will be cleared.
+     @param text unencoded text
+     @return this document
+     */
+    @Override
+    public Element text(String text) {
+        body().text(text); // overridden to not nuke doc structure
+        return this;
+    }
+
+    @Override
+    public String nodeName() {
+        return "#document";
+    }
+}
+
+
+
+Previous Generated Code Failure Log:
+TEST FAILURE:
+Running ant (compile.tests)................................................ OK
+Wrong format for single test! at /Users/inzi/defects4j/framework/core/Project.pm line 576.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

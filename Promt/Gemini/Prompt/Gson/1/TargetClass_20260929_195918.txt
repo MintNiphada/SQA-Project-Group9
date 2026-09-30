@@ -1,0 +1,298 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright (C) 2008 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.gson;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.GenericArrayType;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
+import java.lang.reflect.WildcardType;
+
+/**
+ * A static factory class used to construct the "TypeInfo" objects.
+ *
+ * @author Inderjeet Singh
+ * @author Joel Leitch
+ */
+final class TypeInfoFactory {
+
+  private TypeInfoFactory() {
+    // Not instantiable since it provides factory methods only.
+  }
+
+  public static TypeInfoArray getTypeInfoForArray(Type type) {
+    Preconditions.checkArgument(TypeUtils.isArray(type));
+    return new TypeInfoArray(type);
+  }
+
+  /**
+   * Evaluates the "actual" type for the field.  If the field is a "TypeVariable" or has a
+   * "TypeVariable" in a parameterized type then it evaluates the real type.
+   *
+   * @param f the actual field object to retrieve the type from
+   * @param typeDefiningF the type that contains the field {@code f}
+   * @return the type information for the field
+   */
+  public static TypeInfo getTypeInfoForField(Field f, Type typeDefiningF) {
+    Class<?> classDefiningF = TypeUtils.toRawClass(typeDefiningF);
+    Type type = f.getGenericType();
+    Type actualType = getActualType(type, typeDefiningF, classDefiningF);
+    return new TypeInfo(actualType);
+  }
+
+  private static Type getActualType(
+      Type typeToEvaluate, Type parentType, Class<?> rawParentClass) {
+    if (typeToEvaluate instanceof Class<?>) {
+      return typeToEvaluate;
+    } else if (typeToEvaluate instanceof ParameterizedType) {
+      ParameterizedType castedType = (ParameterizedType) typeToEvaluate;
+      Type owner = castedType.getOwnerType();
+      Type[] actualTypeParameters =
+          extractRealTypes(castedType.getActualTypeArguments(), parentType, rawParentClass);
+      Type rawType = castedType.getRawType();
+      return new ParameterizedTypeImpl(rawType, actualTypeParameters, owner);
+    } else if (typeToEvaluate instanceof GenericArrayType) {
+      GenericArrayType castedType = (GenericArrayType) typeToEvaluate;
+      Type componentType = castedType.getGenericComponentType();
+      Type actualType = getActualType(componentType, parentType, rawParentClass);
+      if (componentType.equals(actualType)) {
+        return castedType;
+      }
+      return actualType instanceof Class<?> ?
+          TypeUtils.wrapWithArray(TypeUtils.toRawClass(actualType))
+          : new GenericArrayTypeImpl(actualType);
+    } else if (typeToEvaluate instanceof TypeVariable<?>) {
+      if (parentType instanceof ParameterizedType) {
+        // The class definition has the actual types used for the type variables.
+        // Find the matching actual type for the Type Variable used for the field.
+        // For example, class Foo<A> { A a; }
+        // new Foo<Integer>(); defines the actual type of A to be Integer.
+        // So, to find the type of the field a, we will have to look at the class'
+        // actual type arguments.
+        TypeVariable<?> fieldTypeVariable = (TypeVariable<?>) typeToEvaluate;
+        TypeVariable<?>[] classTypeVariables = rawParentClass.getTypeParameters();
+        ParameterizedType objParameterizedType = (ParameterizedType) parentType;
+        int indexOfActualTypeArgument = getIndex(classTypeVariables, fieldTypeVariable);
+        Type[] actualTypeArguments = objParameterizedType.getActualTypeArguments();
+        return actualTypeArguments[indexOfActualTypeArgument];
+
+
+      }
+
+      throw new UnsupportedOperationException("Expecting parameterized type, got " + parentType
+          + ".\n Are you missing the use of TypeToken idiom?\n See "
+          + "http://sites.google.com/site/gson/gson-user-guide#TOC-Serializing-and-Deserializing-Gener");
+    } else if (typeToEvaluate instanceof WildcardType) {
+      WildcardType castedType = (WildcardType) typeToEvaluate;
+      return getActualType(castedType.getUpperBounds()[0], parentType, rawParentClass);
+    } else {
+      throw new IllegalArgumentException("Type \'" + typeToEvaluate + "\' is not a Class, "
+          + "ParameterizedType, GenericArrayType or TypeVariable. Can't extract type.");
+    }
+  }
+
+
+      // Evaluate type on this type
+
+
+
+
+  private static Type[] extractRealTypes(
+      Type[] actualTypeArguments, Type parentType, Class<?> rawParentClass) {
+    Preconditions.checkNotNull(actualTypeArguments);
+
+    Type[] retTypes = new Type[actualTypeArguments.length];
+    for (int i = 0; i < actualTypeArguments.length; ++i) {
+      retTypes[i] = getActualType(actualTypeArguments[i], parentType, rawParentClass);
+    }
+    return retTypes;
+  }
+
+  private static int getIndex(TypeVariable<?>[] types, TypeVariable<?> type) {
+    for (int i = 0; i < types.length; ++i) {
+      if (type.equals(types[i])) {
+        return i;
+      }
+    }
+    throw new IllegalStateException(
+        "How can the type variable not be present in the class declaration!");
+  }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+gson-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+gson-from-maven.compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:17: error: class TypeInfoFactoryTest is public, should be declared in a file named TypeInfoFactoryTest.java
+    [javac] public class TypeInfoFactoryTest {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TypeInfoFactoryTest.java:33: error: duplicate class: com.google.gson.TypeInfoFactoryTest
+    [javac] public class TypeInfoFactoryTest extends TestCase {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:75: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]     assertEquals(new Double("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:76: warning: [deprecation] Float(String) in Float has been deprecated
+    [javac]     assertEquals(new Float("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:85: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:86: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:92: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:93: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:99: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:100: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:106: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:113: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:114: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:120: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:121: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:127: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:135: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:141: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:148: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:155: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:156: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:162: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:169: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/MapTest.java:253: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     assertEquals(new Long(123L), map.get("test"));
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/ParameterizedTypesTest.java:124: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]             new MyParameterizedTypeInstanceCreator<Integer>(new Integer(0)))
+    [javac]                                                             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:156: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]     Number expected = new Integer(json);
+    [javac]                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:161: warning: [deprecation] Long(String) in Long has been deprecated
+    [javac]     expected = new Long(json);
+    [javac]                ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:168: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     assertEquals("122.08112002", gson.toJson(new Double(122.08112002)));
+    [javac]                                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:155: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NaN));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:160: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NEGATIVE_INFINITY));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:165: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.POSITIVE_INFINITY));
+    [javac]                        ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/TypeVariableTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 2 errors
+    [javac] 34 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

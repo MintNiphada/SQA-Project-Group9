@@ -1,0 +1,177 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+gson-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+gson-from-maven.compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:14: error: class TypeInfoFactoryTest is public, should be declared in a file named TypeInfoFactoryTest.java
+    [javac] public class TypeInfoFactoryTest {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TypeInfoFactoryTest.java:33: error: duplicate class: com.google.gson.TypeInfoFactoryTest
+    [javac] public class TypeInfoFactoryTest extends TestCase {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:75: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]     assertEquals(new Double("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:76: warning: [deprecation] Float(String) in Float has been deprecated
+    [javac]     assertEquals(new Float("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:85: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:86: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:92: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:93: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:99: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:100: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:106: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:113: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:114: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:120: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:121: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:127: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:135: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:141: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:148: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:155: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:156: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:162: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:169: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:46: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]     Assert.assertTrue(!constructor.isAccessible());
+    [javac]                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:56: error: cannot find symbol
+    [javac]     Assert.assertEquals(int[].class, info1.getType());
+    [javac]                                           ^
+    [javac]   symbol:   method getType()
+    [javac]   location: variable info1 of type TypeInfoArray
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:58: error: cannot find symbol
+    [javac]     Type genericArrayType = new TypeToken<List<String>[]>() {}.getType();
+    [javac]                                 ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:61: error: cannot find symbol
+    [javac]     Assert.assertEquals(genericArrayType, info2.getType());
+    [javac]                                                ^
+    [javac]   symbol:   method getType()
+    [javac]   location: variable info2 of type TypeInfoArray
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:86: error: cannot find symbol
+    [javac]     Type parameterizedType = new TypeToken<GenericClass<Integer, String>>() {}.getType();
+    [javac]                                  ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:99: error: cannot find symbol
+    [javac]     Type parameterizedType = new TypeToken<GenericClass<Integer, String>>() {}.getType();
+    [javac]                                  ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:121: error: cannot find symbol
+    [javac]     Type parameterizedType = new TypeToken<GenericClass<Integer, String>>() {}.getType();
+    [javac]                                  ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:151: error: cannot find symbol
+    [javac]     Type parameterizedType = new TypeToken<NestedGenericClass<Double>>() {}.getType();
+    [javac]                                  ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:163: error: cannot find symbol
+    [javac]     Type genericArrayType = new TypeToken<List<String>[]>() {}.getType();
+    [javac]                                 ^
+    [javac]   symbol:   class TypeToken
+    [javac]   location: class TypeInfoFactoryTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/TargetClassTest.java:165: error: cannot find symbol
+    [javac]     Assert.assertEquals(genericArrayType, info.getType());
+    [javac]                                               ^
+    [javac]   symbol:   method getType()
+    [javac]   location: variable info of type TypeInfoArray
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/MapTest.java:253: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     assertEquals(new Long(123L), map.get("test"));
+    [javac]                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/ParameterizedTypesTest.java:124: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]             new MyParameterizedTypeInstanceCreator<Integer>(new Integer(0)))
+    [javac]                                                             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:156: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]     Number expected = new Integer(json);
+    [javac]                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:161: warning: [deprecation] Long(String) in Long has been deprecated
+    [javac]     expected = new Long(json);
+    [javac]                ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:168: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     assertEquals("122.08112002", gson.toJson(new Double(122.08112002)));
+    [javac]                                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:155: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NaN));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:160: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NEGATIVE_INFINITY));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:165: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.POSITIVE_INFINITY));
+    [javac]                        ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/src/test/java/com/google/gson/functional/TypeVariableTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 11 errors
+    [javac] 35 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Gson_1/gson/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,344 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright 2006 The Closure Compiler Authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.google.javascript.jscomp;
+
+import com.google.common.base.Preconditions;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+
+/**
+ * Tries to chain assignments together.
+ *
+ * @author nicksantos@google.com (Nick Santos)
+ * @author acleung@google.com (Alan Leung)
+ *
+ */
+class ExploitAssigns extends AbstractPeepholeOptimization {
+
+  @Override
+  Node optimizeSubtree(Node subtree) {
+    for (Node child = subtree.getFirstChild(); child != null;) {
+      Node next = child.getNext();
+      if (NodeUtil.isExprAssign(child)) {
+        collapseAssign(child.getFirstChild(), child, subtree);
+      }
+      child = next;
+    }
+    return subtree;
+  }
+
+  /**
+   * Try to collapse the given assign into subsequent expressions.
+   */
+  private void collapseAssign(Node assign, Node expr,
+      Node exprParent) {
+    Node leftValue = assign.getFirstChild();
+    Node rightValue = leftValue.getNext();
+    if (isCollapsibleValue(leftValue, true) &&
+        collapseAssignEqualTo(expr, exprParent, leftValue)) {
+      reportCodeChange();
+    } else if (isCollapsibleValue(rightValue, false) &&
+        collapseAssignEqualTo(expr, exprParent, rightValue)) {
+      reportCodeChange();
+    } else if (rightValue.isAssign()) {
+      // Recursively deal with nested assigns.
+      collapseAssign(rightValue, expr, exprParent);
+    }
+  }
+
+  /**
+   * Determines whether we know enough about the given value to be able
+   * to collapse it into subsequent expressions.
+   *
+   * For example, we can collapse booleans and variable names:
+   * <code>
+   * x = 3; y = x; // y = x = 3;
+   * a = true; b = true; // b = a = true;
+   * <code>
+   * But we won't try to collapse complex expressions.
+   *
+   * @param value The value node.
+   * @param isLValue Whether it's on the left-hand side of an expr.
+   */
+  private static boolean isCollapsibleValue(Node value, boolean isLValue) {
+    switch (value.getType()) {
+      case Token.GETPROP:
+        // Do not collapse GETPROPs on arbitrary objects, because
+        // they may be implemented setter functions, and oftentimes
+        // setter functions fail on native objects. This is OK for "THIS"
+        // objects, because we assume that they are non-native.
+        return !isLValue || value.getFirstChild().isThis();
+
+      case Token.NAME:
+        return true;
+
+      default:
+        return NodeUtil.isImmutableValue(value);
+    }
+  }
+
+  /**
+   * Collapse the given assign expression into the expression directly
+   * following it, if possible.
+   *
+   * @param expr The expression that may be moved.
+   * @param exprParent The parent of {@code expr}.
+   * @param value The value of this expression, expressed as a node. Each
+   *     expression may have multiple values, so this function may be called
+   *     multiple times for the same expression. For example,
+   *     <code>
+   *     a = true;
+   *     </code>
+   *     is equal to the name "a" and the boolean "true".
+   * @return Whether the expression was collapsed successfully.
+   */
+  private boolean collapseAssignEqualTo(Node expr, Node exprParent,
+      Node value) {
+    Node assign = expr.getFirstChild();
+    Node parent = exprParent;
+    Node next = expr.getNext();
+    while (next != null) {
+      switch (next.getType()) {
+        case Token.AND:
+        case Token.OR:
+        case Token.HOOK:
+        case Token.IF:
+        case Token.RETURN:
+        case Token.EXPR_RESULT:
+          // Dive down the left side
+          parent = next;
+          next = next.getFirstChild();
+          break;
+
+        case Token.VAR:
+          if (next.getFirstChild().hasChildren()) {
+            parent = next.getFirstChild();
+            next = parent.getFirstChild();
+            break;
+          }
+          return false;
+
+        case Token.GETPROP:
+        case Token.NAME:
+          if (next.isQualifiedName()) {
+            String nextName = next.getQualifiedName();
+            if (value.isQualifiedName() &&
+                nextName.equals(value.getQualifiedName())) {
+              // If the previous expression evaluates to value of a
+              // qualified name, and that qualified name is used again
+              // shortly, then we can exploit the assign here.
+
+              // Verify the assignment doesn't change its own value.
+              if (!isSafeReplacement(next, assign)) {
+                return false;
+              }
+
+              exprParent.removeChild(expr);
+              expr.removeChild(assign);
+              parent.replaceChild(next, assign);
+              return true;
+            }
+          }
+          return false;
+
+        case Token.ASSIGN:
+          // Assigns are really tricky. In lots of cases, we want to inline
+          // into the right side of the assign. But the left side of the
+          // assign is evaluated first, and it may have convoluted logic:
+          //   a = null;
+          //   (a = b).c = null;
+          // We don't want to exploit the first assign. Similarly:
+          //   a.b = null;
+          //   a.b.c = null;
+          // We don't want to exploit the first assign either.
+          //
+          // To protect against this, we simply only inline when the left side
+          // is guaranteed to evaluate to the same L-value no matter what.
+          Node leftSide = next.getFirstChild();
+          if (leftSide.isName() ||
+              leftSide.isGetProp() &&
+              leftSide.getFirstChild().isThis()) {
+            // Dive down the right side of the assign.
+            parent = next;
+            next = leftSide.getNext();
+            break;
+          } else {
+            return false;
+          }
+
+        default:
+          if (NodeUtil.isImmutableValue(next)
+              && next.isEquivalentTo(value)) {
+            // If the r-value of the expr assign is an immutable value,
+            // and the value is used again shortly, then we can exploit
+            // the assign here.
+            exprParent.removeChild(expr);
+            expr.removeChild(assign);
+            parent.replaceChild(next, assign);
+            return true;
+          }
+          // Return without inlining a thing
+          return false;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Checks name referenced in node to determine if it might have
+   * changed.
+   * @return Whether the replacement can be made.
+   */
+  private boolean isSafeReplacement(Node node, Node replacement) {
+    // No checks are needed for simple names.
+    if (node.isName()) {
+      return true;
+    }
+    Preconditions.checkArgument(node.isGetProp());
+
+      node = node.getFirstChild();
+    if (node.isName()
+        && isNameAssignedTo(node.getString(), replacement)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
+   * @return Whether name is assigned in the expression rooted at node.
+   */
+
+  private boolean isNameAssignedTo(String name, Node node) {
+    for (Node c = node.getFirstChild(); c != null; c = c.getNext()) {
+      if (isNameAssignedTo(name, c)) {
+        return true;
+      }
+    }
+
+    if (node.isName()) {
+      Node parent = node.getParent();
+      if (parent.isAssign() && parent.getFirstChild() == node) {
+        if (name.equals(node.getString())) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+}
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build.xml:259: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build.xml:265: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build.xml:333: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build.xml:339: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 236 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/test/com/google/javascript/jscomp/TargetClassTest.java:9: error: class ExploitAssignsTest is public, should be declared in a file named ExploitAssignsTest.java
+    [javac] public class ExploitAssignsTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/test/com/google/javascript/jscomp/IntegrationTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_124/build.xml:339: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

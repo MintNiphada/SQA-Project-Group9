@@ -1,0 +1,41 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/maven-build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 92 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/src/test/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriterTest.java:24: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/src/test/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriterTest.java:61: error: SimplePropDef is not abstract and does not override abstract method withName(String) in BeanPropertyDefinition
+    [javac]     public static class SimplePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/src/test/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriterTest.java:92: error: method does not override or implement a method from a supertype
+    [javac]         @Override public AnnotatedMember getNonConstructorMutator() { return null; }
+    [javac]         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/src/test/java/com/fasterxml/jackson/databind/ser/BeanPropertyWriterTest.java:110: error: cannot find symbol
+    [javac]         _provider = (DefaultSerializerProvider) _mapper.getSerializerProviderInstance();
+    [javac]                                                        ^
+    [javac]   symbol:   method getSerializerProviderInstance()
+    [javac]   location: variable _mapper of type ObjectMapper
+    [javac] 3 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_1/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

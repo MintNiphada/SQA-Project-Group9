@@ -1,0 +1,154 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.commons.cli;
+
+/**
+ * Contains useful helper methods for classes within this package.
+ *
+ * @author John Keyes (john at integralsource.com)
+ */
+class Util {
+
+    /**
+     * <p>Remove the hyphens from the begining of <code>str</code> and
+     * return the new String.</p>
+     *
+     * @param str The string from which the hyphens should be removed.
+     *
+     * @return the new String.
+     */
+    static String stripLeadingHyphens(String str)
+    {
+        if (str.startsWith("--"))
+        {
+            return str.substring(2, str.length());
+        }
+        else if (str.startsWith("-"))
+        {
+            return str.substring(1, str.length());
+        }
+
+        return str;
+    }
+
+    /**
+     * Remove the leading and trailing quotes from <code>str</code>.
+     * E.g. if str is '"one two"', then 'one two' is returned.
+     *
+     * @param str The string from which the leading and trailing quotes
+     * should be removed.
+     *
+     * @return The string without the leading and trailing quotes.
+     */
+    static String stripLeadingAndTrailingQuotes(String str)
+    {
+        if (str.startsWith("\"")) {
+            str = str.substring(1, str.length());
+        }
+        if (str.endsWith("\"")) {
+            str = str.substring(0, str.length()-1);
+        }
+        return str;
+    }
+}
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+junit-present:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/target/lib/junit-3.8.1.jar
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/build.xml:46: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/TargetClassTest.java:9: error: class UtilTest is public, should be declared in a file named UtilTest.java
+    [javac] public class UtilTest {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/UtilTest.java:24: error: duplicate class: org.apache.commons.cli.UtilTest
+    [javac] public class UtilTest extends TestCase {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/OptionBuilderTest.java:44: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/OptionBuilderTest.java:62: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:52: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]            assertEquals("number flag n", new Double(4.5), line.getOptionObject("n"));
+    [javac]                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:63: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]            assertEquals("number flag n", new Double(4.5), line.getOptionObject('n'));
+    [javac]                                          ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/src/test/org/apache/commons/cli/OptionsTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 2 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_5/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

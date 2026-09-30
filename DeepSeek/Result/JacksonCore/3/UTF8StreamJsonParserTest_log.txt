@@ -1,0 +1,2294 @@
+=== METHOD: testGetSetCodec ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 65 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReleaseBuffered ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetInputSource ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenTrue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenFalse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenNumberInt ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenNumberFloat ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenEmptyArray ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenEmptyObject ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenArrayWithValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTokenObjectWithFields ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextOnNumber ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextOnString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetValueAsString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextCharactersOnFieldName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextLengthOnString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetTextOffset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextFieldNameMatch ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextFieldNameNoMatch ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextTextValueString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextIntValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextIntValueDefault ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextLongValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextBooleanValueTrue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextBooleanValueFalse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetBinaryValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadBinaryValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidToken ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMismatchedArrayEnd ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMismatchedObjectEnd ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMissingColon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZero ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZeroAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonNumericNumbersNaNAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonNumericNumbersInfinityAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonNumericNumbersNaNNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCommentsAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCommentsNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testYamlCommentAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testYamlCommentNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSingleQuotesAllowedString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSingleQuotesNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnquotedFieldNameAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnquotedFieldNameNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUTF8InString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLocation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumberWithExponent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNegativeNumber ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLargeNumberInt ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSkipChildren ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidCharInName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEOFInString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLongFieldName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEscapedCharsInName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLotsOfWhitespace ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloseReleasesBuffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonAsciiFieldName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRootValueWhitespaceSeparation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNegativeInfinityAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPositiveInfinityAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/JacksonCore_3/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:52: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$1> is not abstract and does not override abstract method getJsonFactory() in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {}; // dummy
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:225: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$2> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_3/src/test/java/com/fasterxml/jackson/core/json/UTF8StreamJsonParserTest.java:244: error: <anonymous com.fasterxml.jackson.core.json.UTF8StreamJsonParserTest$3> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString str = new SerializableString() {
+    [javac]                                                           ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_3/maven-build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

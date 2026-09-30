@@ -1,0 +1,173 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:14: error: package org.mockito does not exist
+    [javac] import org.mockito.Mock;
+    [javac]                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:15: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.*;
+    [javac]                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:16: error: package org.mockito does not exist
+    [javac] import org.mockito.MockitoAnnotations;
+    [javac]                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:25: error: cannot find symbol
+    [javac]     @Mock
+    [javac]      ^
+    [javac]   symbol:   class Mock
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:27: error: cannot find symbol
+    [javac]     @Mock
+    [javac]      ^
+    [javac]   symbol:   class Mock
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:29: error: cannot find symbol
+    [javac]     @Mock
+    [javac]      ^
+    [javac]   symbol:   class Mock
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:39: error: cannot find symbol
+    [javac]         MockitoAnnotations.initMocks(this);
+    [javac]         ^
+    [javac]   symbol:   variable MockitoAnnotations
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:40: error: cannot find symbol
+    [javac]         when(ioContext.getSourceReference()).thenReturn(com.fasterxml.jackson.core.JsonLocation.NA);
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:53: error: cannot find symbol
+    [javac]         ObjectCodec newCodec = mock(ObjectCodec.class);
+    [javac]                                ^
+    [javac]   symbol:   method mock(Class<ObjectCodec>)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:139: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:145: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.VALUE_EMBEDDED_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:160: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.VALUE_STRING;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:167: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.FIELD_NAME;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:171: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:177: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.VALUE_STRING;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:181: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:197: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.VALUE_STRING;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:202: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.FIELD_NAME;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:207: error: cannot find symbol
+    [javac]         when(xmlStreamReader.convertToString()).thenReturn("converted");
+    [javac]                             ^
+    [javac]   symbol:   method convertToString()
+    [javac]   location: variable xmlStreamReader of type XMLStreamReader
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:208: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:211: error: _currToken has protected access in ParserMinimalBase
+    [javac]         assertEquals(JsonToken.VALUE_STRING, parser._currToken);
+    [javac]                                                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:215: error: cannot find symbol
+    [javac]         when(xmlStreamReader.convertToString()).thenReturn(null);
+    [javac]                             ^
+    [javac]   symbol:   method convertToString()
+    [javac]   location: variable xmlStreamReader of type XMLStreamReader
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:216: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:221: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.VALUE_NUMBER_INT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:270: error: cannot find symbol
+    [javac]         when(ioContext.isResourceManaged()).thenReturn(false);
+    [javac]         ^
+    [javac]   symbol:   method when(boolean)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:277: error: cannot find symbol
+    [javac]         when(ioContext.isResourceManaged()).thenReturn(true);
+    [javac]         ^
+    [javac]   symbol:   method when(boolean)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:284: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.FIELD_NAME;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:292: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:299: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:301: error: cannot find symbol
+    [javac]         when(parser._parsingContext.getParent()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(XmlReadContext)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:356: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:362: error: _currToken has protected access in ParserMinimalBase
+    [javac]         assertEquals(JsonToken.START_OBJECT, parser._currToken);
+    [javac]                                                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:371: error: cannot find symbol
+    [javac]         when(xmlStreamReader.getLocalName()).thenReturn("field");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class FromXmlParserTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:372: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:382: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:396: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:405: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = null;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:412: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_OBJECT;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:415: error: _currToken has protected access in ParserMinimalBase
+    [javac]         assertEquals(JsonToken.START_ARRAY, parser._currToken);
+    [javac]                                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:419: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.START_ARRAY;
+    [javac]               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/FromXmlParserTest.java:423: error: _currToken has protected access in ParserMinimalBase
+    [javac]         parser._currToken = JsonToken.FIELD_NAME;
+    [javac]               ^
+    [javac] 41 errors
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonXml_1/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

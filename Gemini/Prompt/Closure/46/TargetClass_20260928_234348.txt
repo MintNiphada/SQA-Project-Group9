@@ -1,0 +1,416 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Rhino code, released
+ * May 6, 1999.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1997-1999
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Bob Jervis
+ *   Google Inc.
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * the GNU General Public License Version 2 or later (the "GPL"), in which
+ * case the provisions of the GPL are applicable instead of those above. If
+ * you wish to allow use of your version of this file only under the terms of
+ * the GPL and not to allow others to use your version of this file under the
+ * MPL, indicate your decision by deleting the provisions above and replacing
+ * them with the notice and other provisions required by the GPL. If you do
+ * not delete the provisions above, a recipient may use your version of this
+ * file under either the MPL or the GPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+package com.google.javascript.rhino.jstype;
+
+import com.google.common.collect.Maps;
+import com.google.javascript.rhino.ErrorReporter;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.jstype.RecordTypeBuilder.RecordProperty;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
+
+/**
+ * A record (structural) type.
+ *
+ * Subtyping: The subtyping of a record type is defined via structural
+ * comparison of a record type's properties. For example, a record
+ * type of the form { a : TYPE_1 } is a supertype of a record type
+ * of the form { b : TYPE_2, a : TYPE_1 } because B can be assigned to
+ * A and matches all constraints. Similarly, a defined type can be assigned
+ * to a record type so long as that defined type matches all property
+ * constraints of the record type. A record type of the form { a : A, b : B }
+ * can be assigned to a record of type { a : A }.
+ *
+ */
+class RecordType extends PrototypeObjectType {
+  private static final long serialVersionUID = 1L;
+
+  private final SortedMap<String, JSType> properties = Maps.newTreeMap();
+  private boolean isFrozen = false;
+
+  /**
+   * Creates a record type.
+   *
+   * @param registry The type registry under which this type lives.
+   * @param properties A map of all the properties of this record type.
+   * @throws IllegalStateException if the {@code RecordProperty} associated
+   *         with a property is null.
+   */
+  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {
+    super(registry, null, null);
+    setPrettyPrint(true);
+
+    for (String property : properties.keySet()) {
+      RecordProperty prop = properties.get(property);
+      if (prop == null) {
+        throw new IllegalStateException(
+            "RecordProperty associated with a property should not be null!");
+      }
+      defineDeclaredProperty(property, prop.getType(), prop.getPropertyNode());
+    }
+
+    // Freeze the record type.
+    isFrozen = true;
+  }
+
+  @Override
+  public boolean isEquivalentTo(JSType other) {
+    if (!other.isRecordType()) {
+      return false;
+    }
+
+    // Compare properties.
+    RecordType otherRecord = other.toMaybeRecordType();
+    if (otherRecord == this) {
+      return true;
+    }
+
+    Set<String> keySet = properties.keySet();
+    Map<String, JSType> otherProps = otherRecord.properties;
+    if (!otherProps.keySet().equals(keySet)) {
+      return false;
+    }
+    for (String key : keySet) {
+      if (!otherProps.get(key).isEquivalentTo(properties.get(key))) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  @Override
+  public ObjectType getImplicitPrototype() {
+    return registry.getNativeObjectType(JSTypeNative.OBJECT_TYPE);
+  }
+
+  @Override
+  boolean defineProperty(String propertyName, JSType type,
+      boolean inferred, Node propertyNode) {
+    if (isFrozen) {
+      return false;
+    }
+
+    if (!inferred) {
+      properties.put(propertyName, type);
+    }
+
+    return super.defineProperty(propertyName, type, inferred,
+        propertyNode);
+  }
+
+  @Override
+  public JSType getLeastSupertype(JSType that) {
+    if (!that.isRecordType()) {
+      return super.getLeastSupertype(that);
+    }
+    RecordTypeBuilder builder = new RecordTypeBuilder(registry);
+    for (String property : properties.keySet()) {
+      if (that.toMaybeRecordType().hasProperty(property) &&
+          that.toMaybeRecordType().getPropertyType(property).isEquivalentTo(
+              getPropertyType(property))) {
+        builder.addProperty(property, getPropertyType(property),
+            getPropertyNode(property));
+      }
+    }
+    return builder.build();
+  }
+  JSType getGreatestSubtypeHelper(JSType that) {
+    if (that.isRecordType()) {
+      RecordType thatRecord = that.toMaybeRecordType();
+      RecordTypeBuilder builder = new RecordTypeBuilder(registry);
+
+      // The greatest subtype consists of those *unique* properties of both
+      // record types. If any property conflicts, then the NO_TYPE type
+      // is returned.
+      for (String property : properties.keySet()) {
+        if (thatRecord.hasProperty(property) &&
+            !thatRecord.getPropertyType(property).isEquivalentTo(
+                getPropertyType(property))) {
+          return registry.getNativeObjectType(JSTypeNative.NO_TYPE);
+        }
+
+        builder.addProperty(property, getPropertyType(property),
+            getPropertyNode(property));
+      }
+
+      for (String property : thatRecord.properties.keySet()) {
+        if (!hasProperty(property)) {
+          builder.addProperty(property, thatRecord.getPropertyType(property),
+              thatRecord.getPropertyNode(property));
+        }
+      }
+
+      return builder.build();
+    }
+
+    JSType greatestSubtype = registry.getNativeType(
+        JSTypeNative.NO_OBJECT_TYPE);
+    JSType thatRestrictedToObj =
+        registry.getNativeType(JSTypeNative.OBJECT_TYPE)
+        .getGreatestSubtype(that);
+    if (!thatRestrictedToObj.isEmptyType()) {
+      // In this branch, the other type is some object type. We find
+      // the greatest subtype with the following algorithm:
+      // 1) For each property "x" of this record type, take the union
+      //    of all classes with a property "x" with a compatible property type.
+      //    and which are a subtype of {@code that}.
+      // 2) Take the intersection of all of these unions.
+      for (Map.Entry<String, JSType> entry : properties.entrySet()) {
+        String propName = entry.getKey();
+        JSType propType = entry.getValue();
+        UnionTypeBuilder builder = new UnionTypeBuilder(registry);
+        for (ObjectType alt :
+                 registry.getEachReferenceTypeWithProperty(propName)) {
+          JSType altPropType = alt.getPropertyType(propName);
+          if (altPropType != null && !alt.isEquivalentTo(this) &&
+              alt.isSubtype(that) &&
+              (propType.isUnknownType() || altPropType.isUnknownType() ||
+                  altPropType.isEquivalentTo(propType))) {
+            builder.addAlternate(alt);
+          }
+        }
+        greatestSubtype = greatestSubtype.getLeastSupertype(builder.build());
+      }
+    }
+    return greatestSubtype;
+  }
+
+  @Override
+  RecordType toMaybeRecordType() {
+    return this;
+  }
+
+  @Override
+  public boolean isSubtype(JSType that) {
+    if (JSType.isSubtypeHelper(this, that)) {
+      return true;
+    }
+
+    // Top of the record types is the empty record, or OBJECT_TYPE.
+    if (registry.getNativeObjectType(
+            JSTypeNative.OBJECT_TYPE).isSubtype(that)) {
+      return true;
+    }
+
+    // A type is a subtype of a record type if it itself is a record
+    // type and it has at least the same members as the parent record type
+    // with the same types.
+    if (!that.isRecordType()) {
+      return false;
+    }
+
+    return RecordType.isSubtype(this, that.toMaybeRecordType());
+  }
+
+  /** Determines if typeA is a subtype of typeB */
+  static boolean isSubtype(ObjectType typeA, RecordType typeB) {
+    // typeA is a subtype of record type typeB iff:
+    // 1) typeA has all the properties declared in typeB.
+    // 2) And for each property of typeB,
+    //    2a) if the property of typeA is declared, it must be equal
+    //        to the type of the property of typeB,
+    //    2b) otherwise, it must be a subtype of the property of typeB.
+    //
+    // To figure out why this is true, consider the following pseudo-code:
+    // /** @type {{a: (Object,null)}} */ var x;
+    // /** @type {{a: !Object}} */ var y;
+    // var z = {a: {}};
+    // x.a = null;
+    //
+    // y cannot be assigned to x, because line 4 would violate y's declared
+    // properties. But z can be assigned to x. Even though z and y are the
+    // same type, the properties of z are inferred--and so an assignment
+    // to the property of z would not violate any restrictions on it.
+    for (String property : typeB.properties.keySet()) {
+      if (!typeA.hasProperty(property)) {
+        return false;
+      }
+
+      JSType propA = typeA.getPropertyType(property);
+      JSType propB = typeB.getPropertyType(property);
+      if (!propA.isUnknownType() && !propB.isUnknownType()) {
+        if (typeA.isPropertyTypeDeclared(property)) {
+          if (!propA.isEquivalentTo(propB)) {
+            return false;
+          }
+        } else {
+          if (!propA.isSubtype(propB)) {
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
+  }
+
+  @Override
+  JSType resolveInternal(ErrorReporter t, StaticScope<JSType> scope) {
+    for (Map.Entry<String, JSType> entry : properties.entrySet()) {
+      JSType type = entry.getValue();
+      JSType resolvedType = type.resolve(t, scope);
+      if (type != resolvedType) {
+        properties.put(entry.getKey(), resolvedType);
+      }
+    }
+    return super.resolveInternal(t, scope);
+  }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build/test
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 394 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/src/com/google/javascript/jscomp/CompilerOptions.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/src/com/google/javascript/jscomp/ant/CompileTask.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 4 warnings
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 221 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/test/com/google/javascript/rhino/jstype/TargetClassTest.java:15: error: class RecordTypeTest is public, should be declared in a file named RecordTypeTest.java
+    [javac] public class RecordTypeTest {
+    [javac]        ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_46/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

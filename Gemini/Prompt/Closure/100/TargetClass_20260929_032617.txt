@@ -1,0 +1,240 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright 2007 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.javascript.jscomp;
+
+import com.google.javascript.jscomp.CheckLevel;
+import com.google.javascript.jscomp.NodeTraversal.Callback;
+import com.google.javascript.rhino.JSDocInfo;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+
+/**
+ * Checks for certain uses of the {@code this} keyword that are considered
+ * unsafe because they are likely to reference the global {@code this} object
+ * unintentionally.
+ *
+ * <p>A use of {@code this} is considered unsafe if it's on the left side of an
+ * assignment or a property access, and not inside one of the following:
+ * <ol>
+ * <li>a prototype method
+ * <li>a function annotated with {@code @constructor}
+ * <li>a function annotated with {@code @this}.
+ * <li>a function where there's no logical place to put a
+ *     {@code this} annotation.
+ * </ol>
+ *
+ * <p>Note that this check does not track assignments of {@code this} to
+ * variables or objects. The code
+ * <pre>
+ * function evil() {
+ *   var a = this;
+ *   a.useful = undefined;
+ * }
+ * </pre>
+ * will not get flagged, even though it is semantically equivalent to
+ * <pre>
+ * function evil() {
+ *   this.useful = undefined;
+ * }
+ * </pre>
+ * which would get flagged.
+ *
+*
+*
+ */
+final class CheckGlobalThis implements Callback {
+
+  static final DiagnosticType GLOBAL_THIS = DiagnosticType.warning(
+      "JSC_USED_GLOBAL_THIS",
+      "dangerous use of the global 'this' object");
+
+  private final AbstractCompiler compiler;
+  private final CheckLevel level;
+  
+  /**
+   * If {@code assignLhsChild != null}, then the node being traversed is
+   * a descendant of the first child of an ASSIGN node. assignLhsChild's
+   * parent is this ASSIGN node.
+   */
+  private Node assignLhsChild = null;
+
+  CheckGlobalThis(AbstractCompiler compiler, CheckLevel level) {
+    this.compiler = compiler;
+    this.level = level;
+  }
+
+  /**
+   * Since this pass reports errors only when a global {@code this} keyword
+   * is encountered, there is no reason to traverse non global contexts.
+   */
+  public boolean shouldTraverse(NodeTraversal t, Node n, Node parent) {
+
+    if (n.getType() == Token.FUNCTION) {
+      // Don't traverse functions that are constructors or have the @this
+      // annotation.
+      JSDocInfo jsDoc = getFunctionJsDocInfo(n);
+      if (jsDoc != null && (jsDoc.isConstructor() || jsDoc.hasThisType())) {
+        return false;
+      }
+
+      // Don't traverse functions unless they would normally
+      // be able to have a @this annotation associated with them. e.g.,
+      // var a = function() { }; // or
+      // function a() {} // or
+      // a.x = function() {};
+    }
+
+    if (parent != null && parent.getType() == Token.ASSIGN) {
+      Node lhs = parent.getFirstChild();
+      Node rhs = lhs.getNext();
+      
+      if (n == lhs) {
+        // Always traverse the left side of the assignment. To handle
+        // nested assignments properly (e.g., (a = this).property = c;),
+        // assignLhsChild should not be overridden.
+        if (assignLhsChild == null) {
+          assignLhsChild = lhs;
+        }
+      } else {
+        // Only traverse the right side if it's not an assignment to a prototype
+        // property or subproperty.
+        if (lhs.getType() == Token.GETPROP) {
+          if (lhs.getLastChild().getString().equals("prototype")) {
+            return false;
+          }
+          String leftName = lhs.getQualifiedName();
+          if (leftName != null && leftName.contains(".prototype.")) {
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
+  }
+
+  public void visit(NodeTraversal t, Node n, Node parent) {
+    if (n.getType() == Token.THIS && shouldReportThis(n, parent)) {
+      compiler.report(t.makeError(n, level, GLOBAL_THIS));
+    }
+    if (n == assignLhsChild) {
+      assignLhsChild = null;
+    }
+  }
+
+  private boolean shouldReportThis(Node n, Node parent) {
+    if (assignLhsChild != null) {
+      // Always report a THIS on the left side of an assign.
+      return true;
+    }
+
+    // Also report a THIS with a property access.
+    return false;
+  }
+
+  /**
+   * Gets a function's JSDoc information, if it has any. Checks for a few
+   * patterns (ellipses show where JSDoc would be):
+   * <pre>
+   * ... function() {}
+   * ... x = function() {};
+   * var ... x = function() {};
+   * ... var x = function() {};
+   * </pre>
+   */
+  private JSDocInfo getFunctionJsDocInfo(Node n) {
+    JSDocInfo jsDoc = n.getJSDocInfo();
+    Node parent = n.getParent();
+    if (jsDoc == null) {
+      int parentType = parent.getType();
+      if (parentType == Token.NAME || parentType == Token.ASSIGN) {
+        jsDoc = parent.getJSDocInfo();
+        if (jsDoc == null && parentType == Token.NAME) {
+          Node gramps = parent.getParent();
+          if (gramps.getType() == Token.VAR) {
+            jsDoc = gramps.getJSDocInfo();
+          }
+        }
+      }
+    }
+    return jsDoc;
+  }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build/test
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 175 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/test/com/google/javascript/jscomp/TargetClassTest.java:11: error: class CheckGlobalThisTest is public, should be declared in a file named CheckGlobalThisTest.java
+    [javac] public class CheckGlobalThisTest {
+    [javac]        ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_100/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

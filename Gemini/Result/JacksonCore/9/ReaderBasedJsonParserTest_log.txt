@@ -1,0 +1,45 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 71 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:158: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:495: warning: [deprecation] _reportBase64EOF() in ParserMinimalBase has been deprecated
+    [javac]             p._reportBase64EOF();
+    [javac]              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:502: warning: [deprecation] _reportInvalidBase64(Base64Variant,char,int,String) in ParserMinimalBase has been deprecated
+    [javac]             p._reportInvalidBase64(Base64Variants.MIME, ' ', 1, "test msg");
+    [javac]              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:510: warning: [deprecation] _reportInvalidBase64(Base64Variant,char,int,String) in ParserMinimalBase has been deprecated
+    [javac]             p._reportInvalidBase64(Base64Variants.MIME, '=', 0, null);
+    [javac]              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:517: warning: [deprecation] _reportInvalidBase64(Base64Variant,char,int,String) in ParserMinimalBase has been deprecated
+    [javac]             p._reportInvalidBase64(Base64Variants.MIME, '\u0007', 1, null);
+    [javac]              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/src/test/java/com/fasterxml/jackson/core/base/ParserMinimalBaseTest.java:524: warning: [deprecation] _reportInvalidBase64(Base64Variant,char,int,String) in ParserMinimalBase has been deprecated
+    [javac]             p._reportInvalidBase64(Base64Variants.MIME, '?', 1, null);
+    [javac]              ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonCore_9/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

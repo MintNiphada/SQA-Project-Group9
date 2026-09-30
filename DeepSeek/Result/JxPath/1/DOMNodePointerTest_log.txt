@@ -1,0 +1,110 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/1.2.3/xerces-1.2.3.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/xerces-1.2.3.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.2/servletapi-2.2.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/servletapi-2.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8/junit-3.8.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/junit-3.8.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/ant/ant-optional/1.5.1/ant-optional-1.5.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/ant-optional-1.5.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.4/commons-beanutils-1.4.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/commons-beanutils-1.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/commons-logging-1.0.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-collections/commons-collections/2.0/commons-collections-2.0.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/commons-collections-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/ant/ant/1.5/ant-1.5.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/ant-1.5.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/ant/ant-optional/1.5/ant-optional-1.5.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/lib/ant-optional-1.5.jar
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/build.xml:110: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:107: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertFalse(DOMNodePointer.testNode(textPointer.getImmediateNode(), testOnText));
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:114: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertFalse(DOMNodePointer.testNode(textPointer.getImmediateNode(), nodeTest));
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:117: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertTrue(DOMNodePointer.testNode(textPointer.getImmediateNode(), textTest));
+    [javac]                                                                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:118: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertTrue(DOMNodePointer.testNode(cdataPointer.getImmediateNode(), textTest));
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:122: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertTrue(DOMNodePointer.testNode(commentPointer.getImmediateNode(), commentTest));
+    [javac]                                                                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:126: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertTrue(DOMNodePointer.testNode(piPointer.getImmediateNode(), piTest));
+    [javac]                                                                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:133: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertTrue(DOMNodePointer.testNode(piPointer.getImmediateNode(), piTest));
+    [javac]                                                                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:135: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertFalse(DOMNodePointer.testNode(piPointer.getImmediateNode(), wrongTarget));
+    [javac]                                                                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:216: error: reference to getNamespaceURI is ambiguous
+    [javac]         assertNull(rootPointer.getNamespaceURI(null));
+    [javac]                               ^
+    [javac]   both method getNamespaceURI(String) in DOMNodePointer and method getNamespaceURI(Node) in DOMNodePointer match
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:285: error: cannot find symbol
+    [javac]         assertNull(textPointer.getImmediateNode().getParentNode());
+    [javac]                                                  ^
+    [javac]   symbol:   method getParentNode()
+    [javac]   location: class Object
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:346: error: cannot find symbol
+    [javac]         assertNull(elementPointer.getImmediateNode().getParentNode());
+    [javac]                                                     ^
+    [javac]   symbol:   method getParentNode()
+    [javac]   location: class Object
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:402: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertEquals("ns", DOMNodePointer.getPrefix(elementPointer.getImmediateNode()));
+    [javac]                                                                                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:409: error: incompatible types: Object cannot be converted to Node
+    [javac]         assertEquals("child", DOMNodePointer.getLocalName(elementPointer.getImmediateNode()));
+    [javac]                                                                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:416: error: no suitable method found for getNamespaceURI(Object)
+    [javac]         assertEquals("http://example.com/ns", DOMNodePointer.getNamespaceURI(elementPointer.getImmediateNode()));
+    [javac]                                                             ^
+    [javac]     method DOMNodePointer.getNamespaceURI(String) is not applicable
+    [javac]       (argument mismatch; Object cannot be converted to String)
+    [javac]     method DOMNodePointer.getNamespaceURI(Node) is not applicable
+    [javac]       (argument mismatch; Object cannot be converted to Node)
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/src/test/org/apache/commons/jxpath/ri/model/dom/DOMNodePointerTest.java:428: error: cannot find symbol
+    [javac]         assertEquals("some textcdata content", elementPointer.getValue().replaceAll("\\s+", ""));
+    [javac]                                                                         ^
+    [javac]   symbol:   method replaceAll(String,String)
+    [javac]   location: class Object
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 15 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JxPath_1/build.xml:110: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

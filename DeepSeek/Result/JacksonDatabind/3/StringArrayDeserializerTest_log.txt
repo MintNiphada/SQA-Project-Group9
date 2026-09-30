@@ -1,0 +1,316 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/maven-build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/maven-build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 278 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:4: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.*;
+    [javac]                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:11: error: package org.mockito does not exist
+    [javac] import org.mockito.ArgumentMatchers;
+    [javac]                   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:147: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:148: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:122: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:36: error: cannot find symbol
+    [javac]         JsonDeserializer<String> custom = mock(JsonDeserializer.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:140: error: cannot find symbol
+    [javac]         JsonParser jp = mock(JsonParser.class);
+    [javac]                         ^
+    [javac]   symbol:   method mock(Class<JsonParser>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:141: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:142: error: cannot find symbol
+    [javac]         TypeDeserializer typeDeser = mock(TypeDeserializer.class);
+    [javac]                                      ^
+    [javac]   symbol:   method mock(Class<TypeDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:146: error: cannot find symbol
+    [javac]         verify(typeDeser).deserializeTypedFromArray(jp, ctxt);
+    [javac]         ^
+    [javac]   symbol:   method verify(TypeDeserializer)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:154: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:155: error: cannot find symbol
+    [javac]         BeanProperty property = mock(BeanProperty.class);
+    [javac]                                 ^
+    [javac]   symbol:   method mock(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:156: error: cannot find symbol
+    [javac]         JavaType stringType = TypeFactory.defaultInstance().constructType(String.class);
+    [javac]                               ^
+    [javac]   symbol:   variable TypeFactory
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:157: error: cannot find symbol
+    [javac]         when(ctxt.constructType(String.class)).thenReturn(stringType);
+    [javac]         ^
+    [javac]   symbol:   method when(JavaType)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:160: error: cannot find symbol
+    [javac]         when(ctxt.findContextualValueDeserializer(eq(stringType), eq(property)))
+    [javac]                                                   ^
+    [javac]   symbol:   method eq(JavaType)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:160: error: cannot find symbol
+    [javac]         when(ctxt.findContextualValueDeserializer(eq(stringType), eq(property)))
+    [javac]                                                                   ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:170: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:171: error: cannot find symbol
+    [javac]         BeanProperty property = mock(BeanProperty.class);
+    [javac]                                 ^
+    [javac]   symbol:   method mock(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:172: error: cannot find symbol
+    [javac]         JavaType stringType = TypeFactory.defaultInstance().constructType(String.class);
+    [javac]                               ^
+    [javac]   symbol:   variable TypeFactory
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:173: error: cannot find symbol
+    [javac]         when(ctxt.constructType(String.class)).thenReturn(stringType);
+    [javac]         ^
+    [javac]   symbol:   method when(JavaType)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:174: error: cannot find symbol
+    [javac]         JsonDeserializer<String> custom = mock(JsonDeserializer.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:175: error: cannot find symbol
+    [javac]         when(ctxt.findContextualValueDeserializer(eq(stringType), eq(property)))
+    [javac]                                                   ^
+    [javac]   symbol:   method eq(JavaType)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:175: error: cannot find symbol
+    [javac]         when(ctxt.findContextualValueDeserializer(eq(stringType), eq(property)))
+    [javac]                                                                   ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:186: error: cannot find symbol
+    [javac]         JsonDeserializer<String> origDeser = mock(JsonDeserializer.class);
+    [javac]                                              ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:189: error: cannot find symbol
+    [javac]         StringArrayDeserializer spy = spy(original);
+    [javac]                                       ^
+    [javac]   symbol:   method spy(StringArrayDeserializer)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:190: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                    ^
+    [javac]   symbol:   method any(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:190: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                                                       ^
+    [javac]   symbol:   method any(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:190: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                                                                                ^
+    [javac]   symbol:   method any(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:190: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]         ^
+    [javac]   symbol:   method doReturn(<null>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:191: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:192: error: cannot find symbol
+    [javac]         BeanProperty property = mock(BeanProperty.class);
+    [javac]                                 ^
+    [javac]   symbol:   method mock(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:193: error: cannot find symbol
+    [javac]         JsonDeserializer<String> newDeser = mock(JsonDeserializer.class);
+    [javac]                                             ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:194: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(origDeser), eq(property))).thenReturn(newDeser);
+    [javac]                                                    ^
+    [javac]   symbol:   method same(JsonDeserializer<String>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:194: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(origDeser), eq(property))).thenReturn(newDeser);
+    [javac]                                                                     ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:203: error: cannot find symbol
+    [javac]         JsonDeserializer<String> origDeser = mock(JsonDeserializer.class);
+    [javac]                                              ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:205: error: cannot find symbol
+    [javac]         StringArrayDeserializer spy = spy(original);
+    [javac]                                       ^
+    [javac]   symbol:   method spy(StringArrayDeserializer)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:206: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                    ^
+    [javac]   symbol:   method any(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:206: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                                                       ^
+    [javac]   symbol:   method any(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:206: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]                                                                                                                                ^
+    [javac]   symbol:   method any(Class<JsonDeserializer>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:206: error: cannot find symbol
+    [javac]         doReturn(null).when(spy).findConvertingContentDeserializer(any(DeserializationContext.class), any(BeanProperty.class), any(JsonDeserializer.class));
+    [javac]         ^
+    [javac]   symbol:   method doReturn(<null>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:207: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:208: error: cannot find symbol
+    [javac]         BeanProperty property = mock(BeanProperty.class);
+    [javac]                                 ^
+    [javac]   symbol:   method mock(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:209: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(origDeser), eq(property))).thenReturn(origDeser);
+    [javac]                                                    ^
+    [javac]   symbol:   method same(JsonDeserializer<String>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:209: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(origDeser), eq(property))).thenReturn(origDeser);
+    [javac]                                                                     ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:219: error: cannot find symbol
+    [javac]         StringArrayDeserializer spy = spy(original);
+    [javac]                                       ^
+    [javac]   symbol:   method spy(StringArrayDeserializer)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:220: error: cannot find symbol
+    [javac]         DeserializationContext ctxt = mock(DeserializationContext.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:221: error: cannot find symbol
+    [javac]         BeanProperty property = mock(BeanProperty.class);
+    [javac]                                 ^
+    [javac]   symbol:   method mock(Class<BeanProperty>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:224: error: cannot find symbol
+    [javac]         doReturn(converterDeser).when(spy).findConvertingContentDeserializer(eq(ctxt), eq(property), isNull());
+    [javac]                                                                              ^
+    [javac]   symbol:   method eq(DeserializationContext)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:224: error: cannot find symbol
+    [javac]         doReturn(converterDeser).when(spy).findConvertingContentDeserializer(eq(ctxt), eq(property), isNull());
+    [javac]                                                                                        ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:224: error: cannot find symbol
+    [javac]         doReturn(converterDeser).when(spy).findConvertingContentDeserializer(eq(ctxt), eq(property), isNull());
+    [javac]                                                                                                      ^
+    [javac]   symbol:   method isNull()
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:224: error: cannot find symbol
+    [javac]         doReturn(converterDeser).when(spy).findConvertingContentDeserializer(eq(ctxt), eq(property), isNull());
+    [javac]         ^
+    [javac]   symbol:   method doReturn(JsonDeserializer<CAP#1>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object from capture of ?
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:225: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(converterDeser), eq(property))).thenReturn(converterDeser);
+    [javac]                                                    ^
+    [javac]   symbol:   method same(JsonDeserializer<CAP#1>)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object from capture of ?
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:225: error: cannot find symbol
+    [javac]         when(ctxt.handleSecondaryContextualization(same(converterDeser), eq(property))).thenReturn(converterDeser);
+    [javac]                                                                          ^
+    [javac]   symbol:   method eq(BeanProperty)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:226: error: cannot find symbol
+    [javac]         JavaType stringType = TypeFactory.defaultInstance().constructType(String.class);
+    [javac]                               ^
+    [javac]   symbol:   variable TypeFactory
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/deser/std/StringArrayDeserializerTest.java:227: error: cannot find symbol
+    [javac]         when(ctxt.constructType(String.class)).thenReturn(stringType);
+    [javac]         ^
+    [javac]   symbol:   method when(JavaType)
+    [javac]   location: class StringArrayDeserializerTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/interop/TestGroovyBeans.java:74: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]         return cls.newInstance();
+    [javac]                   ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:18: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id));
+    [javac]                       ^
+    [javac] 52 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_3/maven-build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

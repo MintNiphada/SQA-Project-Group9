@@ -1,0 +1,520 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-dataformat-xml-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-dataformat-xml-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 64 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:4: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.*;
+    [javac]                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:18: error: package org.mockito does not exist
+    [javac] import org.mockito.Mock;
+    [javac]                   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:19: error: package org.mockito.runners does not exist
+    [javac] import org.mockito.runners.MockitoJUnitRunner;
+    [javac]                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:23: error: cannot find symbol
+    [javac] @RunWith(MockitoJUnitRunner.class)
+    [javac]          ^
+    [javac]   symbol: class MockitoJUnitRunner
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:26: error: cannot find symbol
+    [javac]     @Mock
+    [javac]      ^
+    [javac]   symbol:   class Mock
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:29: error: cannot find symbol
+    [javac]     @Mock
+    [javac]      ^
+    [javac]   symbol:   class Mock
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:37: error: cannot find symbol
+    [javac]         when(mockReader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:38: error: cannot find symbol
+    [javac]         when(mockReader.getLocalName()).thenReturn("root");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:39: error: cannot find symbol
+    [javac]         when(mockReader.getNamespaceURI()).thenReturn("http://ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:40: error: cannot find symbol
+    [javac]         when(mockReader.getAttributeCount()).thenReturn(0);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:41: error: cannot find symbol
+    [javac]         when(mockReader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                       ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:41: error: cannot find symbol
+    [javac]         when(mockReader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:76: error: cannot find symbol
+    [javac]         XMLStreamReader2 badReader = mock(XMLStreamReader2.class);
+    [javac]                                      ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:77: error: cannot find symbol
+    [javac]         when(badReader.getEventType()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:86: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:87: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:88: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("elem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:89: error: cannot find symbol
+    [javac]         when(reader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:90: error: cannot find symbol
+    [javac]         when(reader.getAttributeCount()).thenReturn(2);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:91: error: cannot find symbol
+    [javac]         when(reader.getAttributeLocalName(0)).thenReturn("attr1");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:92: error: cannot find symbol
+    [javac]         when(reader.getAttributeNamespace(0)).thenReturn("ns1");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:93: error: cannot find symbol
+    [javac]         when(reader.getAttributeValue(0)).thenReturn("val1");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:94: error: cannot find symbol
+    [javac]         when(reader.getAttributeLocalName(1)).thenReturn("attr2");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:95: error: cannot find symbol
+    [javac]         when(reader.getAttributeNamespace(1)).thenReturn("ns2");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:96: error: cannot find symbol
+    [javac]         when(reader.getAttributeValue(1)).thenReturn("val2");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:97: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:97: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:123: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:131: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:132: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:133: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("elem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:134: error: cannot find symbol
+    [javac]         when(reader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:135: error: cannot find symbol
+    [javac]         when(reader.getAttributeCount()).thenReturn(0);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:136: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:136: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:141: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.CHARACTERS, XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:142: error: cannot find symbol
+    [javac]         when(reader.getText()).thenReturn("some text");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:154: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:155: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:156: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("elem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:157: error: cannot find symbol
+    [javac]         when(reader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:158: error: cannot find symbol
+    [javac]         when(reader.getAttributeCount()).thenReturn(0);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:159: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:159: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:164: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:169: error: cannot find symbol
+    [javac]         when(reader.hasNext()).thenReturn(true);
+    [javac]         ^
+    [javac]   symbol:   method when(boolean)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:170: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.END_DOCUMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:180: error: cannot find symbol
+    [javac]         setField(tokenStream, "_currentWrapper", mock(ElementWrapper.class));
+    [javac]                                                  ^
+    [javac]   symbol:   method mock(Class<ElementWrapper>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:182: error: cannot find symbol
+    [javac]         when(wrapper.intermediateWrapper()).thenReturn(mock(ElementWrapper.class));
+    [javac]                                                        ^
+    [javac]   symbol:   method mock(Class<ElementWrapper>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:182: error: cannot find symbol
+    [javac]         when(wrapper.intermediateWrapper()).thenReturn(mock(ElementWrapper.class));
+    [javac]         ^
+    [javac]   symbol:   method when(ElementWrapper)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:191: error: cannot find symbol
+    [javac]         when(mockReader.getLocalName()).thenReturn("endElem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:192: error: cannot find symbol
+    [javac]         when(mockReader.getNamespaceURI()).thenReturn("endNs");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:225: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:226: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:227: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("e");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:228: error: cannot find symbol
+    [javac]         when(reader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:229: error: cannot find symbol
+    [javac]         when(reader.getAttributeCount()).thenReturn(0);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:230: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:230: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:234: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:241: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:242: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:243: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("e");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:244: error: cannot find symbol
+    [javac]         when(reader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:245: error: cannot find symbol
+    [javac]         when(reader.getAttributeCount()).thenReturn(0);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:246: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]                                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:246: error: cannot find symbol
+    [javac]         when(reader.getLocationInfo()).thenReturn(mock(XMLStreamLocation2.class));
+    [javac]         ^
+    [javac]   symbol:   method when(LocationInfo)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:250: error: cannot find symbol
+    [javac]         when(reader.next()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:296: error: cannot find symbol
+    [javac]         verify(mockReader).closeCompletely();
+    [javac]         ^
+    [javac]   symbol:   method verify(XMLStreamReader2)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:301: error: cannot find symbol
+    [javac]         doThrow(new XMLStreamException("test")).when(mockReader).closeCompletely();
+    [javac]         ^
+    [javac]   symbol:   method doThrow(XMLStreamException)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:308: error: cannot find symbol
+    [javac]         verify(mockReader).close();
+    [javac]         ^
+    [javac]   symbol:   method verify(XMLStreamReader2)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:313: error: cannot find symbol
+    [javac]         doThrow(new XMLStreamException("test")).when(mockReader).close();
+    [javac]         ^
+    [javac]   symbol:   method doThrow(XMLStreamException)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:321: error: cannot find symbol
+    [javac]         XMLStreamLocation2 loc = mock(XMLStreamLocation2.class);
+    [javac]                                  ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:322: error: cannot find symbol
+    [javac]         when(loc.getCharacterOffset()).thenReturn(100L);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:323: error: cannot find symbol
+    [javac]         when(loc.getLineNumber()).thenReturn(5);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:324: error: cannot find symbol
+    [javac]         when(loc.getColumnNumber()).thenReturn(10);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:325: error: cannot find symbol
+    [javac]         when(mockReader.getLocationInfo().getCurrentLocation()).thenReturn(loc);
+    [javac]         ^
+    [javac]   symbol:   method when(XMLStreamLocation2)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:335: error: cannot find symbol
+    [javac]         when(mockReader.getLocationInfo().getCurrentLocation()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(XMLStreamLocation2)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:344: error: cannot find symbol
+    [javac]         XMLStreamLocation2 loc = mock(XMLStreamLocation2.class);
+    [javac]                                  ^
+    [javac]   symbol:   method mock(Class<XMLStreamLocation2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:345: error: cannot find symbol
+    [javac]         when(loc.getCharacterOffset()).thenReturn(200L);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:346: error: cannot find symbol
+    [javac]         when(loc.getLineNumber()).thenReturn(7);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:347: error: cannot find symbol
+    [javac]         when(loc.getColumnNumber()).thenReturn(15);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:348: error: cannot find symbol
+    [javac]         when(mockReader.getLocationInfo().getStartLocation()).thenReturn(loc);
+    [javac]         ^
+    [javac]   symbol:   method when(XMLStreamLocation2)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:414: error: cannot find symbol
+    [javac]         when(mockReader.next()).thenReturn(XMLStreamConstants.CHARACTERS, XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:415: error: cannot find symbol
+    [javac]         when(mockReader.getText()).thenReturn("converted");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:416: error: cannot find symbol
+    [javac]         when(mockReader.getEventType()).thenReturn(XMLStreamConstants.END_ELEMENT); // after collect
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:417: error: cannot find symbol
+    [javac]         when(mockReader.getLocalName()).thenReturn("elem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:418: error: cannot find symbol
+    [javac]         when(mockReader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:433: error: cannot find symbol
+    [javac]         when(mockReader.next()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:434: error: cannot find symbol
+    [javac]         when(mockReader.getEventType()).thenReturn(XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:435: error: cannot find symbol
+    [javac]         when(mockReader.getLocalName()).thenReturn("elem");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:436: error: cannot find symbol
+    [javac]         when(mockReader.getNamespaceURI()).thenReturn("ns");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:463: error: cannot find symbol
+    [javac]         when(mockReader.getAttributeLocalName(0)).thenReturn("attr");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:464: error: cannot find symbol
+    [javac]         when(mockReader.getAttributeNamespace(0)).thenReturn("attrNs");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:465: error: cannot find symbol
+    [javac]         when(mockReader.getAttributeValue(0)).thenReturn("attrVal");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:478: error: cannot find symbol
+    [javac]         when(mockReader.next()).thenReturn(XMLStreamConstants.CHARACTERS, XMLStreamConstants.END_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:479: error: cannot find symbol
+    [javac]         when(mockReader.getText()).thenReturn("text");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:502: error: cannot find symbol
+    [javac]         XMLStreamReader2 reader = mock(XMLStreamReader2.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<XMLStreamReader2>)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:503: error: cannot find symbol
+    [javac]         when(reader.getEventType()).thenReturn(XMLStreamConstants.START_ELEMENT);
+    [javac]         ^
+    [javac]   symbol:   method when(int)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/src/test/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStreamTest.java:504: error: cannot find symbol
+    [javac]         when(reader.getLocalName()).thenReturn("e");
+    [javac]         ^
+    [javac]   symbol:   method when(String)
+    [javac]   location: class XmlTokenStreamTest
+    [javac] 100 errors
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonXml_2/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

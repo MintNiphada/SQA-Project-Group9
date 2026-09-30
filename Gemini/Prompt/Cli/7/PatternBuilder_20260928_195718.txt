@@ -1,0 +1,389 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.commons.cli2.builder;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.apache.commons.cli2.Argument;
+import org.apache.commons.cli2.Option;
+import org.apache.commons.cli2.validation.ClassValidator;
+import org.apache.commons.cli2.validation.DateValidator;
+import org.apache.commons.cli2.validation.FileValidator;
+import org.apache.commons.cli2.validation.NumberValidator;
+import org.apache.commons.cli2.validation.UrlValidator;
+import org.apache.commons.cli2.validation.Validator;
+
+/**
+ * Builds Options using a String pattern
+ */
+//TODO Document and link to the acceptable patterns
+public class PatternBuilder {
+
+    private final GroupBuilder gbuilder;
+    private final DefaultOptionBuilder obuilder;
+    private final ArgumentBuilder abuilder;
+
+    /**
+     * Creates a new PatternBuilder
+     */
+    public PatternBuilder() {
+        this(
+            new GroupBuilder(),
+            new DefaultOptionBuilder(),
+            new ArgumentBuilder());
+    }
+
+    /**
+     * Creates a new PatternBuilder
+     * @param gbuilder the GroupBuilder to use
+     * @param obuilder the DefaultOptionBuilder to use
+     * @param abuilder the ArgumentBuilder to use
+     */
+    public PatternBuilder(
+        final GroupBuilder gbuilder,
+        final DefaultOptionBuilder obuilder,
+        final ArgumentBuilder abuilder) {
+        this.gbuilder = gbuilder;
+        this.obuilder = obuilder;
+        this.abuilder = abuilder;
+    }
+
+    private final Set options = new HashSet();
+
+    /**
+     * Creates a new Option instance.
+     * @return a new Option instance
+     */
+    public Option create() {
+        final Option option;
+
+        if (options.size() == 1) {
+            option = (Option)options.iterator().next();
+        }
+        else {
+            gbuilder.reset();
+            for (final Iterator i = options.iterator(); i.hasNext();) {
+                gbuilder.withOption((Option)i.next());
+            }
+            option = gbuilder.create();
+        }
+
+        reset();
+
+        return option;
+    }
+
+    /**
+     * Resets this builder
+     */
+    public PatternBuilder reset() {
+        options.clear();
+        return this;
+    }
+
+    private void createOption(
+        final char type,
+        final boolean required,
+        final char opt) {
+        final Argument argument;
+        if (type != ' ') {
+            abuilder.reset();
+            abuilder.withValidator(validator(type));
+            if (required) {
+                abuilder.withMinimum(1);
+            }
+            if (type != '*') {
+                abuilder.withMaximum(1);
+            }
+            argument = abuilder.create();
+        }
+        else {
+            argument = null;
+        }
+
+        obuilder.reset();
+        obuilder.withArgument(argument);
+        obuilder.withShortName(String.valueOf(opt));
+        obuilder.withRequired(required);
+
+        options.add(obuilder.create());
+    }
+
+    /**
+     * Builds an Option using a pattern string.
+     * @param pattern the pattern to build from
+     */
+    public void withPattern(final String pattern) {
+        int sz = pattern.length();
+
+        char opt = ' ';
+        char ch = ' ';
+        char type = ' ';
+        boolean required = false;
+
+        for (int i = 0; i < sz; i++) {
+            ch = pattern.charAt(i);
+
+            switch (ch) {
+                case '!' :
+                    required = true;
+                    break;
+                case '@' :
+                case ':' :
+                case '%' :
+                case '+' :
+                case '#' :
+                case '<' :
+                case '>' :
+                case '*' :
+                case '/' :
+                    type = ch;
+                    break;
+                default :
+                    if (opt != ' ') {
+                        createOption(type, required, opt);
+                        required = false;
+                        type = ' ';
+                    }
+
+                    opt = ch;
+            }
+        }
+
+        if (opt != ' ') {
+            createOption(type, required, opt);
+        }
+    }
+
+    private static Validator validator(final char c) {
+        switch (c) {
+            case '@' :
+                final ClassValidator classv = new ClassValidator();
+                classv.setInstance(true);
+                return classv;
+            case '+' :
+                final ClassValidator instancev = new ClassValidator();
+                return instancev;
+                //case ':':// no validator needed for a string
+            case '%' :
+                return NumberValidator.getNumberInstance();
+            case '#' :
+                return DateValidator.getDateInstance();
+            case '<' :
+                final FileValidator existingv = new FileValidator();
+                existingv.setExisting(true);
+                existingv.setFile(true);
+                return existingv;
+            case '>' :
+            case '*' :
+                return new FileValidator();
+            case '/' :
+                return new UrlValidator();
+            default :
+                return null;
+        }
+    }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+junit-present:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 54 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:55: error: cannot find symbol
+    [javac]         assertEquals(0, group.getOptions().size());
+    [javac]                              ^
+    [javac]   symbol:   method getOptions()
+    [javac]   location: variable group of type Group
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:106: error: cannot find symbol
+    [javac]         assertNull(arg.getValidator());
+    [javac]                       ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:123: error: cannot find symbol
+    [javac]         assertNull(arg.getValidator());
+    [javac]                       ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:139: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:157: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:175: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:191: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:207: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:226: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:246: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:264: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:282: error: cannot find symbol
+    [javac]         Validator validator = arg.getValidator();
+    [javac]                                  ^
+    [javac]   symbol:   method getValidator()
+    [javac]   location: variable arg of type Argument
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:295: error: cannot find symbol
+    [javac]         Collection options = group.getOptions();
+    [javac]                                   ^
+    [javac]   symbol:   method getOptions()
+    [javac]   location: variable group of type Group
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:298: error: cannot find symbol
+    [javac]         assertTrue(group.getAnonymous().isEmpty());
+    [javac]                         ^
+    [javac]   symbol:   method getAnonymous()
+    [javac]   location: variable group of type Group
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:311: error: cannot find symbol
+    [javac]         assertEquals(0, group.getOptions().size());
+    [javac]                              ^
+    [javac]   symbol:   method getOptions()
+    [javac]   location: variable group of type Group
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/builder/PatternBuilderTest.java:324: error: cannot find symbol
+    [javac]         assertEquals(0, ((Group) second).getOptions().size());
+    [javac]                                         ^
+    [javac]   symbol:   method getOptions()
+    [javac]   location: interface Group
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                                                                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/util/HelpFormatterTest.java:413: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]                                               new Object[] { new Integer(-1) }), e.getMessage());
+    [javac]                                                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer max = new Integer(100);
+    [javac]                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:154: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer min = new Integer(100);
+    [javac]                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 16 errors
+    [javac] 9 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_7/build.xml:151: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

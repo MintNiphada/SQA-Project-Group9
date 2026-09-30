@@ -1,0 +1,195 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 299 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:10: error: package org.mockito does not exist
+    [javac] import org.mockito.Mockito;
+    [javac]                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:26: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.mock;
+    [javac]                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:26: error: static import only from classes and interfaces
+    [javac] import static org.mockito.Mockito.mock;
+    [javac] ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:27: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.verify;
+    [javac]                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:27: error: static import only from classes and interfaces
+    [javac] import static org.mockito.Mockito.verify;
+    [javac] ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:28: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.verifyNoMoreInteractions;
+    [javac]                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:28: error: static import only from classes and interfaces
+    [javac] import static org.mockito.Mockito.verifyNoMoreInteractions;
+    [javac] ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:145: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:146: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:122: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/filter/TestMapFiltering.java:72: warning: [deprecation] depositSchemaProperty(PropertyWriter,ObjectNode,SerializerProvider) in PropertyFilter has been deprecated
+    [javac]         public void depositSchemaProperty(PropertyWriter writer,
+    [javac]                     ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/interop/TestGroovyBeans.java:74: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]         return cls.newInstance();
+    [javac]                   ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:39: error: cannot find symbol
+    [javac]         serializerProvider = mapper.getSerializerProviderInstance();
+    [javac]                                    ^
+    [javac]   symbol:   method getSerializerProviderInstance()
+    [javac]   location: variable mapper of type ObjectMapper
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:49: error: cannot find symbol
+    [javac]         SerializerProvider mockProvider = mock(SerializerProvider.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<SerializerProvider>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:50: error: cannot find symbol
+    [javac]         JsonGenerator mockGenerator = mock(JsonGenerator.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<JsonGenerator>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:55: error: cannot find symbol
+    [javac]         verify(mockProvider).defaultSerializeDateKey(testDate, mockGenerator);
+    [javac]         ^
+    [javac]   symbol:   method verify(SerializerProvider)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:56: error: cannot find symbol
+    [javac]         verifyNoMoreInteractions(mockGenerator);
+    [javac]         ^
+    [javac]   symbol:   method verifyNoMoreInteractions(JsonGenerator)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:61: error: cannot find symbol
+    [javac]         SerializerProvider mockProvider = mock(SerializerProvider.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<SerializerProvider>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:62: error: cannot find symbol
+    [javac]         JsonGenerator mockGenerator = mock(JsonGenerator.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<JsonGenerator>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:66: error: cannot find symbol
+    [javac]         verify(mockGenerator).writeFieldName("myKey");
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonGenerator)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:67: error: cannot find symbol
+    [javac]         verifyNoMoreInteractions(mockProvider);
+    [javac]         ^
+    [javac]   symbol:   method verifyNoMoreInteractions(SerializerProvider)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:72: error: cannot find symbol
+    [javac]         SerializerProvider mockProvider = mock(SerializerProvider.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<SerializerProvider>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:73: error: cannot find symbol
+    [javac]         JsonGenerator mockGenerator = mock(JsonGenerator.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<JsonGenerator>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:77: error: cannot find symbol
+    [javac]         verify(mockGenerator).writeFieldName("12345");
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonGenerator)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:78: error: cannot find symbol
+    [javac]         verifyNoMoreInteractions(mockProvider);
+    [javac]         ^
+    [javac]   symbol:   method verifyNoMoreInteractions(SerializerProvider)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:83: error: cannot find symbol
+    [javac]         SerializerProvider mockProvider = mock(SerializerProvider.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<SerializerProvider>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:84: error: cannot find symbol
+    [javac]         JsonGenerator mockGenerator = mock(JsonGenerator.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<JsonGenerator>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:95: error: cannot find symbol
+    [javac]         verify(mockGenerator).writeFieldName("customObjectKey");
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonGenerator)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:96: error: cannot find symbol
+    [javac]         verifyNoMoreInteractions(mockProvider);
+    [javac]         ^
+    [javac]   symbol:   method verifyNoMoreInteractions(SerializerProvider)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:101: error: cannot find symbol
+    [javac]         SerializerProvider mockProvider = mock(SerializerProvider.class);
+    [javac]                                           ^
+    [javac]   symbol:   method mock(Class<SerializerProvider>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:102: error: cannot find symbol
+    [javac]         JsonGenerator mockGenerator = mock(JsonGenerator.class);
+    [javac]                                       ^
+    [javac]   symbol:   method mock(Class<JsonGenerator>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:144: error: cannot find symbol
+    [javac]         JsonFormatVisitorWrapper mockVisitor = mock(JsonFormatVisitorWrapper.class);
+    [javac]                                                ^
+    [javac]   symbol:   method mock(Class<JsonFormatVisitorWrapper>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:149: error: cannot find symbol
+    [javac]         verify(mockVisitor).expectStringFormat(javaType);
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonFormatVisitorWrapper)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:154: error: cannot find symbol
+    [javac]         JsonFormatVisitorWrapper mockVisitor = mock(JsonFormatVisitorWrapper.class);
+    [javac]                                                ^
+    [javac]   symbol:   method mock(Class<JsonFormatVisitorWrapper>)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/databind/ser/std/StdKeySerializerTest.java:158: error: cannot find symbol
+    [javac]         verify(mockVisitor).expectStringFormat(null);
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonFormatVisitorWrapper)
+    [javac]   location: class StdKeySerializerTest
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:19: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id));
+    [javac]                       ^
+    [javac] 30 errors
+    [javac] 9 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_9/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

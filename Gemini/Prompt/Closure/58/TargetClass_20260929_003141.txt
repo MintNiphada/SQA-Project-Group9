@@ -1,0 +1,473 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright 2008 The Closure Compiler Authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.javascript.jscomp;
+
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Sets;
+import com.google.javascript.jscomp.ControlFlowGraph.Branch;
+import com.google.javascript.jscomp.Scope.Var;
+import com.google.javascript.jscomp.graph.DiGraph.DiGraphEdge;
+import com.google.javascript.rhino.Node;
+import com.google.javascript.rhino.Token;
+
+import java.util.BitSet;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * Compute the "liveness" of all local variables. A variable is "live" at a
+ * point of a program if the value it is currently holding might be read later.
+ * Otherwise, the variable is considered "dead" if we know for sure that it will
+ * no longer be read. Dead variables are candidates for dead assignment
+ * elimination and variable name sharing. The worst case safe assumption is to
+ * assume that all variables are live. In that case, we will have no opportunity
+ * for optimizations. This is especially the case within a TRY block when an
+ * assignment is not guaranteed to take place. We bail out by assuming that
+ * all variables are live.
+ * <p>
+ * Due to the possibility of inner functions and closures, certain "local"
+ * variables can escape the function. These variables will be considered as
+ * global and they can be retrieved with {@link #getEscapedLocals()}.
+ *
+ */
+class LiveVariablesAnalysis extends
+    DataFlowAnalysis<Node, LiveVariablesAnalysis.LiveVariableLattice> {
+
+  public static final String ARGUMENT_ARRAY_ALIAS = "arguments";
+
+  private static class LiveVariableJoinOp
+      implements JoinOp<LiveVariableLattice> {
+    @Override
+    public LiveVariableLattice apply(List<LiveVariableLattice> in) {
+      LiveVariableLattice result = new LiveVariableLattice(in.get(0));
+      for (int i = 1; i < in.size(); i++) {
+        result.liveSet.or(in.get(i).liveSet);
+      }
+      return result;
+    }
+  }
+
+  /**
+   * The lattice that stores the liveness of all local variables at a given
+   * point in the program. The whole lattice is the power set of all local
+   * variables and a variable is live if it is in the set.
+   */
+  static class LiveVariableLattice implements LatticeElement {
+    private final BitSet liveSet;
+
+    /**
+     * @param numVars Number of all local variables.
+     */
+    private LiveVariableLattice(int numVars) {
+      this.liveSet = new BitSet(numVars);
+    }
+
+    private LiveVariableLattice(LiveVariableLattice other) {
+      Preconditions.checkNotNull(other);
+      this.liveSet = (BitSet) other.liveSet.clone();
+    }
+
+    @Override
+    public boolean equals(Object other) {
+      Preconditions.checkNotNull(other);
+      return (other instanceof LiveVariableLattice) &&
+          this.liveSet.equals(((LiveVariableLattice) other).liveSet);
+    }
+
+    public boolean isLive(Var v) {
+      Preconditions.checkNotNull(v);
+      return liveSet.get(v.index);
+    }
+
+    public boolean isLive(int index) {
+      return liveSet.get(index);
+    }
+
+    @Override
+    public String toString() {
+      return liveSet.toString();
+    }
+
+    @Override
+    public int hashCode() {
+      return liveSet.hashCode();
+    }
+  }
+
+  // The scope of the function that we are analyzing.
+  private final Scope jsScope;
+  private final Set<Var> escaped;
+
+  LiveVariablesAnalysis(ControlFlowGraph<Node> cfg, Scope jsScope,
+      AbstractCompiler compiler) {
+    super(cfg, new LiveVariableJoinOp());
+    this.jsScope = jsScope;
+    this.escaped = Sets.newHashSet();
+    computeEscaped(jsScope, escaped, compiler);
+  }
+
+  public Set<Var> getEscapedLocals() {
+    return escaped;
+  }
+
+  public int getVarIndex(String var) {
+    return jsScope.getVar(var).index;
+  }
+
+  @Override
+  boolean isForward() {
+    return false;
+  }
+
+  @Override
+  LiveVariableLattice createEntryLattice() {
+    return new LiveVariableLattice(jsScope.getVarCount());
+  }
+
+  @Override
+  LiveVariableLattice createInitialEstimateLattice() {
+    return new LiveVariableLattice(jsScope.getVarCount());
+  }
+
+  @Override
+  LiveVariableLattice flowThrough(Node node, LiveVariableLattice input) {
+    final BitSet gen = new BitSet(input.liveSet.size());
+    final BitSet kill = new BitSet(input.liveSet.size());
+
+    // Make kills conditional if the node can end abruptly by an exception.
+    boolean conditional = false;
+    List<DiGraphEdge<Node, Branch>> edgeList = getCfg().getOutEdges(node);
+    for (DiGraphEdge<Node, Branch> edge : edgeList) {
+      if (Branch.ON_EX.equals(edge.getValue())) {
+        conditional = true;
+      }
+    }
+    computeGenKill(node, gen, kill, conditional);
+    LiveVariableLattice result = new LiveVariableLattice(input);
+    // L_in = L_out - Kill + Gen
+    result.liveSet.andNot(kill);
+    result.liveSet.or(gen);
+    return result;
+  }
+
+  /**
+   * Computes the GEN and KILL set.
+   *
+   * @param n Root node.
+   * @param gen Local variables that are live because of the instruction at
+   *        {@code n} will be added to this set.
+   * @param kill Local variables that are killed because of the instruction at
+   *        {@code n} will be added to this set.
+   * @param conditional {@code true} if any assignments encountered are
+   *        conditionally executed. These assignments might not kill a variable.
+   */
+  private void computeGenKill(Node n, BitSet gen, BitSet kill,
+      boolean conditional) {
+
+    switch (n.getType()) {
+      case Token.SCRIPT:
+      case Token.BLOCK:
+      case Token.FUNCTION:
+        return;
+
+      case Token.WHILE:
+      case Token.DO:
+      case Token.IF:
+        computeGenKill(NodeUtil.getConditionExpression(n), gen, kill,
+            conditional);
+        return;
+
+      case Token.FOR:
+        if (!NodeUtil.isForIn(n)) {
+          computeGenKill(NodeUtil.getConditionExpression(n), gen, kill,
+              conditional);
+        } else {
+          // for(x in y) {...}
+          Node lhs = n.getFirstChild();
+          Node rhs = lhs.getNext();
+          if (NodeUtil.isVar(lhs)) {
+            // for(var x in y) {...}
+            lhs = lhs.getLastChild();
+          }
+            addToSetIfLocal(lhs, kill);
+            addToSetIfLocal(lhs, gen);
+          computeGenKill(rhs, gen, kill, conditional);
+        }
+        return;
+
+      case Token.VAR:
+        for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+          if (c.hasChildren()) {
+            computeGenKill(c.getFirstChild(), gen, kill, conditional);
+            if (!conditional) {
+              addToSetIfLocal(c, kill);
+            }
+          }
+        }
+        return;
+
+      case Token.AND:
+      case Token.OR:
+        computeGenKill(n.getFirstChild(), gen, kill, conditional);
+        // May short circuit.
+        computeGenKill(n.getLastChild(), gen, kill, true);
+        return;
+
+      case Token.HOOK:
+        computeGenKill(n.getFirstChild(), gen, kill, conditional);
+        // Assume both sides are conditional.
+        computeGenKill(n.getFirstChild().getNext(), gen, kill, true);
+        computeGenKill(n.getLastChild(), gen, kill, true);
+        return;
+
+      case Token.NAME:
+        if (isArgumentsName(n)) {
+          markAllParametersEscaped();
+        } else {
+          addToSetIfLocal(n, gen);
+        }
+        return;
+
+      default:
+        if (NodeUtil.isAssignmentOp(n) && NodeUtil.isName(n.getFirstChild())) {
+          Node lhs = n.getFirstChild();
+          if (!conditional) {
+            addToSetIfLocal(lhs, kill);
+          }
+          if (!NodeUtil.isAssign(n)) {
+            // assignments such as a += 1 reads a.
+            addToSetIfLocal(lhs, gen);
+          }
+          computeGenKill(lhs.getNext(), gen, kill, conditional);
+        } else {
+          for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+            computeGenKill(c, gen, kill, conditional);
+          }
+        }
+        return;
+    }
+  }
+
+  private void addToSetIfLocal(Node node, BitSet set) {
+    Preconditions.checkState(NodeUtil.isName(node));
+    String name = node.getString();
+    if (!jsScope.isDeclared(name, false)) {
+      return;
+    }
+    Var var = jsScope.getVar(name);
+    if (!escaped.contains(var)) {
+      set.set(var.index);
+    }
+  }
+
+  /**
+   * Give up computing liveness of formal parameter by putting all the parameter
+   * names in the escaped set.
+   */
+  void markAllParametersEscaped() {
+    Node lp = jsScope.getRootNode().getFirstChild().getNext();
+    for(Node arg = lp.getFirstChild(); arg != null; arg = arg.getNext()) {
+      escaped.add(jsScope.getVar(arg.getString()));
+    }
+  }
+
+  private boolean isArgumentsName(Node n) {
+    if (n.getType() != Token.NAME ||
+        !n.getString().equals(ARGUMENT_ARRAY_ALIAS) ||
+        jsScope.isDeclared(ARGUMENT_ARRAY_ALIAS, false)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build.xml:311: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build.xml:316: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 217 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:82: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(indexA, indexB);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class Assert
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:83: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(indexA, indexC);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class Assert
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:113: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:120: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:127: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:141: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:170: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:184: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:213: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:231: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:243: error: cannot find symbol
+    [javac]     Assert.assertNotNull(helper.lva.getResultLatticeElement());
+    [javac]                                    ^
+    [javac]   symbol:   method getResultLatticeElement()
+    [javac]   location: variable lva of type LiveVariablesAnalysis
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:255: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(lattice1, "not a lattice");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(LiveVariableLattice,String)
+    [javac]   location: class Assert
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/test/com/google/javascript/jscomp/TargetClassTest.java:299: error: incompatible types: GraphEdge<Node,Branch> cannot be converted to DiGraphEdge<Node,Branch>
+    [javac]     for (DiGraphEdge<Node, Branch> edge : helper.cfg.getEdges()) {
+    [javac]                                                              ^
+    [javac] 15 errors
+    [javac] 5 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_58/build.xml:316: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

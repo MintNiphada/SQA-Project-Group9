@@ -1,0 +1,97 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+junit-present:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/TargetClassTest.java:24: error: class WriteableCommandLineTest is public, should be declared in a file named WriteableCommandLineTest.java
+    [javac] public class WriteableCommandLineTest {
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/TargetClassTest.java:53: error: cannot find symbol
+    [javac]                 .withShortName("v")
+    [javac]                 ^
+    [javac]   symbol:   method withShortName(String)
+    [javac]   location: variable sBuilder of type SwitchBuilder
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/TargetClassTest.java:69: error: CommandLineImpl is abstract; cannot be instantiated
+    [javac]         writeableCommandLine = new CommandLineImpl(rootGroup, new ArrayList());
+    [javac]                                ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                                                                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/GroupImplTest.java:24: error: DummyCommandLine is not abstract and does not override abstract method addProperty(String,String) in WriteableCommandLine
+    [javac]     private static class DummyCommandLine implements WriteableCommandLine {
+    [javac]                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/GroupImplTest.java:227: error: DummyArgument is not abstract and does not override abstract method validate(WriteableCommandLine,Option) in Argument
+    [javac]     private static class DummyArgument extends DummyOption implements Argument {
+    [javac]                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/GroupImplTest.java:241: error: getInitialSeparator() in DummyArgument cannot implement getInitialSeparator() in Argument
+    [javac]         public String getInitialSeparator() {
+    [javac]                       ^
+    [javac]   return type String is not compatible with char
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/GroupImplTest.java:333: error: reference to canProcess is ambiguous
+    [javac]         Assert.assertFalse(group.canProcess(cl, null));
+    [javac]                                 ^
+    [javac]   both method canProcess(WriteableCommandLine,ListIterator) in OptionImpl and method canProcess(WriteableCommandLine,String) in GroupImpl match
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/util/HelpFormatterTest.java:413: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]                                               new Object[] { new Integer(-1) }), e.getMessage());
+    [javac]                                                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer max = new Integer(100);
+    [javac]                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:154: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer min = new Integer(100);
+    [javac]                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+    [javac] 9 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:151: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

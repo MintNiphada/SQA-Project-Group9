@@ -1,0 +1,527 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.apache.commons.cli;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import java.util.Date;
+
+/**
+ * This is a temporary implementation. TypeHandler will handle the
+ * pluggableness of OptionTypes and it will direct all of these types
+ * of conversion functionalities to ConvertUtils component in Commons
+ * already. BeanUtils I think.
+ */
+public class TypeHandler
+{
+    /**
+     * Returns the <code>Object</code> of type <code>obj</code>
+     * with the value of <code>str</code>.
+     *
+     * @param str the command line value
+     * @param obj the type of argument
+     * @return The instance of <code>obj</code> initialised with
+     * the value of <code>str</code>.
+     * @throws ParseException if the value creation for the given object type failed
+     */
+    public static Object createValue(final String str, final Object obj) throws ParseException
+    {
+        return createValue(str, (Class<?>) obj);
+    }
+
+    /**
+     * Returns the <code>Object</code> of type <code>clazz</code>
+     * with the value of <code>str</code>.
+     *
+     * @param str the command line value
+     * @param clazz the type of argument
+     * @return The instance of <code>clazz</code> initialised with
+     * the value of <code>str</code>.
+     * @throws ParseException if the value creation for the given class failed
+     */
+    @SuppressWarnings("unchecked") // returned value will have type T because it is fixed by clazz
+    public static <T> T createValue(final String str, final Class<T> clazz) throws ParseException
+    {
+        if (PatternOptionBuilder.STRING_VALUE == clazz)
+        {
+            return (T) str;
+        }
+        else if (PatternOptionBuilder.OBJECT_VALUE == clazz)
+        {
+            return (T) createObject(str);
+        }
+        else if (PatternOptionBuilder.NUMBER_VALUE == clazz)
+        {
+            return (T) createNumber(str);
+        }
+        else if (PatternOptionBuilder.DATE_VALUE == clazz)
+        {
+            return (T) createDate(str);
+        }
+        else if (PatternOptionBuilder.CLASS_VALUE == clazz)
+        {
+            return (T) createClass(str);
+        }
+        else if (PatternOptionBuilder.FILE_VALUE == clazz)
+        {
+            return (T) createFile(str);
+        }
+        else if (PatternOptionBuilder.EXISTING_FILE_VALUE == clazz)
+        {
+            return (T) openFile(str);
+        }
+        else if (PatternOptionBuilder.FILES_VALUE == clazz)
+        {
+            return (T) createFiles(str);
+        }
+        else if (PatternOptionBuilder.URL_VALUE == clazz)
+        {
+            return (T) createURL(str);
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+      * Create an Object from the classname and empty constructor.
+      *
+      * @param classname the argument value
+      * @return the initialised object
+      * @throws ParseException if the class could not be found or the object could not be created
+      */
+    public static Object createObject(final String classname) throws ParseException
+    {
+        Class<?> cl;
+
+        try
+        {
+            cl = Class.forName(classname);
+        }
+        catch (final ClassNotFoundException cnfe)
+        {
+            throw new ParseException("Unable to find the class: " + classname);
+        }
+        
+        try
+        {
+            return cl.newInstance();
+        }
+        catch (final Exception e)
+        {
+            throw new ParseException(e.getClass().getName() + "; Unable to create an instance of: " + classname);
+        }
+    }
+
+    /**
+     * Create a number from a String. If a . is present, it creates a
+     * Double, otherwise a Long.
+     *
+     * @param str the value
+     * @return the number represented by <code>str</code>
+     * @throws ParseException if <code>str</code> is not a number
+     */
+    public static Number createNumber(final String str) throws ParseException
+    {
+        try
+        {
+            if (str.indexOf('.') != -1)
+            {
+                return Double.valueOf(str);
+            }
+            return Long.valueOf(str);
+        }
+        catch (final NumberFormatException e)
+        {
+            throw new ParseException(e.getMessage());
+        }
+    }
+
+    /**
+     * Returns the class whose name is <code>classname</code>.
+     *
+     * @param classname the class name
+     * @return The class if it is found
+     * @throws ParseException if the class could not be found
+     */
+    public static Class<?> createClass(final String classname) throws ParseException
+    {
+        try
+        {
+            return Class.forName(classname);
+        }
+        catch (final ClassNotFoundException e)
+        {
+            throw new ParseException("Unable to find the class: " + classname);
+        }
+    }
+
+    /**
+     * Returns the date represented by <code>str</code>.
+     * <p>
+     * This method is not yet implemented and always throws an
+     * {@link UnsupportedOperationException}.
+     *
+     * @param str the date string
+     * @return The date if <code>str</code> is a valid date string,
+     * otherwise return null.
+     * @throws UnsupportedOperationException always
+     */
+    public static Date createDate(final String str)
+    {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    /**
+     * Returns the URL represented by <code>str</code>.
+     *
+     * @param str the URL string
+     * @return The URL in <code>str</code> is well-formed
+     * @throws ParseException if the URL in <code>str</code> is not well-formed
+     */
+    public static URL createURL(final String str) throws ParseException
+    {
+        try
+        {
+            return new URL(str);
+        }
+        catch (final MalformedURLException e)
+        {
+            throw new ParseException("Unable to parse the URL: " + str);
+        }
+    }
+
+    /**
+     * Returns the File represented by <code>str</code>.
+     *
+     * @param str the File location
+     * @return The file represented by <code>str</code>.
+     */
+    public static File createFile(final String str)
+    {
+        return new File(str);
+    }
+
+    /**
+     * Returns the opened FileInputStream represented by <code>str</code>.
+     *
+     * @param str the file location
+     * @return The file input stream represented by <code>str</code>.
+     * @throws ParseException if the file is not exist or not readable
+     */
+    public static FileInputStream openFile(String str) throws ParseException
+    {
+        try
+        {
+            return new FileInputStream(str);
+        }
+        catch (FileNotFoundException e)
+        {
+            throw new ParseException("Unable to find file: " + str);
+        }
+    }
+
+    /**
+     * Returns the File[] represented by <code>str</code>.
+     * <p>
+     * This method is not yet implemented and always throws an
+     * {@link UnsupportedOperationException}.
+     *
+     * @param str the paths to the files
+     * @return The File[] represented by <code>str</code>.
+     * @throws UnsupportedOperationException always
+     */
+    public static File[] createFiles(final String str)
+    {
+        // to implement/port:
+        //        return FileW.findFiles(str);
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-cli-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-cli-from-maven.compile.tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/maven-build.xml:110: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI133Test.java:26: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI13Test.java:25: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.OptionBuilder;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI13Test.java:28: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI148Test.java:24: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.OptionBuilder;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI148Test.java:26: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugCLI71Test.java:28: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugsTest.java:32: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.GnuParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugsTest.java:36: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.OptionBuilder;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugsTest.java:40: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.Parser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/bug/BugsTest.java:41: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:176: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.hasArg().create('n'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:177: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.create('m'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:294: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:307: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:320: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:333: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:346: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:359: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasOptionalArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:360: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("bar").hasOptionalArg().create('b'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:375: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").hasArg().create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:388: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:409: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:430: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("foo").create('f'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:451: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withValueSeparator().hasArgs(2).create('J'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:474: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withValueSeparator().hasOptionalArgs(2).create('D'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:494: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:495: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("help").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:508: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:509: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("help").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:522: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").hasOptionalArg().create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:523: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("help").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:537: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").hasOptionalArg().create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:538: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("help").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:552: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:553: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:578: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:579: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:604: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:605: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").hasOptionalArg().create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:630: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:631: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("verbose").hasOptionalArg().create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:656: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("version").create());
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:657: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.hasArg().create('v'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:672: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("bfile").hasArg().isRequired().create('b'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:689: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("bfile").hasArg().isRequired().create('b'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:706: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("bfile").hasArg().isRequired().create('b'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:731: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("bfile").hasArg().isRequired().create('b'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:732: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.withLongOpt("cfile").hasArg().isRequired().create('c'));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:755: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.create("a"));
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:756: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.create("b"));
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:761: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.isRequired().create("c"));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:783: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.create("a"));
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:784: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.create("b"));
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:798: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.withLongOpt("foo").create());
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:799: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         group.addOption(OptionBuilder.withLongOpt("bar").create());
+    [javac]                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:814: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.isRequired().create('v'));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:918: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.hasArgs().create("e"));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:919: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         options.addOption(OptionBuilder.hasArgs().create("f"));
+    [javac]                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:944: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.hasOptionalArgs(2).withLongOpt("hide").create());        
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:961: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.hasOptionalArg().create('e'));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:1019: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.hasArgs().withValueSeparator(',').create('k'));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:1035: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.hasOptionalArgs(2).create('i'));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:1036: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.hasOptionalArgs().create('j'));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/ParserTestCase.java:1055: warning: [deprecation] OptionBuilder in org.apache.commons.cli has been deprecated
+    [javac]         opts.addOption(OptionBuilder.isRequired().create("f"));
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/OptionTest.java:40: warning: [deprecation] addValue(String) in Option has been deprecated
+    [javac]         public boolean addValue(final String value)
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/src/test/java/org/apache/commons/cli/TypeHandlerTest.java:73: error: incompatible types: CAP#1 cannot be converted to Class<?>
+    [javac]         Class<?> result = TypeHandler.createValue("java.lang.String", PatternOptionBuilder.CLASS_VALUE);
+    [javac]                                                  ^
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object from capture of ?
+    [javac] 1 error
+    [javac] 69 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_40/maven-build.xml:110: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

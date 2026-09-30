@@ -1,0 +1,256 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.commons.cli2.option;
+
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Set;
+
+import org.apache.commons.cli2.DisplaySetting;
+import org.apache.commons.cli2.Option;
+import org.apache.commons.cli2.WriteableCommandLine;
+import org.apache.commons.cli2.resource.ResourceConstants;
+import org.apache.commons.cli2.resource.ResourceHelper;
+
+/**
+ * A base implementation of Option providing limited ground work for further
+ * Option implementations.
+ */
+public abstract class OptionImpl implements Option {
+    private final int id;
+    private final boolean required;
+
+    /**
+     * Creates an OptionImpl with the specified id
+     * @param id the unique id of this Option
+     * @param required true iff this Option must be present
+     */
+    public OptionImpl(final int id,
+                      final boolean required) {
+        this.id = id;
+        this.required = required;
+    }
+
+    public boolean canProcess(final WriteableCommandLine commandLine,
+                              final ListIterator arguments) {
+        if (arguments.hasNext()) {
+            final String argument = (String) arguments.next();
+            arguments.previous();
+
+            return canProcess(commandLine, argument);
+        } else {
+            return false;
+        }
+    }
+
+    public String toString() {
+        final StringBuffer buffer = new StringBuffer();
+        appendUsage(buffer, DisplaySetting.ALL, null);
+
+        return buffer.toString();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public boolean equals(final Object thatObj) {
+        if (thatObj instanceof OptionImpl) {
+            final OptionImpl that = (OptionImpl) thatObj;
+
+            return (getId() == that.getId()) &&
+                   equals(getPreferredName(), that.getPreferredName()) &&
+                   equals(getDescription(), that.getDescription()) &&
+                   equals(getPrefixes(), that.getPrefixes()) &&
+                   equals(getTriggers(), that.getTriggers());
+        } else {
+            return false;
+        }
+    }
+
+    private boolean equals(Object left,
+                           Object right) {
+        if ((left == null) && (right == null)) {
+            return true;
+        } else if ((left == null) || (right == null)) {
+            return false;
+        } else {
+            return left.equals(right);
+        }
+    }
+
+    public int hashCode() {
+        int hashCode = getId();
+        if (getPreferredName() != null) {
+            hashCode = (hashCode * 37) + getPreferredName().hashCode();
+        }
+
+        if (getDescription() != null) {
+            hashCode = (hashCode * 37) + getDescription().hashCode();
+        }
+
+        hashCode = (hashCode * 37) + getPrefixes().hashCode();
+        hashCode = (hashCode * 37) + getTriggers().hashCode();
+
+        return hashCode;
+    }
+
+    public Option findOption(String trigger) {
+        if (getTriggers().contains(trigger)) {
+            return this;
+        } else {
+            return null;
+        }
+    }
+
+    public boolean isRequired() {
+        return required;
+    }
+
+    public void defaults(final WriteableCommandLine commandLine) {
+        // nothing to do normally
+    }
+
+
+
+    protected void checkPrefixes(final Set prefixes) {
+        // nothing to do if empty prefix list
+        if (prefixes.isEmpty()) {
+            return;
+        }
+
+        // check preferred name
+        checkPrefix(prefixes, getPreferredName());
+
+        // check triggers
+        this.getTriggers();
+
+        for (final Iterator i = getTriggers().iterator(); i.hasNext();) {
+            checkPrefix(prefixes, (String) i.next());
+        }
+    }
+
+    private void checkPrefix(final Set prefixes,
+                             final String trigger) {
+        for (final Iterator i = prefixes.iterator(); i.hasNext();) {
+            String prefix = (String) i.next();
+
+            if (trigger.startsWith(prefix)) {
+                return;
+            }
+        }
+
+        final ResourceHelper helper = ResourceHelper.getResourceHelper();
+        final String message =
+            helper.getMessage(ResourceConstants.OPTION_TRIGGER_NEEDS_PREFIX, trigger,
+                              prefixes.toString());
+        throw new IllegalArgumentException(message);
+    }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+junit-present:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 56 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/src/test/org/apache/commons/cli2/option/OptionImplTest.java:126: error: diamond operator is not supported in -source 6
+    [javac]         List<String> args = new ArrayList<>(Arrays.asList("--arg1", "--arg2"));
+    [javac]                                           ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_16/build.xml:151: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

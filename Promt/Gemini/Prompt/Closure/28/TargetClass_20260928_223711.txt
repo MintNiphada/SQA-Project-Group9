@@ -1,0 +1,207 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/*
+ * Copyright 2008 The Closure Compiler Authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.javascript.jscomp;
+
+import com.google.javascript.rhino.Node;
+
+/**
+ * For use with CodeGenerator to determine the cost of generated code.
+ *
+ * @see CodeGenerator
+ * @see CodePrinter
+ */
+class InlineCostEstimator {
+  // For now simply assume identifiers are 2 characters.
+  private static final String ESTIMATED_IDENTIFIER = "ab";
+  static final int ESTIMATED_IDENTIFIER_COST = ESTIMATED_IDENTIFIER.length();
+
+  private InlineCostEstimator() {
+  }
+
+  /**
+   * Determines the size of the js code.
+   */
+  static int getCost(Node root) {
+    return getCost(root, Integer.MAX_VALUE);
+  }
+
+  /**
+   * Determines the estimated size of the js snippet represented by the node.
+   */
+  static int getCost(Node root, int costThreshhold) {
+    CompiledSizeEstimator estimator = new CompiledSizeEstimator(costThreshhold);
+    estimator.add(root);
+    return estimator.getCost();
+  }
+
+  /**
+   * Code consumer that estimates compiled size by assuming names are
+   * shortened and all whitespace is stripped.
+   */
+  private static class CompiledSizeEstimator extends CodeConsumer {
+    private int maxCost;
+    private int cost = 0;
+    private char last = '\0';
+    private boolean continueProcessing = true;
+
+    CompiledSizeEstimator(int costThreshhold) {
+      this.maxCost = costThreshhold;
+    }
+
+    void add(Node root) {
+      CodeGenerator cg = new CodeGenerator(this);
+      cg.add(root);
+    }
+
+    int getCost() {
+      return cost;
+    }
+
+    @Override
+    boolean continueProcessing() {
+      return continueProcessing;
+    }
+
+    @Override
+    char getLastChar() {
+      return last;
+    }
+
+    @Override
+    void append(String str){
+      last = str.charAt(str.length() - 1);
+      cost += str.length();
+      if (maxCost <= cost) {
+        continueProcessing = false;
+      }
+    }
+
+    @Override
+    void addIdentifier(String identifier) {
+      add(ESTIMATED_IDENTIFIER);
+    }
+
+    /**
+     * Constants (true, false, null) are considered basically free,
+     * because it's likely that they will get folded when we're done.
+     */
+  }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 224 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:663: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/test/com/google/javascript/jscomp/TargetClassTest.java:11: error: class InlineCostEstimatorTest is public, should be declared in a file named InlineCostEstimatorTest.java
+    [javac] public class InlineCostEstimatorTest {
+    [javac]        ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Closure_28/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

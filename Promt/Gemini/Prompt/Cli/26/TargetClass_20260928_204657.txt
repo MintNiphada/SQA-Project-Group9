@@ -1,0 +1,513 @@
+--- SYSTEM PROMPT ---
+ปYou are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, comments, or notes before or after the code.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+Original Target Code:
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.apache.commons.cli;
+
+/**
+ * OptionBuilder allows the user to create Options using descriptive methods.
+ *
+ * <p>Details on the Builder pattern can be found at
+ * <a href="http://c2.com/cgi-bin/wiki?BuilderPattern">
+ * http://c2.com/cgi-bin/wiki?BuilderPattern</a>.</p>
+ *
+ * @author John Keyes (john at integralsource.com)
+ * @version $Revision$, $Date$
+ * @since 1.0
+ */
+public final class OptionBuilder
+{
+    /** long option */
+    private static String longopt;
+
+    /** option description */
+    private static String description;
+
+    /** argument name */
+    private static String argName;
+
+    /** is required? */
+    private static boolean required;
+
+    /** the number of arguments */
+    private static int numberOfArgs = Option.UNINITIALIZED;
+
+    /** option type */
+    private static Object type;
+
+    /** option can have an optional argument value */
+    private static boolean optionalArg;
+
+    /** value separator for argument value */
+    private static char valuesep;
+
+    /** option builder instance */
+    private static OptionBuilder instance = new OptionBuilder();
+
+    /**
+     * private constructor to prevent instances being created
+     */
+    private OptionBuilder()
+    {
+        // hide the constructor
+    }
+
+    /**
+     * Resets the member variables to their default values.
+     */
+    private static void reset()
+    {
+        description = null;
+        argName = "arg";
+        longopt = null;
+        type = null;
+        required = false;
+        numberOfArgs = Option.UNINITIALIZED;
+
+
+        // PMM 9/6/02 - these were missing
+        optionalArg = false;
+        valuesep = (char) 0;
+    }
+
+    /**
+     * The next Option created will have the following long option value.
+     *
+     * @param newLongopt the long option value
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withLongOpt(String newLongopt)
+    {
+        OptionBuilder.longopt = newLongopt;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will require an argument value.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasArg()
+    {
+        OptionBuilder.numberOfArgs = 1;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will require an argument value if
+     * <code>hasArg</code> is true.
+     *
+     * @param hasArg if true then the Option has an argument value
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasArg(boolean hasArg)
+    {
+        OptionBuilder.numberOfArgs = hasArg ? 1 : Option.UNINITIALIZED;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will have the specified argument value name.
+     *
+     * @param name the name for the argument value
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withArgName(String name)
+    {
+        OptionBuilder.argName = name;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will be required.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder isRequired()
+    {
+        OptionBuilder.required = true;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created uses <code>sep</code> as a means to
+     * separate argument values.
+     *
+     * <b>Example:</b>
+     * <pre>
+     * Option opt = OptionBuilder.withValueSeparator(':')
+     *                           .create('D');
+     *
+     * CommandLine line = parser.parse(args);
+     * String propertyName = opt.getValue(0);
+     * String propertyValue = opt.getValue(1);
+     * </pre>
+     *
+     * @param sep The value separator to be used for the argument values.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withValueSeparator(char sep)
+    {
+        OptionBuilder.valuesep = sep;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created uses '<code>=</code>' as a means to
+     * separate argument values.
+     *
+     * <b>Example:</b>
+     * <pre>
+     * Option opt = OptionBuilder.withValueSeparator()
+     *                           .create('D');
+     *
+     * CommandLine line = parser.parse(args);
+     * String propertyName = opt.getValue(0);
+     * String propertyValue = opt.getValue(1);
+     * </pre>
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withValueSeparator()
+    {
+        OptionBuilder.valuesep = '=';
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will be required if <code>required</code>
+     * is true.
+     *
+     * @param newRequired if true then the Option is required
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder isRequired(boolean newRequired)
+    {
+        OptionBuilder.required = newRequired;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created can have unlimited argument values.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasArgs()
+    {
+        OptionBuilder.numberOfArgs = Option.UNLIMITED_VALUES;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created can have <code>num</code> argument values.
+     *
+     * @param num the number of args that the option can have
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasArgs(int num)
+    {
+        OptionBuilder.numberOfArgs = num;
+
+        return instance;
+    }
+
+    /**
+     * The next Option can have an optional argument.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasOptionalArg()
+    {
+        OptionBuilder.numberOfArgs = 1;
+        OptionBuilder.optionalArg = true;
+
+        return instance;
+    }
+
+    /**
+     * The next Option can have an unlimited number of optional arguments.
+     *
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasOptionalArgs()
+    {
+        OptionBuilder.numberOfArgs = Option.UNLIMITED_VALUES;
+        OptionBuilder.optionalArg = true;
+
+        return instance;
+    }
+
+    /**
+     * The next Option can have the specified number of optional arguments.
+     *
+     * @param numArgs - the maximum number of optional arguments
+     * the next Option created can have.
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder hasOptionalArgs(int numArgs)
+    {
+        OptionBuilder.numberOfArgs = numArgs;
+        OptionBuilder.optionalArg = true;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will have a value that will be an instance
+     * of <code>type</code>.
+     *
+     * @param newType the type of the Options argument value
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withType(Object newType)
+    {
+        OptionBuilder.type = newType;
+
+        return instance;
+    }
+
+    /**
+     * The next Option created will have the specified description
+     *
+     * @param newDescription a description of the Option's purpose
+     * @return the OptionBuilder instance
+     */
+    public static OptionBuilder withDescription(String newDescription)
+    {
+        OptionBuilder.description = newDescription;
+
+        return instance;
+    }
+
+    /**
+     * Create an Option using the current settings and with
+     * the specified Option <code>char</code>.
+     *
+     * @param opt the character representation of the Option
+     * @return the Option instance
+     * @throws IllegalArgumentException if <code>opt</code> is not
+     * a valid character.  See Option.
+     */
+    public static Option create(char opt) throws IllegalArgumentException
+    {
+        return create(String.valueOf(opt));
+    }
+
+    /**
+     * Create an Option using the current settings
+     *
+     * @return the Option instance
+     * @throws IllegalArgumentException if <code>longOpt</code> has not been set.
+     */
+    public static Option create() throws IllegalArgumentException
+    {
+        if (longopt == null)
+        {
+            OptionBuilder.reset();
+            throw new IllegalArgumentException("must specify longopt");
+        }
+
+        return create(null);
+    }
+
+    /**
+     * Create an Option using the current settings and with
+     * the specified Option <code>char</code>.
+     *
+     * @param opt the <code>java.lang.String</code> representation
+     * of the Option
+     * @return the Option instance
+     * @throws IllegalArgumentException if <code>opt</code> is not
+     * a valid character.  See Option.
+     */
+    public static Option create(String opt) throws IllegalArgumentException
+    {
+            // create the option
+        Option option = new Option(opt, description);
+
+            // set the option properties
+            option.setLongOpt(longopt);
+            option.setRequired(required);
+            option.setOptionalArg(optionalArg);
+            option.setArgs(numberOfArgs);
+            option.setType(type);
+            option.setValueSeparator(valuesep);
+            option.setArgName(argName);
+            // reset the OptionBuilder properties
+            OptionBuilder.reset();
+
+        // return the Option instance
+        return option;
+    }
+}
+
+
+Previous Generated Code Failure Log:
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-cli-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-cli-from-maven.compile.tests:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/maven-build.xml:107: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 25 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/TargetClassTest.java:6: error: class OptionBuilderTest is public, should be declared in a file named OptionBuilderTest.java
+    [javac] public class OptionBuilderTest
+    [javac]        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/OptionBuilderTest.java:29: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/OptionBuilderTest.java:47: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/OptionTest.java:34: warning: [deprecation] addValue(String) in Option has been deprecated
+    [javac]         public boolean addValue(String value)
+    [javac]                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:44: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("string flag a", "foo", line.getOptionObject("a"));
+    [javac]                                                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:45: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("object flag b", new Vector(), line.getOptionObject("b"));
+    [javac]                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:48: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("file flag e", new File("build.xml"), line.getOptionObject("e"));
+    [javac]                                                                ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:49: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("class flag f", Calendar.class, line.getOptionObject("f"));
+    [javac]                                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:50: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject("n"));
+    [javac]                                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:50: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject("n"));
+    [javac]                                                            ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:51: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("url flag t", new URL("http://commons.apache.org"), line.getOptionObject("t"));
+    [javac]                                                                              ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:61: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject('n'));
+    [javac]                                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:107: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("n object class", Long.class, line.getOptionObject("n").getClass());
+    [javac]                                                        ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:108: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         assertEquals("n value", new Long(1), line.getOptionObject("n"));
+    [javac]                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:108: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("n value", new Long(1), line.getOptionObject("n"));
+    [javac]                                                  ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:110: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("d object class", Double.class, line.getOptionObject("d").getClass());
+    [javac]                                                          ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:111: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("d value", new Double(2.1), line.getOptionObject("d"));
+    [javac]                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:111: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("d value", new Double(2.1), line.getOptionObject("d"));
+    [javac]                                                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:113: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("x object", line.getOptionObject("x"));
+    [javac]                                    ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:122: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("c value", Calendar.class, line.getOptionObject("c"));
+    [javac]                                                     ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:123: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("d value", line.getOptionObject("d"));
+    [javac]                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:132: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("o value", "", line.getOptionObject("o"));
+    [javac]                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:133: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("i value", line.getOptionObject("i"));
+    [javac]                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:134: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("n value", line.getOptionObject("n"));
+    [javac]                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:143: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("u value", new URL("http://commons.apache.org"), line.getOptionObject("u"));
+    [javac]                                                                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:144: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("v value", line.getOptionObject("v"));
+    [javac]                                   ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:153: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("f value", new File("test.properties"), line.getOptionObject("f"));
+    [javac]                                                                  ^
+    [javac] Note: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/src/test/org/apache/commons/cli/OptionsTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 error
+    [javac] 30 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Cli_26/maven-build.xml:107: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+Please fix the generated test code.

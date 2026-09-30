@@ -1,0 +1,107 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 299 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:145: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:146: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:122: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:69: error: no suitable constructor found for AnnotatedConstructor(Constructor<CAP#1>,AnnotationMap,AnnotationMap[])
+    [javac]             return new AnnotatedConstructor(ctor, new AnnotationMap(), paramAnns);
+    [javac]                    ^
+    [javac]     constructor AnnotatedConstructor.AnnotatedConstructor(AnnotatedClass,Constructor<?>,AnnotationMap,AnnotationMap[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AnnotatedConstructor.AnnotatedConstructor(Serialization) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object from capture of ?
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:82: error: no suitable constructor found for AnnotatedMethod(Method,AnnotationMap,AnnotationMap[])
+    [javac]             return new AnnotatedMethod(m, new AnnotationMap(), paramAnns);
+    [javac]                    ^
+    [javac]     constructor AnnotatedMethod.AnnotatedMethod(AnnotatedClass,Method,AnnotationMap,AnnotationMap[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AnnotatedMethod.AnnotatedMethod(Serialization) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:93: error: no suitable constructor found for CreatorProperty(PropertyName,JavaType,<null>,<null>,AnnotationMap,AnnotatedParameter,int,Object,boolean)
+    [javac]         return new CreatorProperty(propName, type, null, null, new AnnotationMap(), param, index, injectableValueId, true);
+    [javac]                ^
+    [javac]     constructor CreatorProperty.CreatorProperty(PropertyName,JavaType,PropertyName,TypeDeserializer,Annotations,AnnotatedParameter,int,Object,PropertyMetadata) is not applicable
+    [javac]       (argument mismatch; boolean cannot be converted to PropertyMetadata)
+    [javac]     constructor CreatorProperty.CreatorProperty(String,JavaType,PropertyName,TypeDeserializer,Annotations,AnnotatedParameter,int,Object,boolean) is not applicable
+    [javac]       (argument mismatch; PropertyName cannot be converted to String)
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:384: warning: [deprecation] addStringCreator(AnnotatedWithParams) in CreatorCollector has been deprecated
+    [javac]         coll.addStringCreator(strCtor);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:385: warning: [deprecation] addIntCreator(AnnotatedWithParams) in CreatorCollector has been deprecated
+    [javac]         coll.addIntCreator(intCtor);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:386: warning: [deprecation] addLongCreator(AnnotatedWithParams) in CreatorCollector has been deprecated
+    [javac]         coll.addLongCreator(longCtor);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:387: warning: [deprecation] addDoubleCreator(AnnotatedWithParams) in CreatorCollector has been deprecated
+    [javac]         coll.addDoubleCreator(dblCtor);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:388: warning: [deprecation] addBooleanCreator(AnnotatedWithParams) in CreatorCollector has been deprecated
+    [javac]         coll.addBooleanCreator(boolCtor);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:391: warning: [deprecation] addDelegatingCreator(AnnotatedWithParams,CreatorProperty[]) in CreatorCollector has been deprecated
+    [javac]         coll.addDelegatingCreator(delCtor, new CreatorProperty[0]);
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:395: warning: [deprecation] addPropertyCreator(AnnotatedWithParams,CreatorProperty[]) in CreatorCollector has been deprecated
+    [javac]         coll.addPropertyCreator(propCtor, new CreatorProperty[] { prop });
+    [javac]             ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/deser/impl/CreatorCollectorTest.java:397: warning: [deprecation] verifyNonDup(AnnotatedWithParams,int) in CreatorCollector has been deprecated
+    [javac]         AnnotatedWithParams old = coll.verifyNonDup(strCtor, CreatorCollector.C_STRING);
+    [javac]                                       ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/filter/TestMapFiltering.java:72: warning: [deprecation] depositSchemaProperty(PropertyWriter,ObjectNode,SerializerProvider) in PropertyFilter has been deprecated
+    [javac]         public void depositSchemaProperty(PropertyWriter writer,
+    [javac]                     ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/interop/TestGroovyBeans.java:74: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]         return cls.newInstance();
+    [javac]                   ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:19: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 17 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_8/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

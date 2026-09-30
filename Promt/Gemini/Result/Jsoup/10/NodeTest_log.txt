@@ -1,0 +1,42 @@
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/target/test-classes
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 21 source files to /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/src/test/java/org/jsoup/nodes/NodeTest.java:399: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(0, n1.hashCode());
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class Assert
+    [javac] /Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/src/test/java/org/jsoup/nodes/NodeTest.java:403: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(0, n1.hashCode());
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class Assert
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/ProjectSQA_group9/defects4j_checkout/Jsoup_10/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

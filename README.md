@@ -14,7 +14,7 @@
 ### AI-Assisting Tools / Generative AI
 
 1. **Gemini**
-2. **Claude**
+2. **Deepseek**
 
 ## Dataset
 
@@ -43,7 +43,7 @@ SQA-Project-Group9/
 │   ├── Result_Round2/       # ผลงานและผลการทดลองสำหรับการส่งงานรอบที่ 2
 │   └── Test/                # Test cases / test suites ที่ CATG สร้างขึ้น
 │
-├── Claude/                  # ผลการทดลอง AI-assisted Test Generation ด้วย Claude
+├── Deepseek/                  # ผลการทดลอง AI-assisted Test Generation ด้วย Claude
 │   ├── Prompt/              # Prompt ที่ใช้ส่งให้ Claude
 │   ├── Result/              # ผลลัพธ์และ Log จากการประมวลผลของ Claude
 │   └── TestCode/            # Java Unit Test ที่ Claude สร้างขึ้น

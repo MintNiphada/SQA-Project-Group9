@@ -1,0 +1,2049 @@
+=== METHOD: shouldInjectMocksIntoFieldsAndViaSetter ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 5s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 9s
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 24 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldInjectIntoSuperClassFields ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 6s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 8s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 24 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldInstantiateFieldIfNotInitialized ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 5s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 7s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 21 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldReturnFalseWhenNoCandidatesMatch ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 6s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 9s
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 26 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldReturnFalseWhenCandidateSetIsEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 5s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 8s
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 23 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldIgnoreStaticAndFinalFields ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 5s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 8s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 22 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldInjectByNameWhenMultipleCandidatesHaveSameType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 7s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 11s
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 30 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldThrowMockitoExceptionWhenConstructorThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 6s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 10s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 28 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldThrowMockitoExceptionWhenNoDefaultConstructorAvailable ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 6s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 7s
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 22 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: shouldHandleObjectWithNoSuperClassHierarchyBeyondObject ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_19 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] > Task :jar UP-TO-DATE
+     [exec] > Task :testng:compileJava UP-TO-DATE
+     [exec] > Task :testng:classes UP-TO-DATE
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 
+     [exec] BUILD SUCCESSFUL in 5s
+     [exec] 3 actionable tasks: 3 up-to-date
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] No Gradle daemons are running.
+
+ant.compile:
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+
+compile.tests:
+
+gradle.compile.tests:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_19/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+     [exec] Parallel execution is an incubating feature.
+     [exec] > Task :buildSrc:compileJava NO-SOURCE
+     [exec] > Task :buildSrc:compileGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processResources UP-TO-DATE
+     [exec] > Task :buildSrc:classes UP-TO-DATE
+     [exec] > Task :buildSrc:jar UP-TO-DATE
+     [exec] > Task :buildSrc:assemble UP-TO-DATE
+     [exec] > Task :buildSrc:compileTestJava NO-SOURCE
+     [exec] > Task :buildSrc:compileTestGroovy UP-TO-DATE
+     [exec] > Task :buildSrc:processTestResources NO-SOURCE
+     [exec] > Task :buildSrc:testClasses UP-TO-DATE
+     [exec] > Task :buildSrc:test UP-TO-DATE
+     [exec] > Task :buildSrc:check UP-TO-DATE
+     [exec] > Task :buildSrc:build UP-TO-DATE
+     [exec] POM relocation to an other version number is not fully supported in Gradle : xml-apis:xml-apis:2.0.2 relocated to xml-apis:xml-apis:1.0.b2.
+     [exec] 
+     [exec] > Configure project :
+     [exec] Please update your dependency to directly use the correct version 'xml-apis:xml-apis:1.0.b2'.
+     [exec] Resolution will only pick dependencies of the relocated element.  Artifacts and other metadata will be ignored.
+     [exec] Version: 2.0.10-beta
+     [exec] 
+     [exec] > Task :testng:processResources NO-SOURCE
+     [exec] > Task :extTest:compileJava NO-SOURCE
+     [exec] > Task :extTest:processResources NO-SOURCE
+     [exec] > Task :extTest:classes UP-TO-DATE
+     [exec] > Task :testng:processTestResources UP-TO-DATE
+     [exec] > Task :extTest:processTestResources UP-TO-DATE
+     [exec] > Task :compileJava UP-TO-DATE
+     [exec] > Task :processResources NO-SOURCE
+     [exec] > Task :classes UP-TO-DATE
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:13: error: class MockCandidateFilterTest is public, should be declared in a file named MockCandidateFilterTest.java
+     [exec] public class MockCandidateFilterTest {
+     [exec]        ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:52: error: cannot find symbol
+     [exec]                 return OngoingInjecter.stub;
+     [exec]                                       ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:73: error: cannot find symbol
+     [exec]                     return OngoingInjecter.stub;
+     [exec]                                           ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:80: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullMocks);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:84: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullField);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TargetClassTest.java:87: error: cannot find symbol
+     [exec]         Assert.assertSame(OngoingInjecter.stub, resultNullInstance);
+     [exec]                                          ^
+     [exec]   symbol:   variable stub
+     [exec]   location: interface OngoingInjecter
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:23: error: DummyOngoingInjecter is not abstract and does not override abstract method thenInject() in OngoingInjecter
+     [exec]     private static class DummyOngoingInjecter implements OngoingInjecter {
+     [exec]                    ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:30: error: thenInject() in DummyOngoingInjecter cannot implement thenInject() in OngoingInjecter
+     [exec]         public boolean thenInject() {
+     [exec]                        ^
+     [exec]   return type boolean is not compatible with Object
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:67: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, intMock, sbMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:88: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock1, intMock, stringMock2);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:104: error: incompatible types: List<Serializable> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(arrayListMock, stringMock);
+     [exec]                                           ^
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilterTest.java:118: error: incompatible types: List<INT#1> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList(stringMock, doubleMock);
+     [exec]                                           ^
+     [exec]   where INT#1,INT#2 are intersection types:
+     [exec]     INT#1 extends Object,Serializable,Comparable<? extends INT#2>
+     [exec]     INT#2 extends Object,Serializable,Comparable<?>
+     [exec] /private/tmp/defects4j_checkout/Mockito_19/test/org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilterTest.java:85: error: incompatible types: List<String> cannot be converted to List<Object>
+     [exec]         List<Object> mocks = Arrays.asList("mock1", "mock2");
+     [exec]                                           ^
+     [exec] 
+     [exec] > Task :compileTestJava
+     [exec] 
+     [exec] > Task :compileTestJava FAILED
+     [exec] Note: Some input files use or override a deprecated API.
+     [exec] Note: Recompile with -Xlint:deprecation for details.
+     [exec] Note: Some input files use unchecked or unsafe operations.
+     [exec] Note: Recompile with -Xlint:unchecked for details.
+     [exec] 13 errors
+     [exec] 
+     [exec] Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+     [exec] Use '--warning-mode all' to show the individual deprecation warnings.
+     [exec] See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+     [exec] 4 actionable tasks: 1 executed, 3 up-to-date
+     [exec] 
+     [exec] FAILURE: Build failed with an exception.
+     [exec] 
+     [exec] * What went wrong:
+     [exec] Execution failed for task ':compileTestJava'.
+     [exec] > Compilation failed; see the compiler error output for details.
+     [exec] 
+     [exec] * Try:
+     [exec] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+     [exec] 
+     [exec] * Get more help at https://help.gradle.org
+     [exec] 
+     [exec] BUILD FAILED in 8s
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:161: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:95: exec returned: 1
+
+Total time: 26 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

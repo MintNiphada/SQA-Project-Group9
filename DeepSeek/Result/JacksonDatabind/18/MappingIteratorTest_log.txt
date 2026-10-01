@@ -1,0 +1,348 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/maven-build.xml:108: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 316 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:6: error: package org.mockito does not exist
+    [javac] import org.mockito.Mockito;
+    [javac]                   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:12: error: package org.mockito does not exist
+    [javac] import static org.mockito.Mockito.*;
+    [javac]                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/deprecated/MiscDeprecatedTest.java:4: warning: [deprecation] EnumMapSerializer in com.fasterxml.jackson.databind.ser.std has been deprecated
+    [javac] import com.fasterxml.jackson.databind.ser.std.EnumMapSerializer;
+    [javac]                                              ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:26: error: cannot find symbol
+    [javac]         mockParser = mock(JsonParser.class);
+    [javac]                      ^
+    [javac]   symbol:   method mock(Class<JsonParser>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:27: error: cannot find symbol
+    [javac]         mockContext = mock(DeserializationContext.class);
+    [javac]                       ^
+    [javac]   symbol:   method mock(Class<DeserializationContext>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:28: error: cannot find symbol
+    [javac]         mockDeserializer = mock(JsonDeserializer.class);
+    [javac]                            ^
+    [javac]   symbol:   method mock(Class<JsonDeserializer>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:29: error: cannot find symbol
+    [javac]         mockType = mock(JavaType.class);
+    [javac]                    ^
+    [javac]   symbol:   method mock(Class<JavaType>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:64: error: cannot find symbol
+    [javac]         when(mockParser.isExpectedStartArrayToken()).thenReturn(true);
+    [javac]         ^
+    [javac]   symbol:   method when(boolean)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:68: error: cannot find symbol
+    [javac]         verify(mockParser).clearCurrentToken();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:73: error: cannot find symbol
+    [javac]         when(mockParser.isExpectedStartArrayToken()).thenReturn(true);
+    [javac]         ^
+    [javac]   symbol:   method when(boolean)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:77: error: cannot find symbol
+    [javac]         verify(mockParser, never()).clearCurrentToken();
+    [javac]                            ^
+    [javac]   symbol:   method never()
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:88: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:89: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(null); // EOF
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:95: error: cannot find symbol
+    [javac]         verify(mockParser).close();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:100: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:101: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(JsonToken.END_ARRAY);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:106: error: cannot find symbol
+    [javac]         verify(mockParser).close();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:111: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:112: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:118: error: cannot find symbol
+    [javac]         verify(mockParser, never()).close();
+    [javac]                            ^
+    [javac]   symbol:   method never()
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:123: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:134: error: cannot find symbol
+    [javac]         verify(mockParser, times(1)).nextToken();
+    [javac]                            ^
+    [javac]   symbol:   method times(int)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:150: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:151: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext)).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:157: error: cannot find symbol
+    [javac]         verify(mockParser).clearCurrentToken();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:163: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:170: error: cannot find symbol
+    [javac]         verify(mockDeserializer).deserialize(mockParser, mockContext, existingValue);
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonDeserializer<Object>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:171: error: cannot find symbol
+    [javac]         verify(mockParser).clearCurrentToken();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:176: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:177: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(null); // EOF
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:191: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:192: error: no suitable constructor found for JsonMappingException(JsonParser,String)
+    [javac]         when(mockParser.nextToken()).thenThrow(new JsonMappingException(mockParser, "Test Error"));
+    [javac]                                                ^
+    [javac]     constructor JsonMappingException.JsonMappingException(String,Throwable) is not applicable
+    [javac]       (argument mismatch; JsonParser cannot be converted to String)
+    [javac]     constructor JsonMappingException.JsonMappingException(String,JsonLocation) is not applicable
+    [javac]       (argument mismatch; JsonParser cannot be converted to String)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:192: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenThrow(new JsonMappingException(mockParser, "Test Error"));
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:206: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:207: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenThrow(new IOException("IO Error"));
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:221: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:222: error: no suitable constructor found for JsonMappingException(JsonParser,String)
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext)).thenThrow(new JsonMappingException(mockParser, "Deser Error"));
+    [javac]                                                                               ^
+    [javac]     constructor JsonMappingException.JsonMappingException(String,Throwable) is not applicable
+    [javac]       (argument mismatch; JsonParser cannot be converted to String)
+    [javac]     constructor JsonMappingException.JsonMappingException(String,JsonLocation) is not applicable
+    [javac]       (argument mismatch; JsonParser cannot be converted to String)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:222: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext)).thenThrow(new JsonMappingException(mockParser, "Deser Error"));
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:236: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:237: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext)).thenThrow(new IOException("Deser IO Error"));
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:264: error: cannot find symbol
+    [javac]         verify(mockParser).close();
+    [javac]         ^
+    [javac]   symbol:   method verify(JsonParser)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:277: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:278: error: cannot find symbol
+    [javac]         when(mockParser.nextToken())
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:283: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext))
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:298: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:299: error: cannot find symbol
+    [javac]         when(mockParser.nextToken())
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:303: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext))
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:316: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:317: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(null); // EOF immediately
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:334: error: cannot find symbol
+    [javac]         FormatSchema mockSchema = mock(FormatSchema.class);
+    [javac]                                   ^
+    [javac]   symbol:   method mock(Class<FormatSchema>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:335: error: cannot find symbol
+    [javac]         when(mockParser.getSchema()).thenReturn(mockSchema);
+    [javac]         ^
+    [javac]   symbol:   method when(FormatSchema)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:344: error: cannot find symbol
+    [javac]         JsonLocation mockLocation = mock(JsonLocation.class);
+    [javac]                                     ^
+    [javac]   symbol:   method mock(Class<JsonLocation>)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:345: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentLocation()).thenReturn(mockLocation);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonLocation)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:356: error: cannot find symbol
+    [javac]         when(mockParser.getCurrentToken()).thenReturn(null);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:357: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(JsonToken.VALUE_STRING);
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:358: error: cannot find symbol
+    [javac]         when(mockDeserializer.deserialize(mockParser, mockContext)).thenReturn("Val");
+    [javac]         ^
+    [javac]   symbol:   method when(Object)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:365: error: cannot find symbol
+    [javac]         verify(mockParser, times(1)).nextToken();
+    [javac]                            ^
+    [javac]   symbol:   method times(int)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:374: error: cannot find symbol
+    [javac]         when(mockParser.nextToken()).thenReturn(null); // EOF
+    [javac]         ^
+    [javac]   symbol:   method when(JsonToken)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/MappingIteratorTest.java:376: error: cannot find symbol
+    [javac]         verify(mockParser, times(2)).nextToken();
+    [javac]                            ^
+    [javac]   symbol:   method times(int)
+    [javac]   location: class MappingIteratorTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:145: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:146: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/filter/TestMapFiltering.java:72: warning: [deprecation] depositSchemaProperty(PropertyWriter,ObjectNode,SerializerProvider) in PropertyFilter has been deprecated
+    [javac]         public void depositSchemaProperty(PropertyWriter writer,
+    [javac]                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:19: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 58 errors
+    [javac] 9 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_18/maven-build.xml:108: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

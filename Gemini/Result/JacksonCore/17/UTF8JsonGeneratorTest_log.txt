@@ -1,0 +1,1290 @@
+=== METHOD: testBasicObjectAndArrayWriting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializableStringFieldNameAndValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumbers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumbersAsStrings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBigDecimalAsPlain ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnquotedFieldNames ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrettyPrinter ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEscapeNonAsciiFeature ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCustomCharacterEscapes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCustomCharacterEscapesLongBuffer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteRawMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteRawSurrogates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteRawSplitSurrogateThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteBinaryByteArray ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteBinaryInputStreamKnownLength ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteBinaryInputStreamUnknownLength ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteBinaryMissingDataThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteUTF8StringAndRawUTF8String ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLongStringSegmentWrites ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLargeRawSegments ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNaNAndInfinityDoublesAndFloats ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutoCloseJsonContent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteEndArrayWithoutStartThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteEndObjectWithoutStartThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFieldNameInRootThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValueExpectingFieldNameThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCustomBufferConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteRawValueSerializableString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testControlCharacterEscaping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLongCustomEscapeFlushing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 88 source files to /private/tmp/defects4j_checkout/JacksonCore_17/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:17: error: cannot find symbol
+    [javac] import com.fasterxml.jackson.core.io.BufferRecycler;
+    [javac]                                     ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: package com.fasterxml.jackson.core.io
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:26: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_17/src/test/java/com/fasterxml/jackson/core/json/UTF8JsonGeneratorTest.java:481: error: cannot find symbol
+    [javac]         IOContext ctxt = new IOContext(new BufferRecycler(), "test", false);
+    [javac]                                            ^
+    [javac]   symbol:   class BufferRecycler
+    [javac]   location: class UTF8JsonGeneratorTest
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_17/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

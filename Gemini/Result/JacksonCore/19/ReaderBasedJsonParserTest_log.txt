@@ -1,0 +1,888 @@
+=== METHOD: testCodecAndInputSource ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 89 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReleaseBuffered ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBasicObjectAndArrayParsing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStringEscapes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSkipString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSingleQuoteStringsAndNames ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnquotedFieldNames ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumberParsing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZeroes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonNumericNumbers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComments ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBase64Decoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadBinaryValueStreaming ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextFieldNameAndOptimizedMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNextFieldNameWithDirectValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLocations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMismatchedBrackets ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidNumberStart ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidHexEscape ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidUnquotedSpaceInString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnexpectedEndInArray ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnrecognizedToken ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRootValuesSpacing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSmallBufferSplit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /private/tmp/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:22: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:29: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:537: error: createRoot(int) has protected access in CharsToNameCanonicalizer
+    [javac]         CharsToNameCanonicalizer sym = CharsToNameCanonicalizer.createRoot(0);
+    [javac]                                                                ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

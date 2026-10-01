@@ -1,0 +1,1152 @@
+=== METHOD: testConstructorsAndRecordSize ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 64 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBasicWriteAndCounts ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteChunkedAssembly ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteMultipleRecordsAtOnce ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteExceedsEntrySizeThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrematureCloseArchiveEntryThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloseArchiveEntryWithoutActiveEntryThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFinishWithUnclosedEntryThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDoubleFinishThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPutArchiveEntryAfterFinishThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloseArchiveEntryAfterFinishThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDirectoryEntryHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveEntry ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveEntryAfterFinishThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLongFileNameModes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBigNumberModes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPaxHeadersForNonAscii ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWritePaxHeadersFormattingAndLongName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to /private/tmp/defects4j_checkout/Compress_18/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:54: warning: [deprecation] getCount() in TarArchiveOutputStream has been deprecated
+    [javac]         Assert.assertEquals((int) tos.getBytesWritten(), tos.getCount());
+    [javac]                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:301: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1b.setGroupId(bigId);
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:323: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry1d.setUserId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:371: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:372: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry2.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:384: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setGroupId(bigId);
+    [javac]                           ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/tar/TarArchiveOutputStreamTest.java:385: error: incompatible types: possible lossy conversion from long to int
+    [javac]         entry3.setUserId(bigId);
+    [javac]                          ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_18/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_18/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

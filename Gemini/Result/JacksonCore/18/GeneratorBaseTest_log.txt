@@ -1,0 +1,663 @@
+=== METHOD: testConstructorsAndInitialState ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 89 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVersion ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCurrentValueDelegation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFeatureEnableDisable ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetFeatureMask ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOverrideStdFeatures ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrettyPrinterHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCodecHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteFieldNameAndStringWithSerializableString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteRawValueVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteBinaryWithInputStreamUnsupported ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteObject ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWriteTree ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloseAndIsClosed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBigDecimalAsString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDecodeSurrogateValid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDecodeSurrogateInvalidSecondChar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 84 source files to /private/tmp/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:23: error: DummyGenerator is not abstract and does not override abstract method writeUTF8String(byte[],int,int) in JsonGenerator
+    [javac]     private static class DummyGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:367: error: cannot find symbol
+    [javac]         Assert.assertFalse(v.isUnknown());
+    [javac]                             ^
+    [javac]   symbol:   method isUnknown()
+    [javac]   location: variable v of type Version
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

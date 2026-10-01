@@ -1,0 +1,1495 @@
+=== METHOD: testInstanceSingleton ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithConfigSameInstance ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithConfigNewInstance ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithConfigOnSubclassThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializerAnnotationFound ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializerTypeModificationStaticTyping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializerWithConverterAndAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializerWithConverterNoAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializer2AnnotationFound ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializer2ContainerType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializer2CustomSerializers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializer2LookupFallback ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateSerializer2PostProcessing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindBeanSerializerNotPotentialBeanTypeAndNotEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindBeanSerializerNotPotentialBeanTypeButEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindPropertyTypeSerializerWithAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindPropertyTypeSerializerDefault ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindPropertyContentTypeSerializerWithAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructBeanSerializerObjectClass ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructBeanSerializerWithProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructObjectIdHandlerPropertyGeneratorNotFound ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructObjectIdHandlerPropertyGeneratorFound ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructObjectIdHandlerNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructFilteredBeanWriter ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructPropertyBuilder ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructBeanSerializerBuilder ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsPotentialBeanType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindBeanPropertiesEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindBeanPropertiesWithIgnorableTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFilterBeanProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testProcessViewsIncludeByDefault ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveIgnorableTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveSetterlessGetters ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: test_constructWriter ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_15 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_15  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /private/tmp/defects4j_checkout/JacksonDatabind_15/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:230: error: ';' expected
+    [javac]         when(factory.findSerializerByAnnotations(prov, origType,beanDesc))thenReturn(null);
+    [javac]                                                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:231: error: ';' expected
+    [javac]         when(origType.isContainerType())).thenReturn(false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:232: error: ';' expected
+    [javac]         when(factory.customSerializers())thenReturn(Collections.emptyList());
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:233: error: ')' expected
+    [javac]         when(factory.findSerializerByLookup(origType,config,beanDesc,false).thenReturn(jsonSerializer);
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_15/src/test/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactoryTest.java:327: error: diamond operator is not supported in -source 6
+    [javac]         List<BeanPropertyWriter> props = new ArrayList<>();
+    [javac]                                                        ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_15/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

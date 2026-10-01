@@ -1,0 +1,458 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 298 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:145: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:146: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/filter/TestMapFiltering.java:72: warning: [deprecation] depositSchemaProperty(PropertyWriter,ObjectNode,SerializerProvider) in PropertyFilter has been deprecated
+    [javac]         public void depositSchemaProperty(PropertyWriter writer,
+    [javac]                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/interop/TestGroovyBeans.java:74: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]         return cls.newInstance();
+    [javac]                   ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TestTypeBindings.java:48: warning: [deprecation] findType(String) in TypeBindings has been deprecated
+    [javac]         assertEquals(obType, b.findType("A"));
+    [javac]                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TestTypeBindings.java:49: warning: [deprecation] findType(String) in TypeBindings has been deprecated
+    [javac]         assertEquals(obType, b.findType("B"));
+    [javac]                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TestTypeBindings.java:58: warning: [deprecation] findType(String) in TypeBindings has been deprecated
+    [javac]         assertEquals(tf.constructType(Long.class), b.findType("A"));
+    [javac]                                                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TestTypeBindings.java:59: warning: [deprecation] findType(String) in TypeBindings has been deprecated
+    [javac]         assertEquals(tf.constructType(String.class), b.findType("B"));
+    [javac]                                                       ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:18: error: cannot find symbol
+    [javac]         JavaType type = TypeFactory.unknownType();
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:30: error: cannot find symbol
+    [javac]         Type type = new TypeReference<List<String>>() {}.getType();
+    [javac]                         ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:37: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:45: error: cannot find symbol
+    [javac]         JavaType stringType = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:46: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(stringType);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:53: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(new TypeReference<List<String>>() {});
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:53: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(new TypeReference<List<String>>() {});
+    [javac]                                              ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:62: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(ArrayList.class.getTypeParameters()[0], ArrayList.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:69: error: cannot find symbol
+    [javac]         JavaType context = tf.constructType(new TypeReference<ArrayList<String>>() {});
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:69: error: cannot find symbol
+    [javac]         JavaType context = tf.constructType(new TypeReference<ArrayList<String>>() {});
+    [javac]                                                 ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:70: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(ArrayList.class.getTypeParameters()[0], context);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:85: error: cannot find symbol
+    [javac]         JavaType elementType = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:103: error: cannot find symbol
+    [javac]         JavaType elementType = tf.constructType(Integer.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:122: error: cannot find symbol
+    [javac]         JavaType elementType = tf.constructType(Long.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:132: error: cannot find symbol
+    [javac]         JavaType keyType = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:133: error: cannot find symbol
+    [javac]         JavaType valueType = tf.constructType(Integer.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:154: error: cannot find symbol
+    [javac]         JavaType keyType = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:155: error: cannot find symbol
+    [javac]         JavaType valueType = tf.constructType(Boolean.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:176: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(String.class) };
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:176: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(String.class) };
+    [javac]                                 ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:177: error: cannot find symbol
+    [javac]         JavaType type = tf.constructSimpleType(Comparable.class, Comparable.class, params);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:185: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(String.class), tf.constructType(Integer.class) };
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:185: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(String.class), tf.constructType(Integer.class) };
+    [javac]                                 ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:192: error: cannot find symbol
+    [javac]         JavaType type = tf.uncheckedSimpleType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:199: error: cannot find symbol
+    [javac]         JavaType type = tf.constructParametrizedType(List.class, List.class, String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:208: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(Integer.class) };
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:208: error: cannot find symbol
+    [javac]         JavaType[] params = new JavaType[]{ tf.constructType(Integer.class) };
+    [javac]                                 ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:209: error: cannot find symbol
+    [javac]         JavaType type = tf.constructParametrizedType(Set.class, Set.class, params);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:218: error: cannot find symbol
+    [javac]         JavaType type = tf.constructParametrizedType(Map.class, Map.class, String.class, Integer.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:228: error: cannot find symbol
+    [javac]         JavaType type = tf.constructParametrizedType(String[].class, String[].class, String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:248: error: reference to constructParametrizedType is ambiguous
+    [javac]         tf.constructParametrizedType(List.class, List.class);
+    [javac]           ^
+    [javac]   both method constructParametrizedType(Class<?>,Class<?>,Class<?>...) in TypeFactory and method constructParametrizedType(Class<?>,Class<?>,JavaType...) in TypeFactory match
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:288: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(List.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:289: error: cannot find symbol
+    [javac]         JavaType specialized = tf.constructSpecializedType(base, List.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:296: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(new TypeReference<Map<String, Integer>>() {});
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:296: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(new TypeReference<Map<String, Integer>>() {});
+    [javac]                                              ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:297: error: cannot find symbol
+    [javac]         JavaType specialized = tf.constructSpecializedType(base, HashMap.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:306: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:313: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(new TypeReference<List<String>>() {});
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:313: error: cannot find symbol
+    [javac]         JavaType base = tf.constructType(new TypeReference<List<String>>() {});
+    [javac]                                              ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:317: error: cannot find symbol
+    [javac]         JavaType specialized = tf.constructSpecializedType(base, ArrayList.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:326: error: cannot find symbol
+    [javac]         JavaType type = tf.constructFromCanonical("Ljava.lang.String;");
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:339: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(new TypeReference<Map<String, Integer>>() {});
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:339: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(new TypeReference<Map<String, Integer>>() {});
+    [javac]                                              ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:340: error: cannot find symbol
+    [javac]         JavaType[] params = tf.findTypeParameters(type, Map.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:350: error: cannot find symbol
+    [javac]         JavaType[] params = tf.findTypeParameters(HashMap.class, Map.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:364: error: cannot find symbol
+    [javac]         JavaType t1 = tf.constructType(Number.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:365: error: cannot find symbol
+    [javac]         JavaType t2 = tf.constructType(Integer.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:373: error: cannot find symbol
+    [javac]         JavaType t = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:381: error: cannot find symbol
+    [javac]         JavaType t = tf.constructType(String.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:400: error: cannot find symbol
+    [javac]             public JavaType modifyType(JavaType type, Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                        ^
+    [javac]   symbol: class JavaType
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:400: error: cannot find symbol
+    [javac]             public JavaType modifyType(JavaType type, Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                    ^
+    [javac]   symbol: class JavaType
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:413: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(returnType);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:423: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(paramType);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:432: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(paramType);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:470: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(String[].class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:478: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(TimeUnit.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:478: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(TimeUnit.class);
+    [javac]                                          ^
+    [javac]   symbol:   class TimeUnit
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:485: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(HashMap.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:492: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(ArrayList.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:499: error: cannot find symbol
+    [javac]         JavaType type = tf.constructType(Map.Entry.class);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:506: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]              ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:506: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]                                               ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:509: error: cannot find symbol
+    [javac]         JavaType type = tf._fromParameterizedClass(HashMap.class, params);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:518: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]              ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:518: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]                                               ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:520: error: cannot find symbol
+    [javac]         JavaType type = tf._fromParameterizedClass(ArrayList.class, params);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:528: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]              ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:528: error: cannot find symbol
+    [javac]         List<JavaType> params = new ArrayList<JavaType>();
+    [javac]                                               ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:530: error: cannot find symbol
+    [javac]         JavaType type = tf._fromParameterizedClass(Comparable.class, params);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:537: error: cannot find symbol
+    [javac]         Type type = new TypeReference<HashMap<String, Integer>>() {}.getType();
+    [javac]                         ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:538: error: cannot find symbol
+    [javac]         JavaType jt = tf.constructType(type);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:547: error: cannot find symbol
+    [javac]         Type type = new TypeReference<ArrayList<Long>>() {}.getType();
+    [javac]                         ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:548: error: cannot find symbol
+    [javac]         JavaType jt = tf.constructType(type);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:556: error: cannot find symbol
+    [javac]         Type type = new TypeReference<Comparable<String>>() {}.getType();
+    [javac]                         ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:557: error: cannot find symbol
+    [javac]         JavaType jt = tf.constructType(type);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:595: error: cannot find symbol
+    [javac]         HierarchicType leaf = new HierarchicType(new TypeReference<HashMap<String, Integer>>() {}.getType());
+    [javac]                                                      ^
+    [javac]   symbol:   class TypeReference
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:597: error: cannot find symbol
+    [javac]         JavaType resolved = tf._resolveVariableViaSubTypes(leaf, "K", bindings);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/databind/type/TypeFactoryTest.java:605: error: cannot find symbol
+    [javac]         JavaType resolved = tf._resolveVariableViaSubTypes(null, "T", bindings);
+    [javac]         ^
+    [javac]   symbol:   class JavaType
+    [javac]   location: class TypeFactoryTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:19: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id));
+    [javac]                       ^
+    [javac] 78 errors
+    [javac] 13 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_11/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 9 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,348 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 89 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:19: error: TestGenerator is not abstract and does not override abstract method writeNumber(String) in JsonGenerator
+    [javac]     private static class TestGenerator extends GeneratorBase {
+    [javac]                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:132: error: setHighestNonEscapedChar(int) in TestGenerator cannot override setHighestNonEscapedChar(int) in JsonGenerator
+    [javac]         public void setHighestNonEscapedChar(int c) {
+    [javac]                     ^
+    [javac]   return type void is not compatible with JsonGenerator
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:131: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:137: error: _reportError(String) in TestGenerator cannot override _reportError(String) in JsonGenerator
+    [javac]         protected void _reportError(String msg) throws IOException {
+    [javac]                        ^
+    [javac]   overridden method does not throw IOException
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:191: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:199: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:201: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:203: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:205: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$1>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:179: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$1> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:184: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:186: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:188: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:228: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:236: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:238: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:240: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:242: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$2>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:216: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$2> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:221: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:223: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:348: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         gen.setFeatureMask(newMask);
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:357: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         gen.setFeatureMask(Feature.QUOTE_FIELD_NAMES.getMask());
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:459: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:467: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:469: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:471: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:473: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$3>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:447: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$3> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:452: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:454: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:456: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:488: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$4> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString ss = new SerializableString() {
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:507: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$5> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString ss = new SerializableString() {
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:558: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$6> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString ss = new SerializableString() {
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:610: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:620: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:622: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:624: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:626: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$7>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:598: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$7> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:603: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:605: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:607: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:663: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:673: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:675: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:677: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:679: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$8>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:651: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$8> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:656: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:658: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:660: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:870: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         gen.setFeatureMask(Feature.STRICT_DUPLICATE_DETECTION.getMask());
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:877: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         gen.setFeatureMask(0);
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:938: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:948: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:950: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:952: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:954: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$11>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:926: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$11> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:931: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:933: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:935: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:975: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:983: error: name clash: createObjectNode() and <T>createObjectNode() have the same erasure
+    [javac]             public TreeNode createObjectNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createObjectNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:985: error: name clash: createArrayNode() and <T>createArrayNode() have the same erasure
+    [javac]             public TreeNode createArrayNode() { return null; }
+    [javac]                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends TreeNode declared in method <T>createArrayNode()
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:987: error: name clash: treeAsTokens(TreeNode) and <T>treeAsTokens(TreeNode) have the same erasure
+    [javac]             public JsonParser treeAsTokens(TreeNode n) { return null; }
+    [javac]                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeAsTokens(TreeNode)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:989: error: method <T>treeToValue(TreeNode,Class<T>) is already defined in class <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$12>
+    [javac]             public <T> T treeToValue(TreeNode n, Class<T> valueType) { return null; }
+    [javac]                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>treeToValue(TreeNode,Class<T>)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:963: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$12> is not abstract and does not override abstract method <T>readValues(JsonParser,ResolvedType) in ObjectCodec
+    [javac]         ObjectCodec codec = new ObjectCodec() {
+    [javac]                                               ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>readValues(JsonParser,ResolvedType)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:968: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:970: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:972: error: method does not override or implement a method from a supertype
+    [javac]             @Override
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:1080: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         gen.setFeatureMask(mask);
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:1231: warning: [deprecation] setFeatureMask(int) in GeneratorBase has been deprecated
+    [javac]         Assert.assertSame(gen, gen.setFeatureMask(0));
+    [javac]                                   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:1255: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$14> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString ss = new SerializableString() {
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/src/test/java/com/fasterxml/jackson/core/base/GeneratorBaseTest.java:1274: error: <anonymous com.fasterxml.jackson.core.base.GeneratorBaseTest$15> is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]         SerializableString ss = new SerializableString() {
+    [javac]                                                          ^
+    [javac] 72 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_18/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

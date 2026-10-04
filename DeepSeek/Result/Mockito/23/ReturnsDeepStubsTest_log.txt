@@ -1,0 +1,2099 @@
+=== METHOD: answer_notMockable_delegatesToReturnsEmptyValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: answer_mockable_callsGetMock ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: getMock_matchingStubbedInvocation_returnsStubbedAnswer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: getMock_noMatchingStubbedInvocation_createsAndRecordsDeepStub ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: createNewDeepStubMock_usesMockitoCore ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: withSettingsUsing_withExtraInterfaces ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: withSettingsUsing_withoutExtraInterfaces ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: returnsDeepStubsAnswerUsing_overridesActualParameterizedType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: recordDeepStubMock_addsAnswerAndReturnsMock ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: actualParameterizedType_infersFromTypeToMock ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Mockito_23 && ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Mockito_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+
+gradle.compile:
+
+ant.compile:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+gradle.compile.mutants:
+
+ant.compile.mutants:
+     [exec] WARNING: An illegal reflective access operation has occurred
+     [exec] WARNING: Illegal reflective access by org.gradle.internal.reflect.JavaMethod (file:/private/tmp/defects4j_checkout/Mockito_23/.gradle_local_home/wrapper/dists/gradle-4.9-bin/3mej81ass7vk2a46lvq46osb1f/gradle-4.9/lib/gradle-base-services-4.9.jar) to method java.lang.ClassLoader.getPackages()
+     [exec] WARNING: Please consider reporting this to the maintainers of org.gradle.internal.reflect.JavaMethod
+     [exec] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+     [exec] WARNING: All illegal access operations will be denied in a future release
+
+compile.tests:
+
+gradle.compile.tests:
+
+ant.compile.tests:
+
+clean:
+
+prepare:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Mockito_23/target/reports/junit
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:82: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 305 source files to /private/tmp/defects4j_checkout/Mockito_23/target/classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/listeners/MethodInvocationReport.java:7: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] import org.mockito.exceptions.PrintableInvocation;
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/MockitoAnnotationsMockAnnotationProcessor.java:8: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac] import org.mockito.MockitoAnnotations.Mock;
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/invocation/DescribedInvocation.java:14: warning: [deprecation] PrintableInvocation in org.mockito.exceptions has been deprecated
+    [javac] public interface DescribedInvocation extends PrintableInvocation {
+    [javac]                                              ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:82: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return (IMockitoConfiguration) configClass.newInstance();
+    [javac]                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:127: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]             return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+    [javac]                                                                         ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/ClassPathLoader.java:159: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                         result.add(service.cast(loader.loadClass(name).newInstance()));
+    [javac]                                                                       ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:34: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]         registerAnnotationProcessor(MockitoAnnotations.Mock.class, new MockitoAnnotationsMockAnnotationProcessor());
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/configuration/injection/scanner/MockScanner.java:82: warning: [deprecation] Mock in MockitoAnnotations has been deprecated
+    [javac]                 || null != field.getAnnotation(MockitoAnnotations.Mock.class);
+    [javac]                                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/internal/util/reflection/AccessibilityChanger.java:29: warning: [deprecation] isAccessible() in AccessibleObject has been deprecated
+    [javac]         wasAccessible = accessibleObject.isAccessible();
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:39: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/src/org/mockito/verification/Timeout.java:44: warning: [deprecation] never() in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode never() {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 20 warnings
+
+compile.test:
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 296 source files to /private/tmp/defects4j_checkout/Mockito_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:101: error: try-with-resources is not supported in -source 6
+    [javac]         try (MockedConstruction<MockUtil> mockedUtil = mockConstruction(MockUtil.class,
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /private/tmp/defects4j_checkout/Mockito_23/test/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubsTest.java:102: error: lambda expressions are not supported in -source 6
+    [javac]                 (mock, context) -> {
+    [javac]                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 2 errors
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:162: The following error occurred while executing this line:
+/Users/inzi/defects4j/framework/projects/Mockito/Mockito.build.xml:70: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Mockito_23/build.xml:88: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

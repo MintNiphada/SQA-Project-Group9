@@ -1,0 +1,1677 @@
+=== METHOD: testCreateRoot ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMakeChild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameSingleQuad ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameTwoQuads ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameThreeQuads ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameLong ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameWithInternDisabled ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindNameNonExistent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindNameAfterAdd ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSize ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBucketCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMaybeDirty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReleaseMergesIntoParent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReleaseNoMergeIfNotDirty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMergeChildWhenCountsEqual ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMergeChildExceedingMaxEntriesForReuse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRehashPreservesNames ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRehashDoublesHashSize ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrimaryCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSecondaryCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTertiaryCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSpilloverCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTotalCount ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCalcHashSingleQuad ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCalcHashTwoQuads ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCalcHashThreeQuads ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCalcHashInvalidQlen ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameWithZeroQlen ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSpilloverStart ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCalcTertiaryShift ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReportTooManyCollisionsSmallTableDoesNotThrow ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNukeSymbols ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVerifyLongName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindSecondaryReturnsNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameWithQ2Zero ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInternCacheUsed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHashSeed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildInheritsParentState ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameAfterRehashStillFindable ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddNameLongExpandsArray ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindNameWithLongNameAfterRehash ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTotalCountMatchesSum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_10 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_10  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to /private/tmp/defects4j_checkout/JacksonCore_10/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:14: error: class ByteQuadsCanonicalizerTest is public, should be declared in a file named ByteQuadsCanonicalizerTest.java
+    [javac] public class ByteQuadsCanonicalizerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:80: error: cannot find symbol
+    [javac]         flags = JsonFactory.Feature.INTERN_FIELD_NAMES.disableIn(flags);
+    [javac]                                                       ^
+    [javac]   symbol:   method disableIn(int)
+    [javac]   location: variable INTERN_FIELD_NAMES of type Feature
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_10/src/test/java/com/fasterxml/jackson/core/sym/TargetClassTest.java:282: error: incompatible types: Object cannot be converted to int
+    [javac]         int start = (int) m.invoke(root);
+    [javac]                                   ^
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_10/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

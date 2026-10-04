@@ -1,0 +1,328 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 89 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:33: error: lambda expressions are not supported in -source 6
+    [javac]         when(mockIOContext.allocNameCopyBuffer(anyInt())).thenAnswer(invocation -> new char[invocation.getArgumentAt(0, Integer.class)]);
+    [javac]                                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:50: error: invalid method declaration; return type required
+    [javac]         when(mockIOContext.allocTokenBuffer()).thenReturn(new char[5]);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:50: error: <identifier> expected
+    [javac]         when(mockIOContext.allocTokenBuffer()).thenReturn(new char[5]);
+    [javac]                                            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:50: error: ']' expected
+    [javac]         when(mockIOContext.allocTokenBuffer()).thenReturn(new char[5]);
+    [javac]                                                                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: illegal start of type
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: invalid method declaration; return type required
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: <identifier> expected
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                                                       ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: <identifier> expected
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                                                                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: <identifier> expected
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                                                                                ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: <identifier> expected
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                                                                                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:52: error: <identifier> expected
+    [javac]         return new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]                                                                                                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:56: error: class, interface, or enum expected
+    [javac]     public void testConstructors() throws Exception {        Reader reader = new StringReader("{}");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:57: error: class, interface, or enum expected
+    [javac]         ReaderBasedJsonParser parser = new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:58: error: class, interface, or enum expected
+    [javac]         assertNotNull(parser);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:59: error: class, interface, or enum expected
+    [javac]         assertEquals(reader, parser.getInputSource());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:60: error: class, interface, or enum expected
+    [javac]         assertEquals(mockCodec, parser.getCodec());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:61: error: class, interface, or enum expected
+    [javac]         verify(mockIOContext).allocTokenBuffer();
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:64: error: class, interface, or enum expected
+    [javac]         char[] buf = new char[] { '1', '2', '3' };
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:65: error: class, interface, or enum expected
+    [javac]         parser = new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols, buf, 0, 3, false);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:66: error: class, interface, or enum expected
+    [javac]         assertNotNull(parser);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:67: error: class, interface, or enum expected
+    [javac]         assertEquals(0, parser.getTokenLocation().getCharOffset()); // inputPtr = 0
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:68: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:71: error: class, interface, or enum expected
+    [javac]     public void testGetSetCodec() throws Exception {        ReaderBasedJsonParser parser = createParser("true");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:72: error: class, interface, or enum expected
+    [javac]         ObjectCodec newCodec = mock(ObjectCodec.class);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:72: error: <identifier> expected
+    [javac]         ObjectCodec newCodec = mock(ObjectCodec.class);
+    [javac]                                                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:73: error: <identifier> expected
+    [javac]         parser.setCodec(newCodec);
+    [javac]                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:73: error: <identifier> expected
+    [javac]         parser.setCodec(newCodec);
+    [javac]                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:74: error: invalid method declaration; return type required
+    [javac]         assertEquals(newCodec, parser.getCodec());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:74: error: <identifier> expected
+    [javac]         assertEquals(newCodec, parser.getCodec());
+    [javac]                              ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:74: error: <identifier> expected
+    [javac]         assertEquals(newCodec, parser.getCodec());
+    [javac]                                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:78: error: class, interface, or enum expected
+    [javac]     public void testReleaseBuffered() throws Exception {        ReaderBasedJsonParser parser = createParser("  123  ");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:80: error: class, interface, or enum expected
+    [javac]         parser.nextToken(); // should be VALUE_NUMBER_INT
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:81: error: class, interface, or enum expected
+    [javac]         parser.nextToken(); // should be null? Actually after number, there's space, nextToken would be null
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:84: error: class, interface, or enum expected
+    [javac]         Reader reader = new StringReader("abc");
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:85: error: class, interface, or enum expected
+    [javac]         char[] buf = "abcdef".toCharArray();
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:86: error: class, interface, or enum expected
+    [javac]         ReaderBasedJsonParser p2 = new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols, buf, 2, 6, false);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:88: error: class, interface, or enum expected
+    [javac]         Writer sw = new StringWriter();
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:89: error: class, interface, or enum expected
+    [javac]         int released = p2.releaseBuffered(sw);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:90: error: class, interface, or enum expected
+    [javac]         assertEquals(4, released);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:91: error: class, interface, or enum expected
+    [javac]         assertEquals("cdef", sw.toString());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:92: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:95: error: class, interface, or enum expected
+    [javac]     public void testGetInputSource() throws Exception {        Reader reader = new StringReader("x");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:96: error: class, interface, or enum expected
+    [javac]         ReaderBasedJsonParser parser = new ReaderBasedJsonParser(mockIOContext, FEATURE_DEFAULT, reader, mockCodec, symbols);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:97: error: class, interface, or enum expected
+    [javac]         assertEquals(reader, parser.getInputSource());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:98: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:101: error: class, interface, or enum expected
+    [javac]     public void testNextTokenTrueFalseNull() throws Exception {        ReaderBasedJsonParser parser = createParser(" true false null ");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:102: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_TRUE, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:103: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_FALSE, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:104: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NULL, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:105: error: class, interface, or enum expected
+    [javac]         assertNull(parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:106: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:109: error: class, interface, or enum expected
+    [javac]     public void testNextTokenNumber() throws Exception {        ReaderBasedJsonParser parser = createParser("123 -456 0.5 1e2");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:110: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_INT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:111: error: class, interface, or enum expected
+    [javac]         assertEquals(123, parser.getIntValue());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:112: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_INT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:113: error: class, interface, or enum expected
+    [javac]         assertEquals(-456, parser.getIntValue());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:114: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:115: error: class, interface, or enum expected
+    [javac]         assertEquals(0.5, parser.getDoubleValue(), 0.0001);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:116: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:117: error: class, interface, or enum expected
+    [javac]         assertEquals(100.0, parser.getDoubleValue(), 0.0001);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:118: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:121: error: class, interface, or enum expected
+    [javac]     public void testNextTokenString() throws Exception {        ReaderBasedJsonParser parser = createParser("\"hello\" \"esc\\\"ape\"");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:122: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_STRING, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:123: error: class, interface, or enum expected
+    [javac]         assertEquals("hello", parser.getText());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:124: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_STRING, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:125: error: class, interface, or enum expected
+    [javac]         assertEquals("esc\"ape", parser.getText());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:126: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:129: error: class, interface, or enum expected
+    [javac]     public void testNextTokenArray() throws Exception {        ReaderBasedJsonParser parser = createParser("[ ] [ 1 , 2 ]");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:130: error: class, interface, or enum expected
+    [javac]         assertTokenSequence(parser, JsonToken.START_ARRAY, JsonToken.END_ARRAY, JsonToken.START_ARRAY,
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:132: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:135: error: class, interface, or enum expected
+    [javac]     public void testNextTokenObject() throws Exception {        ReaderBasedJsonParser parser = createParser("{ \"a\" : 1 , \"b\" : true }");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:136: error: class, interface, or enum expected
+    [javac]         assertTokenSequence(parser, JsonToken.START_OBJECT, JsonToken.FIELD_NAME, JsonToken.VALUE_NUMBER_INT,
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:138: error: class, interface, or enum expected
+    [javac]         assertEquals("a", parser.getCurrentName());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:140: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:143: error: class, interface, or enum expected
+    [javac]     public void testNextTokenMismatchedBrackets() throws Exception {        ReaderBasedJsonParser parser = createParser("]");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:144: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected JsonParseException for mismatched bracket");
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:144: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected JsonParseException for mismatched bracket");
+    [javac]                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:145: error: class, interface, or enum expected
+    [javac]         } catch (JsonParseException e) {            // good
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:148: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected JsonParseException");
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:148: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected JsonParseException");
+    [javac]                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:149: error: class, interface, or enum expected
+    [javac]         } catch (JsonParseException e) { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:153: error: class, interface, or enum expected
+    [javac]     public void testNextTokenComma() throws Exception {        parser = createParser("[1,,2]");
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:154: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            parser.nextToken();            parser.nextToken(); // should throw because of extra comma
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:154: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            parser.nextToken();            parser.nextToken(); // should throw because of extra comma
+    [javac]                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:154: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            parser.nextToken();            parser.nextToken(); // should throw because of extra comma
+    [javac]                                                                                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:155: error: class, interface, or enum expected
+    [javac]             fail("Expected exception");
+    [javac]             ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:156: error: class, interface, or enum expected
+    [javac]         } catch (JsonParseException e) { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:160: error: class, interface, or enum expected
+    [javac]     public void testNextTokenLeadingZero() throws Exception {        // default: not allowed
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:162: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected exception for leading zero");
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:162: error: class, interface, or enum expected
+    [javac]         try {            parser.nextToken();            fail("Expected exception for leading zero");
+    [javac]                                                         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:163: error: class, interface, or enum expected
+    [javac]         } catch (JsonParseException e) { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:166: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_INT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:167: error: class, interface, or enum expected
+    [javac]         assertEquals(123, parser.getIntValue());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:168: error: class, interface, or enum expected
+    [javac]     }
+    [javac]     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:171: error: class, interface, or enum expected
+    [javac]     public void testNextTokenInfNaN() throws Exception {        ReaderBasedJsonParser parser = createParser(" NaN Infinity -Infinity ", JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask());
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:172: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:173: error: class, interface, or enum expected
+    [javac]         assertTrue(Double.isNaN(parser.getDoubleValue()));
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:174: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:175: error: class, interface, or enum expected
+    [javac]         assertEquals(Double.POSITIVE_INFINITY, parser.getDoubleValue(), 0.0);
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/src/test/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParserTest.java:176: error: class, interface, or enum expected
+    [javac]         assertEquals(JsonToken.VALUE_NUMBER_FLOAT, parser.nextToken());
+    [javac]         ^
+    [javac] 100 errors
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_19/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

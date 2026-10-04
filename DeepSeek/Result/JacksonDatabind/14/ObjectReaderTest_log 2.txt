@@ -1,0 +1,63 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 301 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:362: error: diamond operator is not supported in -source 6
+    [javac]         Map<Object, Object> m = new HashMap<>();
+    [javac]                                             ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:395: error: ')' expected
+    [javac]         int result = r.readValue(new ByteArrayInputStream("123".getBytes("UTF-8"));
+    [javac]                                                                                   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:409: error: unclosed string literal
+    [javac]         int result = r.readValue("123".getBytes("UTF-8));
+    [javac]                                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:425: error: try-with-resources is not supported in -source 6
+    [javac]         try (FileOutputStream fos = new FileOutputStream(f)) {
+    [javac]             ^
+    [javac]   (use -source 7 or higher to enable try-with-resources)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:583: error: unclosed string literal
+    [javac]         MappingIterator<Integer> it = r.readValues("[9] ".getBytes("UTF-8));
+    [javac]                                                                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:592: error: unclosed string literal
+    [javac]         byte[] data = "****[10,11]".getBytes("UTF-8);
+    [javac]                                              ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:669: error: unclosed string literal
+    [javac]         int result = r.forType(Integer.class).readValue("1".getBytes("UTF-8));
+    [javac]                                                                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:747: error: unclosed string literal
+    [javac]         JsonParser p = new JsonFactory().createParser("\"\"); // empty
+    [javac]                                                       ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:850: error: illegal character: '`'
+    [javac] ```
+    [javac] ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:850: error: illegal character: '`'
+    [javac] ```
+    [javac]  ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:850: error: illegal character: '`'
+    [javac] ```
+    [javac]   ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/src/test/java/com/fasterxml/jackson/databind/ObjectReaderTest.java:851: error: reached end of file while parsing
+    [javac] 12 errors
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonDatabind_14/maven-build.xml:112: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

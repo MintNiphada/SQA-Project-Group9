@@ -1,0 +1,2384 @@
+=== METHOD: testConstructors ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetImmediateNode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetBaseValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsCollection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetLength ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsLeaf ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetValueText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetValueElementWithContentTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddContent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetNamespaceURI ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetNamespaceURIObj ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNamespacePointer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildIterator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAttributeIterator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNamespaceIterator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetNamespaceResolver ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompareChildNodePointers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompareChildNodePointerNonElementBase ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTestNodeNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTestNodeNodeNameTest ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTestNodeNodeTypeTest ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTestNodeProcessingInstructionTest ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetPrefix ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetLocalName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsLanguage ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindEnclosingAttribute ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNodeParent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveRoot ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathWithId ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathRoot ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathChild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathTextNode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathCDATA ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsPathPI ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetRelativePositionByQName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHashCodeAndEquals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateChild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateChildFailed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateChildWithValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAttributeOnElement ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAttributeWithNamespace ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAttributeUnknownNamespacePrefix ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAttributeOnNonElement ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JxPath_19 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JxPath_19  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+get-deps:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xerces/xerces/2.4.0/xerces-2.4.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xerces-2.4.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/servletapi/servletapi/2.4/servletapi-2.4.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/servletapi-2.4.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jspapi/jsp-api/2.0/jsp-api-2.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jsp-api-2.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/xml-apis-2.0.2.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/jdom/jdom/1.0/jdom-1.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/jdom-1.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-beanutils-1.7.0.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/commons-logging/commons-logging/1.1/commons-logging-1.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/commons-logging-1.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/junit/junit/3.8.1/junit-3.8.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/junit-3.8.1.jar
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/JxPath/lib/mockrunner-0.4.1.jar
+      [get] To: /private/tmp/defects4j_checkout/JxPath_19/target/lib/mockrunner-jdk1.3-j2ee1.3-0.4.jar
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:36: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 13 source files to /private/tmp/defects4j_checkout/JxPath_19/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/JxPath_19/src/test/org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointerTest.java:515: error: lambda expressions are not supported in -source 6
+    [javac]         assertFalse(root.getContent().stream().filter(c -> c instanceof Element && "newChild".equals(((Element) c).getName())).findAny().isEmpty());
+    [javac]                                                         ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JxPath_19/build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

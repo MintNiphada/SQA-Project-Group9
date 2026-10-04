@@ -1,0 +1,2413 @@
+=== METHOD: testBasicModule ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 402 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/src/com/google/javascript/jscomp/CompilerOptions.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/src/com/google/javascript/jscomp/ant/CompileTask.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 4 warnings
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 224 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:663: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 11 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRequire ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testModuleExports ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRelativeRequire ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRelativeRequireParent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNoReportDependencies ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMultipleScriptsThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToModuleName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGuessCJSModuleName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetModule ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSuffixVarsExportsGlobal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSuffixVarsGlobal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSuffixVarsLocalNotRenamed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testModuleNameNotRenamed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testExportsLocalRenamed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructorFilenamePrefixWithoutSeparator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToModuleNameWithHyphen ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToModuleNameNoJsExtension ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToModuleNameLeadingDotSlash ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToModuleNameRelativeWithCurrent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOptionalExportsOverride ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRequireInsideFunction ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMultipleRequires ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNormalizeSourceName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_26/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_26/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_26/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_26/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 85 source files to /private/tmp/defects4j_checkout/Closure_26/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:65: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/test.js", "var foo = require('./bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:75: error: no suitable method found for test(SourceFile,String)
+    [javac]     test(SourceFile.fromCode("dir/sub/test.js", "var foo = require('../bar');"),
+    [javac]     ^
+    [javac]     method CompilerTestCase.test(String,String) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String)
+    [javac]     method CompilerTestCase.test(String[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to String[])
+    [javac]     method CompilerTestCase.test(JSModule[],String[]) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSModule[])
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:98: error: cannot find symbol
+    [javac]       Node root = new Node(Token.BLOCK);
+    [javac]                            ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:99: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/ProcessCommonJSModulesTest.java:100: error: cannot find symbol
+    [javac]       root.addChildToBack(new Node(Token.SCRIPT));
+    [javac]                                    ^
+    [javac]   symbol:   variable Token
+    [javac]   location: class ProcessCommonJSModulesTest
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_26/test/com/google/javascript/jscomp/parsing/JsDocInfoParserTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_26/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,1163 @@
+=== METHOD: testGetInstance_nullField_returnsNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetInstance_alreadyLenient_returnsSame ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 9 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetInstance_strictField_returnsLenientWithWrappedField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetInstance_nonLenient_returnsNewLenientField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsLenient_returnsTrue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_withinBounds_noChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_outOfBounds_positiveOverflow_addsDifference ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_outOfBounds_negativeOverflow_subtractsDifference ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_timeZoneConversion ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_valueSameAsCurrent_noChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_largeOverflow ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSet_negativeLargeOverflow ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 157 source files to /private/tmp/defects4j_checkout/Time_26/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:25: error: class ZonedChronologyTest is public, should be declared in a file named ZonedChronologyTest.java
+    [javac] public class ZonedChronologyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:205: error: cannot find symbol
+    [javac]         Provider custom = new UTCProvider();
+    [javac]                               ^
+    [javac]   symbol:   class UTCProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:212: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]         ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:225: error: cannot find symbol
+    [javac]         Provider bad = new Provider() {
+    [javac]                            ^
+    [javac]   symbol:   class Provider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]         ^
+    [javac]   symbol:   class NameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:246: error: cannot find symbol
+    [javac]         NameProvider custom = new DefaultNameProvider();
+    [javac]                                   ^
+    [javac]   symbol:   class DefaultNameProvider
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/DateTimeZoneTest.java:472: error: cannot find symbol
+    [javac]             new FixedDateTimeZone(null, null, 0, 0);
+    [javac]                 ^
+    [javac]   symbol:   class FixedDateTimeZone
+    [javac]   location: class DateTimeZoneTest
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:72: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(null);
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Time_26/src/test/java/org/joda/time/chrono/TargetClassTest.java:88: error: incompatible types: Chronology cannot be converted to ZonedChronology
+    [javac]         ZonedChronology zc = zonedUTC.withZone(zoneNY);
+    [javac]                                               ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_26/build.xml:235: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

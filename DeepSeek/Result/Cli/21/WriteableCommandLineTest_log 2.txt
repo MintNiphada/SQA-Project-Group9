@@ -1,0 +1,374 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+junit-present:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/Users/inzi/defects4j/framework/projects/lib/junit-4.12.jar to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/Users/inzi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 61 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:10: error: TestOption is not abstract and does not override abstract method findOption(String) in Option
+    [javac]     private static class TestOption implements Option {
+    [javac]                    ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:31: error: getId() in TestOption cannot implement getId() in Option
+    [javac]         public String getId() {
+    [javac]                       ^
+    [javac]   return type String is not compatible with int
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:30: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:50: error: name clash: process(WriteableCommandLine,ListIterator<String>) in TestOption and process(WriteableCommandLine,ListIterator) in Option have the same erasure, yet neither overrides the other
+    [javac]         public void process(WriteableCommandLine commandLine, ListIterator<String> arguments) {
+    [javac]                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:62: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:67: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:72: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:77: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:82: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:87: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:92: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:97: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:102: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:107: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:112: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:117: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:122: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:127: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:141: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:146: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:151: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:156: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:161: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:166: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:171: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:176: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:181: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:186: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:191: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:196: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:201: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:206: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:211: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:216: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:221: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:226: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:231: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:236: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:246: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:251: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:256: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:261: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:266: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:271: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:276: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:281: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:286: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:291: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:296: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:301: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:306: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:311: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:316: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:321: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:326: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:331: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:336: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:341: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:346: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:351: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:361: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:366: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:371: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:376: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:381: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:386: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:391: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:396: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:401: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:406: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:411: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:416: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:420: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:424: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:429: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:433: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:438: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:443: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:448: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:453: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:458: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:463: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:468: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:473: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:478: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:483: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:488: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:493: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:498: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:503: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:508: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:513: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:518: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:523: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:528: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:533: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/WriteableCommandLineTest.java:538: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                                                                  ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/util/HelpFormatterTest.java:413: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]                                               new Object[] { new Integer(-1) }), e.getMessage());
+    [javac]                                                              ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer max = new Integer(100);
+    [javac]                       ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:154: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer min = new Integer(100);
+    [javac]                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 100 errors
+    [javac] 9 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Cli_21/build.xml:151: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

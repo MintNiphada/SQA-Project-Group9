@@ -1,0 +1,79 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:167: error: lambda expressions are not supported in -source 6
+    [javac]         verify(mockTb).process(argThat(t -> t.isStartTag() && t.asStartTag().name().equals("head")));
+    [javac]                                          ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:182: error: ';' expected
+    [javac]         when(mockTb.process(any(Token.class))).thenReturn(false));
+    [javac]                                                                 ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:183: error: ')' expected
+    [javac]         when(mockTb.process(eq(headStart)).thenReturn(true);
+    [javac]                                                            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:191: error: diamond operator is not supported in -source 6
+    [javac]         stack = new LinkedList<>();
+    [javac]                                ^
+    [javac]   (use -source 7 or higher to enable diamond operator)
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:307: error: ')' expected
+    [javac]         when(mockTb.process(eq(headEnd)).thenReturn(true);
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:318: error: ')' expected
+    [javac]         when(mockTb.process(eq(headEnd)).thenReturn(true);
+    [javac]                                                          ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:319: error: ')' expected
+    [javac]         when(mockTb.process(eq(start)).thenReturn(true);
+    [javac]                                                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:339: error: ')' expected
+    [javac]         when(mockTb.process(eq(start), eq(TreeBuilderState.InBody)).thenReturn(true);
+    [javac]                                                                                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:351: error: ';' expected
+    [javac]         verify(mockTb).transition(TreeBuilderState.InHead));
+    [javac]                                                           ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:357: error: ')' expected
+    [javac]         when(mockTb.process(eq(space), eq(TreeBuilderState.InHead)).thenReturn(true);
+    [javac]                                                                                     ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:367: error: ')' expected
+    [javac]         when(mockTb.process(eq(new Token.EndTag("noscript"))).thenReturn(true);
+    [javac]                                                                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:447: error: ')' expected
+    [javac]         when(mockTb.process(eq(start)).thenReturn(true);
+    [javac]                                                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:478: error: ')' expected
+    [javac]         when(mockTb.process(eq(table)).thenReturn(true);
+    [javac]                                                        ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:488: error: ')' expected
+    [javac]         when(mockTb.process(eq(script), eq(TreeBuilderState.InHead)).thenReturn(true);
+    [javac]                                                                                      ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/src/test/java/org/jsoup/parser/TreeBuilderStateTest.java:508: error: ')' expected
+    [javac]         when(mockTb.process(eq(input), eq(TreeBuilderState.InBody)).thenReturn(true);
+    [javac]                                                                                     ^
+    [javac] 15 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/Jsoup_17/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

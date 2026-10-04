@@ -1,0 +1,1840 @@
+=== METHOD: testAddDecoderCopy ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderLZMAValid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderLZMADictTooLarge ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderLZMA2 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderDeflate ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderBzip2 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderAesNullPassword ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderAesPropertiesTooShort ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderAesSpecialKeyDerivation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderAesNormalKeyDerivation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDecoderUnsupportedMethod ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderCopy ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderLzma ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderLzma2 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderDeflate ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderBzip2 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderAes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEncoderUnsupportedMethod ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDummyByteAddingInputStreamReadNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDummyByteAddingInputStreamReadAddsDummy ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDummyByteAddingInputStreamReadArrayNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDummyByteAddingInputStreamReadArrayAddsDummy ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCoderBaseEncodeThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_23 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_23  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 81 source files to /private/tmp/defects4j_checkout/Compress_23/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:15: error: class CodersTest is public, should be declared in a file named CodersTest.java
+    [javac] public class CodersTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:39: error: cannot find symbol
+    [javac]         assertTrue(result instanceof LZMAInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class LZMAInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorInputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorInputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:170: error: cannot find symbol
+    [javac]         assertTrue(result instanceof DeflaterOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class DeflaterOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:177: error: cannot find symbol
+    [javac]         assertTrue(result instanceof BZip2CompressorOutputStream);
+    [javac]                                      ^
+    [javac]   symbol:   class BZip2CompressorOutputStream
+    [javac]   location: class CodersTest
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:195: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:205: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:213: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/sevenz/TargetClassTest.java:223: error: DummyByteAddingInputStream has private access in Coders
+    [javac]         InputStream stream = new Coders.DummyByteAddingInputStream(bais);
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:71: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_23/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:69: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 9 errors
+    [javac] 8 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_23/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

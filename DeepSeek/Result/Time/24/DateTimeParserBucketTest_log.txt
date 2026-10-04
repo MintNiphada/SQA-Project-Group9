@@ -1,0 +1,2139 @@
+=== METHOD: testDeprecatedConstructor1 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] Compiling 155 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 9 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeprecatedConstructor2 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMainConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMainConstructorNullLocale ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetChronology ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetLocale ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetZone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetOffset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetPivotYear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetZone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetOffset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetPivotYear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSaveFieldWithDateTimeField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSaveFieldWithDateTimeFieldType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSaveFieldWithText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSaveStateAndRestore ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRestoreStateInvalid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisNoFields ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisResetFalse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisResetTrue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisDefaultYearInsertionForMonth ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisDefaultYearInsertionForDay ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisOutOfRange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisOutOfRangeWithText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisWithOffset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisWithZoneNoTransition ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisWithZoneTransitionGap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeMillisWithZoneTransitionOverlap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSortWithMoreThan10Fields ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSavedFieldsSharedClone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompareReverse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_24 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_24  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_24/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:11: error: cannot find symbol
+    [javac]     private static final Chronology ISO_UTC = ISOChronology.getInstanceUTC();
+    [javac]                                               ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:14: error: cannot find symbol
+    [javac]         return ISOChronology.getInstance(zone);
+    [javac]                ^
+    [javac]   symbol:   variable ISOChronology
+    [javac]   location: class DateTimeParserBucketTest
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:316: error: cannot find symbol
+    [javac]         assertTrue(result == dt.getMillis() || result == dt.withEarlierOffsetAtOverlap().getMillis());
+    [javac]                                                            ^
+    [javac]   symbol:   method withEarlierOffsetAtOverlap()
+    [javac]   location: variable dt of type DateTime
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:368: error: DelegatedDurationField is not abstract and does not override abstract method toString() in DurationField
+    [javac]     static class DelegatedDurationField extends DurationField {
+    [javac]            ^
+    [javac] /private/tmp/defects4j_checkout/Time_24/src/test/java/org/joda/time/format/DateTimeParserBucketTest.java:371: error: constructor DurationField in class DurationField cannot be applied to given types;
+    [javac]             super(type);
+    [javac]             ^
+    [javac]   required: no arguments
+    [javac]   found: DurationFieldType
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 5 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_24/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

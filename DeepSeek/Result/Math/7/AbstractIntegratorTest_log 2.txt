@@ -1,0 +1,1828 @@
+=== METHOD: testConstructorWithName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 458 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/PerfTestUtils.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 11 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructorNoName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddGetClearStepHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetStepHandlersReturnsUnmodifiable ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetCurrentStepStartDefault ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetCurrentSignedStepsizeDefault ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetMaxEvaluationsNegative ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetMaxEvaluationsPositive ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetEvaluationsInitiallyZero ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInitIntegrationResetsEvaluationsAndCallsHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEventHandlerWithSolver ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddEventHandlerTwoOverloads ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetEventHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClearEventHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeDerivatives ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeDerivativesExceedsMaxEvaluations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSanityChecksTooSmallInterval ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSanityChecksNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateWithConcrete ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepNoEvents ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepIsLastStepDueToEnd ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepWithEventStop ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepWithEventReset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepMultipleEventsOrdering ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepEventReOccurs ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetStateInitialized ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 9 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateDimensionMismatchY0 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 12 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateDimensionMismatchY ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 12 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateDimensionMatch ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_7 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_7  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.1-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 236 source files to /private/tmp/defects4j_checkout/Math_7/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:36: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:79: error: TestStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class TestStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:86: error: no suitable constructor found for AbstractStepInterpolator(double[],boolean)
+    [javac]             super(y, forward);
+    [javac]             ^
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator() is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(double[],boolean,EquationsMapper,EquationsMapper[]) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor AbstractStepInterpolator.AbstractStepInterpolator(AbstractStepInterpolator) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:207: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {}
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:361: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_7/src/test/java/org/apache/commons/math3/ode/AbstractIntegratorTest.java:387: error: cannot find symbol
+    [javac]             public void handleStep(StepInterpolator interpolator, boolean isLast) {
+    [javac]                                    ^
+    [javac]   symbol: class StepInterpolator
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 6 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_7/build.xml:185: Compile failed; see the compiler error output for details.
+
+Total time: 14 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

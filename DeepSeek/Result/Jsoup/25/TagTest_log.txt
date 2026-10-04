@@ -1,0 +1,1431 @@
+=== METHOD: valueOfNullThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 25 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: valueOfEmptyThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: valueOfWhitespaceThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: valueOfKnownTagCaseInsensitiveAndTrimmed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: valueOfUnknownTagDefaults ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: valueOfUnknownTagLowercasesAndTrims ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: knownBlockTagProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: knownInlineTagProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: knownEmptyTagProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: knownPreserveWhitespaceTags ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: formatAsBlockForDivAndTitle ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: isDataForDefaultAndEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: isDataTrueWhenCanContainInlineFalseAndNotEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: setSelfClosingOnUnknown ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: knownTagStaticCheck ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsSameObject ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsNotInstance ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsDifferentTagName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsSameStateDifferentInstances ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenCanContainBlockDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenCanContainInlineDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenEmptyDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenFormatAsBlockDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenIsBlockDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenPreserveWhitespaceDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: equalsFalseWhenSelfClosingDiffers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: toStringReturnsName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_25 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_25  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 7 source files to /private/tmp/defects4j_checkout/Jsoup_25/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:46: error: cannot find symbol
+    [javac]         assertTrue(unknown.canContainInline());
+    [javac]                           ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable unknown of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:66: error: cannot find symbol
+    [javac]         assertTrue(p.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable p of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:79: error: cannot find symbol
+    [javac]         assertTrue(a.canContainInline());
+    [javac]                     ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable a of type Tag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_25/src/test/java/org/jsoup/parser/TagTest.java:90: error: cannot find symbol
+    [javac]         assertFalse(img.canContainInline());
+    [javac]                        ^
+    [javac]   symbol:   method canContainInline()
+    [javac]   location: variable img of type Tag
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_25/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

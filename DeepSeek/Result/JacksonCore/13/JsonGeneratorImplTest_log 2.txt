@@ -1,0 +1,130 @@
+COMPILE_ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 87 source files to /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/target/test-classes
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:18: error: TestJsonGenerator is not abstract and does not override abstract method _verifyValueWrite(String) in GeneratorBase
+    [javac]     static class TestJsonGenerator extends JsonGeneratorImpl {
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:37: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeString(String text) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:38: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeString2(int c) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:39: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _flushBuffer() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:41: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeStartArray() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:42: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeEndArray() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:43: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeStartObject() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:44: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeEndObject() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:45: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeFieldName(String name) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:46: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeFieldName(SerializableString name) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:47: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNull() throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:48: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(int v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:49: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(long v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:50: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(BigInteger v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:51: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(double v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:52: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(float v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:53: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(BigDecimal v) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:54: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeNumber(String encodedValue) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:55: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeBoolean(boolean state) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:56: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRaw(String text) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:57: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRaw(String text, int offset, int len) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:58: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRaw(char[] text, int offset, int len) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:59: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRaw(char c) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:60: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRawValue(String text) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:61: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRawValue(String text, int offset, int len) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:62: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeRawValue(char[] text, int offset, int len) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:63: error: method does not override or implement a method from a supertype
+    [javac]         @Override protected void _writeBinary(Base64Variant b64variant, byte[] data, int offset, int len) throws IOException { }
+    [javac]         ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:83: error: TestSerializableString is not abstract and does not override abstract method putUnquotedUTF8(ByteBuffer) in SerializableString
+    [javac]     static class TestSerializableString implements SerializableString {
+    [javac]            ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:117: error: package Feature does not exist
+    [javac]         int features = Feature.ESCAPE_NON_ASCII.getMask();
+    [javac]                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:125: error: package Feature does not exist
+    [javac]         int features = Feature.QUOTE_FIELD_NAMES.getMask(); // enabled by default, so disable by not including? Actually getMask() returns bit, we need to disable. We'll pass 0 and then disable? The constructor checks enabledIn(features). So if we pass 0, QUOTE_FIELD_NAMES is enabled (default). To disable, we need to pass features with that bit cleared. We'll use ~Feature.QUOTE_FIELD_NAMES.getMask() & some base. Simpler: use JsonFactory.Feature? Actually, we can use Feature.QUOTE_FIELD_NAMES.enabledIn(features) returns true if bit is set. By default, the feature is enabled, meaning the bit is set in the default feature flags. But we can pass a features value that does not include that bit. We'll use 0 and then call disable? But the constructor only uses the passed features. So we need to pass a features value where QUOTE_FIELD_NAMES is not enabled. We can compute: int features = 0; // default features include QUOTE_FIELD_NAMES? Actually, the default feature flags are defined in JsonFactory or JsonGenerator.Feature. The default for QUOTE_FIELD_NAMES is true. So if we pass 0, it will still be enabled because the default is true? Wait, the constructor uses Feature.QUOTE_FIELD_NAMES.enabledIn(features). The enabledIn method checks if the bit is set in the given flags. If we pass 0, the bit is not set, so enabledIn returns false. So _cfgUnqNames = !false = true. So passing 0 will disable QUOTE_FIELD_NAMES? That seems contradictory. Let's check: In Jackson, features are typically enabled by default, meaning the bit is set in the default feature flags. But if we pass 0, we are explicitly providing a feature set with no bits set, so all features are disabled. So QUOTE_FIELD_NAMES will be disabled. So _cfgUnqNames will be true. So we can test with features=0 to get _cfgUnqNames=true. So we'll use that.
+    [javac]                               ^
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:136: error: cannot find symbol
+    [javac]         gen.enable(Feature.QUOTE_FIELD_NAMES);
+    [javac]                    ^
+    [javac]   symbol:   variable Feature
+    [javac]   location: class JsonGeneratorImplTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:145: error: cannot find symbol
+    [javac]         gen.enable(Feature.ESCAPE_NON_ASCII);
+    [javac]                    ^
+    [javac]   symbol:   variable Feature
+    [javac]   location: class JsonGeneratorImplTest
+    [javac] /Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/src/test/java/com/fasterxml/jackson/core/json/JsonGeneratorImplTest.java:154: error: package Feature does not exist
+    [javac]         int newFeatures = Feature.QUOTE_FIELD_NAMES.getMask();
+    [javac]                                  ^
+    [javac] 33 errors
+
+BUILD FAILED
+/Users/inzi/Desktop/ProjectSQA_group9/defects4j_checkout/JacksonCore_13/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

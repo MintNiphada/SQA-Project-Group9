@@ -1,0 +1,20 @@
+Now testing catg.generated.CatgHarness_8aa7e2aa77
+
+========== Input 1 ==========
+WARNING: 
+java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at catg.generated.CatgHarness_8aa7e2aa77.main(CatgHarness_8aa7e2aa77.java:12)
+Caused by: java.lang.ClassCastException: janala.interpreters.FloatValue cannot be cast to janala.interpreters.ObjectValue
+	at janala.interpreters.ConcolicInterpreter.visitPUTFIELD(ConcolicInterpreter.java:1382)
+	at janala.logger.inst.PUTFIELD.visit(PUTFIELD.java:16)
+	at janala.logger.DirectConcolicExecution.log(DirectConcolicExecution.java:58)
+	at janala.logger.AbstractLogger.SPECIAL(AbstractLogger.java:706)
+	at janala.logger.DJVM.SPECIAL(DJVM.java:708)
+	at org.apache.commons.lang.Entities$PrimitiveEntityMap.<init>(Entities.java:421)
+	at org.apache.commons.lang.Entities$LookupEntityMap.<init>(Entities.java:502)
+	at org.apache.commons.lang.Entities.<init>(Entities.java:693)
+	at org.apache.commons.lang.Entities.<clinit>(Entities.java:366)
+	... 3 more
+Java exited with status 1

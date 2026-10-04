@@ -1,0 +1,24 @@
+Now testing catg.generated.CatgHarness_7a8e3aa213
+
+========== Input 1 ==========
+WARNING: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:424)
+	at java.util.ArrayList.remove(ArrayList.java:501)
+	at janala.interpreters.Frame.pop2(Frame.java:81)
+	at janala.interpreters.ConcolicInterpreter.visitLSHR(ConcolicInterpreter.java:1308)
+	at janala.logger.inst.LSHR.visit(LSHR.java:9)
+	at janala.logger.DirectConcolicExecution.log(DirectConcolicExecution.java:58)
+	at janala.logger.AbstractLogger.ASTORE(AbstractLogger.java:217)
+	at janala.logger.DJVM.ASTORE(DJVM.java:224)
+	at catg.generated.CatgHarness_7a8e3aa213.main(CatgHarness_7a8e3aa213.java:27)
+Exception in thread "Thread-1" java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:424)
+	at java.util.ArrayList.remove(ArrayList.java:501)
+	at janala.interpreters.Frame.pop2(Frame.java:81)
+	at janala.interpreters.ConcolicInterpreter.visitLSHR(ConcolicInterpreter.java:1308)
+	at janala.logger.inst.LSHR.visit(LSHR.java:9)
+	at janala.logger.DirectConcolicExecution.log(DirectConcolicExecution.java:58)
+	at janala.logger.DirectConcolicExecution.finish(DirectConcolicExecution.java:46)
+	at janala.logger.DirectConcolicExecution$Finisher.run(DirectConcolicExecution.java:41)
+Java exited with status 1

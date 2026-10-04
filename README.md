@@ -31,8 +31,8 @@
 
 | ผู้รับผิดชอบ | เครื่องมือ / ส่วนงาน | รายละเอียดหน้าที่ความรับผิดชอบ |
 | :--- | :--- | :--- |
-| **สมาชิกคนที่ 1** | **CATG** | ศึกษาและตั้งค่าอัลกอริทึม CATG, กำหนดค่า Configuration, สั่งรันการทดลองสร้าง Test Case ร่วมกับ Defects4J Dataset และสรุปผลการทดลองใน `Result_Round1/` และ `Result_Round2/` |
-| **สมาชิกคนที่ 2** | **Botsing** | ศึกษาและตั้งค่าอัลกอริทึม Botsing, กำหนด พารามิเตอร์สำหรับการสร้าง Test Suite เพื่อทำ Crash Replication บน Defects4J และสรุปผลการทดลองใน `Result_Round1/` และ `Result_Round2/` |
+| นิภาดา ญายะนันท์ 663380507-9 | **CATG** | ศึกษาและตั้งค่าอัลกอริทึม CATG, กำหนดค่า Configuration, สั่งรันการทดลองสร้าง Test Case ร่วมกับ Defects4J Dataset และสรุปผลการทดลองใน `Result_Round1/` และ `Result_Round2/` |
+| ทัตพิชา วะสาร 673380584-2 | **Botsing** | ศึกษาและตั้งค่าอัลกอริทึม Botsing, กำหนด พารามิเตอร์สำหรับการสร้าง Test Suite เพื่อทำ Crash Replication บน Defects4J และสรุปผลการทดลองใน `Result_Round1/` และ `Result_Round2/` |
 | ศศิวิตรา วงษ์รุ่งอรุณเลิศ 673380602-6 | **Gemini & DeepSeek** | ออกแบบ Prompt Engineering, พัฒนาอัตโนมัติสคริปต์รัน Pipeline (API Automation), จัดการระบบซิงก์และวัดผล Line/Branch Coverage ของ AI บน Defects4J |
 
 ---

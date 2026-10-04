@@ -1,0 +1,169 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package com.fasterxml.jackson.databind.type;
+
+import java.util.*;
+
+import com.fasterxml.jackson.databind.JavaType;
+
+/**
+ * Simple recursive-descent parser for parsing canonical {@link JavaType}
+ * representations and constructing type instances.
+ */
+public class TypeParser
+    implements java.io.Serializable
+{
+    private static final long serialVersionUID = 1L;
+
+    protected final TypeFactory _factory;
+        
+    public TypeParser(TypeFactory f) {
+        _factory = f;
+    }
+
+    /**
+     * @since 2.6.2
+     */
+    public TypeParser withFactory(TypeFactory f) {
+        return (f == _factory) ? this : new TypeParser(f);
+    }
+
+    public JavaType parse(String canonical) throws IllegalArgumentException
+    {
+        MyTokenizer tokens = new MyTokenizer(canonical.trim());
+        JavaType type = parseType(tokens);
+        // must be end, now
+        if (tokens.hasMoreTokens()) {
+            throw _problem(tokens, "Unexpected tokens after complete type");
+        }
+        return type;
+    }
+
+    protected JavaType parseType(MyTokenizer tokens)
+        throws IllegalArgumentException
+    {
+        if (!tokens.hasMoreTokens()) {
+            throw _problem(tokens, "Unexpected end-of-string");
+        }
+        Class<?> base = findClass(tokens.nextToken(), tokens);
+
+        // either end (ok, non generic type), or generics
+        if (tokens.hasMoreTokens()) {
+            String token = tokens.nextToken();
+            if ("<".equals(token)) {
+                List<JavaType> parameterTypes = parseTypes(tokens);
+                TypeBindings b = TypeBindings.create(base, parameterTypes);
+                return _factory._fromClass(null, base, b);
+            }
+            // can be comma that separates types, or closing '>'
+            tokens.pushBack(token);
+        }
+        return _factory._fromClass(null, base, null);
+    }
+
+    protected List<JavaType> parseTypes(MyTokenizer tokens)
+        throws IllegalArgumentException
+    {
+        ArrayList<JavaType> types = new ArrayList<JavaType>();
+        while (tokens.hasMoreTokens()) {
+            types.add(parseType(tokens));
+            if (!tokens.hasMoreTokens()) break;
+            String token = tokens.nextToken();
+            if (">".equals(token)) return types;
+            if (!",".equals(token)) {
+                throw _problem(tokens, "Unexpected token '"+token+"', expected ',' or '>')");
+            }
+        }
+        throw _problem(tokens, "Unexpected end-of-string");
+    }
+
+    protected Class<?> findClass(String className, MyTokenizer tokens)
+    {
+        try {
+            return _factory.findClass(className);
+        } catch (Exception e) {
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
+            throw _problem(tokens, "Can not locate class '"+className+"', problem: "+e.getMessage());
+        }
+    }
+
+    protected IllegalArgumentException _problem(MyTokenizer tokens, String msg)
+    {
+        return new IllegalArgumentException(String.format("Failed to parse type '%s' (remaining: '%s'): %s",
+                tokens.getAllInput(), tokens.getRemainingInput(), msg));
+    }
+
+    final static class MyTokenizer extends StringTokenizer
+    {
+        protected final String _input;
+
+        protected int _index;
+
+        protected String _pushbackToken;
+
+        public MyTokenizer(String str) {            
+            super(str, "<,>", true);
+            _input = str;
+        }
+
+        @Override
+        public boolean hasMoreTokens() {
+            return (_pushbackToken != null) || super.hasMoreTokens();
+        }
+        
+        @Override
+        public String nextToken() {
+            String token;
+            if (_pushbackToken != null) {
+                token = _pushbackToken;
+                _pushbackToken = null;
+            } else {
+                token = super.nextToken();
+                _index += token.length();
+                token = token.trim();
+            }
+            return token;
+        }
+
+        public void pushBack(String token) {
+            _pushbackToken = token;
+            // let's NOT change index for now, since token may have been trim()ed
+        }
+
+        public String getAllInput() { return _input; }
+//        public String getUsedInput() { return _input.substring(0, _index); }
+        public String getRemainingInput() { return _input.substring(_index); }
+    }
+}

@@ -1,0 +1,1399 @@
+=== METHOD: testDefaultValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDefineReplacements ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPassAndExecutionSettings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWarningsGuardsAndLevels ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRenamingAndTypeProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRuntimeTypeCheckAndCodingConvention ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testColorizeErrorOutputAndExternExports ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTracerModeEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDevModeEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_149 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_149  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_149/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 184 source files to /private/tmp/defects4j_checkout/Closure_149/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:21: error: class AbstractCommandLineRunnerTest is public, should be declared in a file named AbstractCommandLineRunnerTest.java
+    [javac] public class AbstractCommandLineRunnerTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:181: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:182: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:194: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:209: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:225: error: method does not override or implement a method from a supertype
+    [javac]         @Override
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:239: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:48: error: cannot find symbol
+    [javac]     MessageFormatter formatter = new BasicErrorFormatter();
+    [javac]                                      ^
+    [javac]   symbol:   class BasicErrorFormatter
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:119: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:147: error: cannot find symbol
+    [javac]         Lists.newArrayList(m1, m2),
+    [javac]         ^
+    [javac]   symbol:   variable Lists
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:377: error: cannot find symbol
+    [javac]     options.customPasses = ArrayListMultimap.create();
+    [javac]                            ^
+    [javac]   symbol:   variable ArrayListMultimap
+    [javac]   location: class CompilerTest
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:487: error: cannot find symbol
+    [javac]       public Style getStyle() {
+    [javac]              ^
+    [javac]   symbol: class Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/CompilerTest.java:488: error: cannot find symbol
+    [javac]         return Style.BY_WHOLE;
+    [javac]                ^
+    [javac]   symbol: variable Style
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:220: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("one_part_only"), Collections.emptyList());
+    [javac]                                                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:225: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("not-a-valid-ident:1"), Collections.emptyList());
+    [javac]                                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:230: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0", "m:0"), Collections.emptyList());
+    [javac]                                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:235: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:abc"), Collections.emptyList());
+    [javac]                                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:240: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:2"), Collections.emptyList());
+    [javac]                                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:254: error: incompatible types: List<Object> cannot be converted to List<String>
+    [javac]     AbstractCommandLineRunner.createJsModules(ImmutableList.of("m:0:dep_unknown"), Collections.emptyList());
+    [javac]                                                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:364: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     int res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                     ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:368: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:372: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:376: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     res = runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                                 ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:386: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java:395: error: no suitable constructor found for Result(JSError[],JSError[],<null>,<null>,<null>,<null>,<null>)
+    [javac]     runner.processResults(new Result(new JSError[0], new JSError[0], null, null, null, null, null), null, options);
+    [javac]                           ^
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String,Map<String,Integer>) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac]     constructor Result.Result(JSError[],JSError[],String,VariableMap,VariableMap,VariableMap,FunctionInformationMap,SourceMap,String) is not applicable
+    [javac]       (actual and formal argument lists differ in length)
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_149/test/com/google/javascript/jscomp/TargetClassTest.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 25 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_149/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

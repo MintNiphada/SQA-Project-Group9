@@ -1,0 +1,1770 @@
+=== METHOD: testConstructorsAndNodeName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 30 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/BuildEntities.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTagName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTagNameEmpty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testId ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAttrStringAndBoolean ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDataset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParentAndParents ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildrenAndChild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildOutOfBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextNodesAndDataNodes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelectAndIs ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendPrependChild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildren ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildrenNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildrenOutOfBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendPrependElementAndText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendPrependHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeAfterMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyAndWrap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCssSelector ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSiblings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsByMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsByAttributeValueMatchingInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsMatchingTextInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsMatchingOwnTextInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndOwnText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testData ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClassMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHasClassBoundaries ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHtmlAndOuterHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOuterHtmlWithOutline ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 17 source files to /private/tmp/defects4j_checkout/Jsoup_61/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:142: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("a comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:206: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(5, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:393: error: constructor Comment in class Comment cannot be applied to given types;
+    [javac]         script.appendChild(new Comment("comment"));
+    [javac]                            ^
+    [javac]   required: String,String
+    [javac]   found: String
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_61/src/test/java/org/jsoup/nodes/ElementTest.java:483: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         Element customSelfClosing = new Element(Tag.valueOf("custom", org.jsoup.parser.ParseSettings.htmlDefault).setSelfClosing(), "");
+    [javac]                                                                                                                  ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_61/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

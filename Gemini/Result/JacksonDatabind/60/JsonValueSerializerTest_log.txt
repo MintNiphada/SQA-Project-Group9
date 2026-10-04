@@ -1,0 +1,704 @@
+=== METHOD: testConstructorAndToString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testContextualWithPredefinedSerializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testContextualWithoutSerializerFinalType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testContextualWithoutSerializerNonFinalDynamic ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeNullValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeNonNullValueWithDynamicSerializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeThrowsIOException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeThrowsWrappedException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeThrowsError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeNullValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeDynamicSerializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeForcedTypeInformation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeWithoutForcedTypeInformation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeThrowsIOException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeThrowsWrappedException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerializeWithTypeThrowsError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetSchema ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptJsonFormatVisitorNonEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptJsonFormatVisitorForEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptJsonFormatVisitorForBrokenEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptJsonFormatVisitorForErrorEnum ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsNaturalTypeWithStdHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_60 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_60  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 372 source files to /private/tmp/defects4j_checkout/JacksonDatabind_60/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_60/src/test/java/com/fasterxml/jackson/databind/ser/std/JsonValueSerializerTest.java:67: error: lambda expressions are not supported in -source 7
+    [javac]         Mockito.when(am.getValue(Mockito.any())).thenAnswer(inv -> m.invoke(inv.getArgument(0)));
+    [javac]                                                                 ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_60/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,104 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package com.fasterxml.jackson.databind.deser.std;
+
+import java.util.concurrent.atomic.AtomicReference;
+
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.deser.ValueInstantiator;
+import com.fasterxml.jackson.databind.jsontype.TypeDeserializer;
+
+public class AtomicReferenceDeserializer
+    extends ReferenceTypeDeserializer<AtomicReference<Object>>
+{
+    private static final long serialVersionUID = 1L;
+
+    /*
+    /**********************************************************
+    /* Life-cycle
+    /**********************************************************
+     */
+
+    /**
+     * @since 2.9
+     */
+    public AtomicReferenceDeserializer(JavaType fullType, ValueInstantiator inst,
+            TypeDeserializer typeDeser, JsonDeserializer<?> deser)
+    {
+        super(fullType, inst, typeDeser, deser);
+    }
+
+    /*
+    /**********************************************************
+    /* Abstract method implementations
+    /**********************************************************
+     */
+
+    @Override
+    public AtomicReferenceDeserializer withResolved(TypeDeserializer typeDeser, JsonDeserializer<?> valueDeser) {
+        return new AtomicReferenceDeserializer(_fullType, _valueInstantiator,
+                typeDeser, valueDeser);
+    }
+
+    @Override
+    public AtomicReference<Object> getNullValue(DeserializationContext ctxt) throws JsonMappingException {
+        return new AtomicReference<Object>();
+    }
+
+    @Override
+    public Object getEmptyValue(DeserializationContext ctxt) {
+        return new AtomicReference<Object>();
+    }
+    
+    @Override
+    public AtomicReference<Object> referenceValue(Object contents) {
+        return new AtomicReference<Object>(contents);
+    }
+
+    @Override
+    public Object getReferenced(AtomicReference<Object> reference) {
+        return reference.get();
+    }
+
+    @Override // since 2.9
+    public AtomicReference<Object> updateReference(AtomicReference<Object> reference, Object contents) {
+        reference.set(contents);
+        return reference;
+    }
+
+    @Override // since 2.9
+    public Boolean supportsUpdate(DeserializationConfig config) {
+        // yes; regardless of value deserializer reference itself may be updated
+        return Boolean.TRUE;
+    }
+}

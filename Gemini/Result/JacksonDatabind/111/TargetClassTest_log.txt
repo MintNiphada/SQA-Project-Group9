@@ -1,0 +1,896 @@
+=== METHOD: testBasicProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithValueDeserializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithNullProvider ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFixAccess ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetAndReturn ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetFailure ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetAndReturnFailure ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetNullTokenWithNullProvider ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetNullTokenSkipped ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnNullTokenSkipped ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnNullTokenWithNullProvider ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetCoercedNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetCoercedNullSkipped ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnCoercedNullSkipped ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnCoercedNullWithNullProvider ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeWithType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeAndSetExceptionOnField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializeSetAndReturnExceptionOnField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadResolve ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadResolveBrokenField ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

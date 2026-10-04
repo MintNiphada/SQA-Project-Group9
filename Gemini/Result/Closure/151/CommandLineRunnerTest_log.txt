@@ -1,0 +1,528 @@
+=== METHOD: testDefaultConfiguration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 187 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHelpFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testQuotedArguments ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAllFlags ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompilationLevelsAndWarnings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateNameMapFilesFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBooleanOptionHandlerValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBooleanOptionHandlerDirectly ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetDefaultExterns ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateExternsWithOnlyCustomExterns ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateExternsWithDefaultAndCustomExterns ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_151 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_151  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_151/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_151/build.xml:115: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 156 source files to /private/tmp/defects4j_checkout/Closure_151/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:217: error: Flags has private access in CommandLineRunner
+    [javac]     CommandLineRunner.Flags.BooleanOptionHandler handler =
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:218: error: Flags has private access in CommandLineRunner
+    [javac]         new CommandLineRunner.Flags.BooleanOptionHandler(parser, null, setter);
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:227: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:241: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_151/test/com/google/javascript/jscomp/CommandLineRunnerTest.java:255: error: method does not override or implement a method from a supertype
+    [javac]       @Override
+    [javac]       ^
+    [javac] 5 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_151/build.xml:115: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

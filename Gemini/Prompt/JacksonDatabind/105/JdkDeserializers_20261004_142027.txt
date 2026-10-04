@@ -1,0 +1,83 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package com.fasterxml.jackson.databind.deser.std;
+
+import java.nio.ByteBuffer;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import com.fasterxml.jackson.databind.*;
+
+/**
+ * Container class that contains serializers for JDK types that
+ * require special handling for some reason.
+ */
+public class JdkDeserializers
+{
+    private final static HashSet<String> _classNames = new HashSet<String>();
+    static {
+        // note: can skip primitive types; other ways to check them:
+        Class<?>[] types = new Class<?>[] {
+                UUID.class,
+                AtomicBoolean.class,
+                StackTraceElement.class,
+                ByteBuffer.class
+        };
+        for (Class<?> cls : types) { _classNames.add(cls.getName()); }
+        for (Class<?> cls : FromStringDeserializer.types()) { _classNames.add(cls.getName()); }
+    }
+
+    public static JsonDeserializer<?> find(Class<?> rawType, String clsName)
+    {
+        if (_classNames.contains(clsName)) {
+            JsonDeserializer<?> d = FromStringDeserializer.findDeserializer(rawType);
+            if (d != null) {
+                return d;
+            }
+            if (rawType == UUID.class) {
+                return new UUIDDeserializer();
+            }
+            if (rawType == StackTraceElement.class) {
+                return new StackTraceElementDeserializer();
+            }
+            if (rawType == AtomicBoolean.class) {
+                // (note: AtomicInteger/Long work due to single-arg constructor. For now?
+                return new AtomicBooleanDeserializer();
+            }
+            if (rawType == ByteBuffer.class) {
+                return new ByteBufferDeserializer();
+            }
+        }
+        return null;
+    }
+}

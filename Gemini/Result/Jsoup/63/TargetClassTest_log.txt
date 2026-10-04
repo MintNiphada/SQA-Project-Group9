@@ -1,0 +1,1195 @@
+=== METHOD: testReadBasicTokens ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelfClosingFlagUnacknowledgedError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcknowledgeSelfClosingFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitDoublePendingThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitEndTagWithAttributesError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitStringAndCharBufferMerging ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitSingleString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitCharAndIntArrayVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStateTransitions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTagPendingCreationAndAppropriateEndTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCommentAndDoctypePending ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateTempBuffer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceEmptyAndSkippedChars ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceDecimal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceHex ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceHexUppercase ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNoNumerals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceMissingSemicolon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceInvalidCodePoints ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNamedValidAndBase ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNamedInvalid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceInAttributeHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testErrorTrackingMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCurrentNodeInHtmlNS ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnescapeEntities ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnescapeEntitiesInAttribute ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_63 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_63  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_63/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/TargetClassTest.java:6: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:303: error: cannot find symbol
+    [javac]         commentToken.getData().append("hello world");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:326: error: cannot find symbol
+    [javac]         commentToken.getData().append("initial comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_63/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:544: error: incompatible types: Element cannot be converted to FormElement
+    [javac]         FormElement form = doc.appendElement("form");
+    [javac]                                             ^
+    [javac] 4 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_63/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

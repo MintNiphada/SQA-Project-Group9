@@ -1,0 +1,1775 @@
+=== METHOD: testConstructorsAndEncoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 94 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSetEntryEncodingThrowsExceptionWhenConstructorUsed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamNullName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamNullStream ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamUnknownArchiver ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamSevenZ ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamAllTypesWithoutEncoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveInputStreamAllTypesWithEncoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamNullName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamNullStream ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamUnknownArchiver ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamSevenZ ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamAllTypesWithoutEncoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateArchiveOutputStreamAllTypesWithEncoding ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectNullStream ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectUnmarkableStream ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectZip ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectAr ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectCpio ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectArj ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectSevenZ ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectDump ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectTar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectUnknownSignature ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAutodetectResetIOException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Compress_29 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Compress_29  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:80: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 86 source files to /private/tmp/defects4j_checkout/Compress_29/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:30: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("UTF-8");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:40: warning: [deprecation] setEntryEncoding(String) in ArchiveStreamFactory has been deprecated
+    [javac]         factory.setEntryEncoding("ISO-8859-1");
+    [javac]                ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:199: error: cannot find symbol
+    [javac]         data[24] = (byte) (DumpArchiveInputStream.NFS_MAGIC & 0xFF);
+    [javac]                                                  ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:200: error: cannot find symbol
+    [javac]         data[25] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 8) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:201: error: cannot find symbol
+    [javac]         data[26] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 16) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/ArchiveStreamFactoryTest.java:202: error: cannot find symbol
+    [javac]         data[27] = (byte) ((DumpArchiveInputStream.NFS_MAGIC >> 24) & 0xFF);
+    [javac]                                                   ^
+    [javac]   symbol:   variable NFS_MAGIC
+    [javac]   location: class DumpArchiveInputStream
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestampTest.java:416: warning: [deprecation] Date(int,int,int,int,int,int) in Date has been deprecated
+    [javac]         Date d = new Date(97, 8, 24, 15, 10, 2);
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipEightByteIntegerTest.java:107: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipEightByteInteger handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipLongTest.java:83: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipLong handling", !zl.equals(new Integer(0x1234)));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Compress_29/src/test/java/org/apache/commons/compress/archivers/zip/ZipShortTest.java:81: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertTrue("non ZipShort handling", !zs.equals(new Integer(0x1234)));
+    [javac]                                                        ^
+    [javac] 4 errors
+    [javac] 10 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Compress_29/maven-build.xml:113: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

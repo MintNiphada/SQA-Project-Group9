@@ -1,0 +1,107 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package org.jsoup.parser;
+
+import org.jsoup.nodes.Attributes;
+
+import static org.jsoup.internal.Normalizer.lowerCase;
+
+/**
+ * Controls parser settings, to optionally preserve tag and/or attribute name case.
+ */
+public class ParseSettings {
+    /**
+     * HTML default settings: both tag and attribute names are lower-cased during parsing.
+     */
+    public static final ParseSettings htmlDefault;
+    /**
+     * Preserve both tag and attribute case.
+     */
+    public static final ParseSettings preserveCase;
+
+    static {
+        htmlDefault = new ParseSettings(false, false);
+        preserveCase = new ParseSettings(true, true);
+    }
+
+    private final boolean preserveTagCase;
+    private final boolean preserveAttributeCase;
+
+    /**
+     * Returns true if preserving tag name case.
+     */
+    public boolean preserveTagCase() {
+        return preserveTagCase;
+    }
+
+    /**
+     * Returns true if preserving attribute case.
+     */
+
+    /**
+     * Define parse settings.
+     * @param tag preserve tag case?
+     * @param attribute preserve attribute name case?
+     */
+    public ParseSettings(boolean tag, boolean attribute) {
+        preserveTagCase = tag;
+        preserveAttributeCase = attribute;
+    }
+
+    /**
+     * Normalizes a tag name according to the case preservation setting.
+     */
+    public String normalizeTag(String name) {
+        name = name.trim();
+        if (!preserveTagCase)
+            name = lowerCase(name);
+        return name;
+    }
+
+    /**
+     * Normalizes an attribute according to the case preservation setting.
+     */
+    public String normalizeAttribute(String name) {
+        name = name.trim();
+        if (!preserveAttributeCase)
+            name = lowerCase(name);
+        return name;
+    }
+
+    Attributes normalizeAttributes(Attributes attributes) {
+        if (!preserveAttributeCase) {
+            attributes.normalize();
+        }
+        return attributes;
+    }
+}

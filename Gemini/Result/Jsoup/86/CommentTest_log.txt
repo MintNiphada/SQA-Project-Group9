@@ -1,0 +1,459 @@
+=== METHOD: testConstructorsAndGetData ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 48 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOuterHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOuterHtmlHeadWithPrettyPrint ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOuterHtmlHeadWithoutPrettyPrint ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsXmlDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsXmlDeclarationProcessingInstruction ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsXmlDeclarationDocType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAsXmlDeclarationInvalid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_86 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_86  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_86/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:16: warning: [deprecation] Comment(String,String) in Comment has been deprecated
+    [javac]         Comment comment2 = new Comment("another comment", "http://example.com");
+    [javac]                            ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/CommentTest.java:100: error: incompatible types: Node cannot be converted to Comment
+    [javac]         Comment clone = comment.clone();
+    [javac]                                      ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/nodes/ElementTest.java:406: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("Attribute should be boolean", attributes.get(0) instanceof BooleanAttribute);
+    [javac] 		                                                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_86/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_86/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

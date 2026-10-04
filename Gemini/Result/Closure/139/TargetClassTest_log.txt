@@ -1,0 +1,858 @@
+=== METHOD: testSplitVarDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 163 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConvertWhileToFor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testExtractForInitializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testExtractForExpressionInitializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNormalizeLabels ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMoveNamedFunctions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveDuplicateVarDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveDuplicateVarWithoutInit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveDuplicateVarInForIn ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveDuplicateVarInLabel ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAssertOnChangeFailsOnVarChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAssertOnChangeFailsOnWhileChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPropagateConstantAnnotations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPropagateConstantAnnotationsEmptyName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPropagateConstantAnnotationsAssertOnChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVerifyConstantsPass ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVerifyConstantsWithUserDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVerifyConstantsInconsistent ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNormalizeStatementsCallback ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsecutiveFunctionHoisting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCatchVarUniqueRenamingDoesNotRewriteVar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyVarNodeThrowsAssertOnChange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_139 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_139  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:53: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:58: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_139/build.xml:101: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /private/tmp/defects4j_checkout/Closure_139/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:148: error: no suitable constructor found for Node(int,String)
+    [javac]     Node root = new Node(Token.SCRIPT, new Node(Token.NAME, ""));
+    [javac]                                        ^
+    [javac]     constructor Node.Node(int,Node) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node)
+    [javac]     constructor Node.Node(int,Node[]) is not applicable
+    [javac]       (argument mismatch; String cannot be converted to Node[])
+    [javac] /private/tmp/defects4j_checkout/Closure_139/test/com/google/javascript/jscomp/TargetClassTest.java:159: error: incompatible types: SyntacticScopeCreator cannot be converted to Callback
+    [javac]     NodeTraversal.traverse(compiler, script, new SyntacticScopeCreator(compiler));
+    [javac]                                              ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_139/build.xml:101: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

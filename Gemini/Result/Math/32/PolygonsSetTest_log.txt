@@ -1,0 +1,1007 @@
+=== METHOD: testEmptyPolygon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFullSpacePolygon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBox ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHalfPlane ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testQuadrantOpenLoop ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvertedBox ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBoxWithHole ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDisjointBoxes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBoundaryCollectionConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildNew ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVerticesCaching ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testXorOperation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDegeneratedPolygon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyBoundaryCollection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_32 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_32  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 230 source files to /private/tmp/defects4j_checkout/Math_32/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:18: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getX(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:19: error: cannot find symbol
+    [javac]         Assert.assertEquals(0.0, set.getBarycenter().getY(), 1.0e-10);
+    [javac]                                                     ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:27: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:28: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getY()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getY()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:60: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(set.getBarycenter().getX()));
+    [javac]                                                           ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:84: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(intersection.getBarycenter().getX()));
+    [javac]                                                                    ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSetTest.java:97: error: cannot find symbol
+    [javac]         Assert.assertTrue(Double.isNaN(inverted.getBarycenter().getX()));
+    [javac]                                                                ^
+    [javac]   symbol:   method getX()
+    [javac]   location: interface Vector<Euclidean2D>
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Math_32/src/test/java/org/apache/commons/math3/optimization/univariate/BrentOptimizerTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_32/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

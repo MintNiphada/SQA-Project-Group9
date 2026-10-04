@@ -1,0 +1,100 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+/*
+ * Copyright (c) 2007 Mockito contributors
+ * This program is made available under the terms of the MIT License.
+ */
+package org.mockito.internal.configuration;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+
+import org.mockito.Captor;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.Spy;
+import org.mockito.configuration.AnnotationEngine;
+import org.mockito.exceptions.Reporter;
+import org.mockito.exceptions.base.MockitoException;
+import org.mockito.internal.util.MockUtil;
+
+
+@SuppressWarnings({"unchecked"})
+public class SpyAnnotationEngine implements AnnotationEngine {
+
+    public Object createMockFor(Annotation annotation, Field field) {
+        return null;
+    }
+    
+    @SuppressWarnings("deprecation")
+    public void process(Class<?> context, Object testClass) {
+        Field[] fields = context.getDeclaredFields();
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(Spy.class)) {
+                assertNoAnnotations(Spy.class, field, Mock.class, org.mockito.MockitoAnnotations.Mock.class, Captor.class);
+                boolean wasAccessible = field.isAccessible();
+                field.setAccessible(true);
+                try {
+                    Object instance = field.get(testClass);
+                    if (instance == null) {
+                        throw new MockitoException("Cannot create a @Spy for '" + field.getName() + "' field because the *instance* is missing\n" +
+                        		  "The instance must be created *before* initMocks();\n" +
+                                  "Example of correct usage of @Spy:\n" +
+                            	  "   @Spy List mock = new LinkedList();\n" +
+                            	  "   //also, don't forget about MockitoAnnotations.initMocks();");
+
+                    }
+                    if (new MockUtil().isMock(instance)) { 
+                        // instance has been spied earlier
+                        Mockito.reset(instance);
+                    } else {
+                        field.set(testClass, Mockito.spy(instance));
+                    }
+                } catch (IllegalAccessException e) {
+                    throw new MockitoException("Problems initiating spied field " + field.getName(), e);
+                } finally {
+                    field.setAccessible(wasAccessible);
+                }
+            }
+        }
+    }
+    
+    //TODO duplicated elsewhere
+    void assertNoAnnotations(Class annotation, Field field, Class ... undesiredAnnotations) {
+        for (Class u : undesiredAnnotations) {
+            if (field.isAnnotationPresent(u)) {
+                new Reporter().unsupportedCombinationOfAnnotations(annotation.getSimpleName(), annotation.getClass().getSimpleName());
+            }
+        }        
+    }    
+}

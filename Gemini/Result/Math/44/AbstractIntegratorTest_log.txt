@@ -1,0 +1,911 @@
+=== METHOD: testConstructorsAndGetters ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 350 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStepHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEventHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateSuccessful ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateDimensionMismatchY0 ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntegrateDimensionMismatchY ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComputeDerivativesExceedsMaxEvaluations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testResetEvaluations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSanityChecksFailsForSmallInterval ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepNoEvents ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepWithEventStop ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepWithEventResetState ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepWithEventResetDerivatives ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAcceptStepBackwardIntegration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Math_44 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Math_44  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+     [echo] -------- Commons MATH 3.0-SNAPSHOT --------
+
+compile:
+
+check-availability:
+     [echo] doing check-availability...
+
+download-dependencies:
+     [echo] doing download-dependencies...
+[hastarget] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+download-junit:
+
+compile.tests:
+    [javac] Compiling 176 source files to /private/tmp/defects4j_checkout/Math_44/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:70: error: DummyStepInterpolator is not abstract and does not override abstract method readExternal(ObjectInput) in AbstractStepInterpolator
+    [javac]     private static class DummyStepInterpolator extends AbstractStepInterpolator {
+    [javac]                    ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:75: error: cannot find symbol
+    [javac]             this.previousTime = previousTime;
+    [javac]                 ^
+    [javac]   symbol: variable previousTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:76: error: cannot find symbol
+    [javac]             this.currentTime = currentTime;
+    [javac]                 ^
+    [javac]   symbol: variable currentTime
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                            ^
+    [javac]   symbol:   variable currentTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:104: error: cannot find symbol
+    [javac]                 interpolatedState[i] = state[i] + theta * (currentTime - previousTime) * derivatives[i];
+    [javac]                                                                          ^
+    [javac]   symbol:   variable previousTime
+    [javac]   location: class DummyStepInterpolator
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:133: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$1> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler1 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:137: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$2> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         StepHandler handler2 = new StepHandler() {
+    [javac]                                                  ^
+    [javac] /private/tmp/defects4j_checkout/Math_44/src/test/java/org/apache/commons/math/ode/AbstractIntegratorTest.java:272: error: <anonymous org.apache.commons.math.ode.AbstractIntegratorTest$11> is not abstract and does not override abstract method reset() in StepHandler
+    [javac]         integrator.addStepHandler(new StepHandler() {
+    [javac]                                                     ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 8 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Math_44/build.xml:180: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,622 @@
+=== METHOD: testBuildEmptyRecordReturnsNativeObjectType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddPropertyAndBuild ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddDuplicatePropertyReturnsNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddMultipleDistinctProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAddPropertyWithNullTypeAndNode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRecordPropertyGetters ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRecordPropertyNullGetters ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_165 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_165  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_165/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_165/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:252: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:258: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_165/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:325: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_165/build.xml:331: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Closure_165/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/JSTypeRegistryTest.java:375: error: cannot find symbol
+    [javac]     Assert.assertTrue(paramResult.isUnionType() || paramResult.isParameterizedType());
+    [javac]                                                               ^
+    [javac]   symbol:   method isParameterizedType()
+    [javac]   location: variable paramResult of type JSType
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:21: error: TestObjectType is not abstract and does not override abstract method toStringHelper(boolean) in JSType
+    [javac]   private static class TestObjectType extends ObjectType {
+    [javac]                  ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:349: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseNamedType(NamedType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:350: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseProxyObjectType(ProxyObjectType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseRecordType(RecordType type) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/ObjectTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType templateType) { return null; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_165/test/com/google/javascript/rhino/jstype/TargetClassTest.java:140: error: cannot find symbol
+    [javac]     registry.registerIndex("prop", customObj);
+    [javac]             ^
+    [javac]   symbol:   method registerIndex(String,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_165/build.xml:331: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

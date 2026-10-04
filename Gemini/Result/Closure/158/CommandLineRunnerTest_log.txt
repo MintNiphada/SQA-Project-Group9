@@ -1,0 +1,467 @@
+=== METHOD: testDefaultConstruction ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVersionOutput ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHelpFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidCommandLineFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testComprehensiveOptionsParsing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFlagFileParsing ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRecursiveFlagFileError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidFlagFileRead ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateExternsDefaultAndCustom ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetDefaultExterns ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFormattingOptionReflection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBooleanOptionHandler ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_158 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_158  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_158/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_158/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 200 source files to /private/tmp/defects4j_checkout/Closure_158/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_158/test/com/google/javascript/jscomp/TargetClassTest.java:345: error: lambda expressions are not supported in -source 6
+    [javac]     Supplier<List<JSSourceFile>> externsSupplier = () -> Lists.newArrayList();
+    [javac]                                                       ^
+    [javac]   (use -source 8 or higher to enable lambda expressions)
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_158/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

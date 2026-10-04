@@ -1,0 +1,1716 @@
+=== METHOD: testBasicFeederAndBufferMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 144 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFeedInputWhenUndecodedBytesRemain ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFeedInputEndBeforeStart ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFeedInputAfterEndOfInput ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDecodeEscapedThrowsInternal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSimpleValuesChunkByChunk ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFastLiterals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBOMHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBOMSplitAcrossFeeds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCorruptBOMSecondByte ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCorruptBOMThirdByte ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWhitespaceAndNewlines ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumbersVariousForms ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNumberSplitAcrossFeeds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZerosWhenAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZerosWhenNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLeadingZerosNegativeWhenNotAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNonStandardNumbers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStringEscapes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMultiByteUtf8InStrings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMultiByteUtf8SplitAcrossFeeds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSingleQuotedStringsAndKeys ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnquotedFieldNames ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testObjectFieldNamesOfVariousLengths ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTrailingCommasWhenAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMissingValuesWhenAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testJavaAndYamlComments ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testJavaCommentsWhenDisabled ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testYamlCommentsWhenDisabled ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnrecognizedToken ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidNumberExponentWithoutDigit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidNumberDecimalWithoutDigit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidNumberMinusWithoutDigit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnterminatedCComment ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEofHandlingOnValidRootNumber ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEofHandlingOnValidRootZero ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEofHandlingOnValidRootFloat ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEofHandlingOnValidRootKeywords ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloseParser ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonCore_26 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonCore_26  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-core-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-core-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 66 source files to /private/tmp/defects4j_checkout/JacksonCore_26/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:22: error: createRoot(int) has protected access in ByteQuadsCanonicalizer
+    [javac]         ByteQuadsCanonicalizer sym = ByteQuadsCanonicalizer.createRoot(1).makeChild(JsonFactory.Feature.collectDefaults());
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:238: warning: [deprecation] ALLOW_NUMERIC_LEADING_ZEROS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NUMERIC_LEADING_ZEROS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:268: warning: [deprecation] ALLOW_NON_NUMERIC_NUMBERS in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:418: warning: [deprecation] ALLOW_TRAILING_COMMA in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_TRAILING_COMMA.getMask();
+    [javac]                                                                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonCore_26/src/test/java/com/fasterxml/jackson/core/json/async/NonBlockingJsonParserTest.java:438: warning: [deprecation] ALLOW_MISSING_VALUES in Feature has been deprecated
+    [javac]         int feats = JsonParser.Feature.collectDefaults() | JsonParser.Feature.ALLOW_MISSING_VALUES.getMask();
+    [javac]                                                                              ^
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonCore_26/maven-build.xml:102: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

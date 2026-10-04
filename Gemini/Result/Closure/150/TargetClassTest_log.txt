@@ -1,0 +1,1014 @@
+=== METHOD: testInitialScopeCreation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCustomCodingConvention ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLiteralTypesAttachment ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFunctionDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructorAndPrototypeDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLocalScopeCreation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCatchScopeDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEnumDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEnumDuplicateKeyWarning ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEnumNonConstantKeyWarning ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidEnumInitializerWarning ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTypedefDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testQualifiedTypedefDeclaration ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMalformedTypedefWarning ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInheritanceAndOverriddenFunction ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInheritanceViaInherits ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStubDeclarations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrototypeReassignment ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBleedingFunctionName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCollectPropertiesInConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFunctionTypeAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMultipleVarDefWarningWithJsDoc ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testObjectLiteralCast ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSingletonGetter ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstantsAndDiagnosticTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_150 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_150  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:56: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_150/build.xml:106: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 188 source files to /private/tmp/defects4j_checkout/Closure_150/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:20: error: class TypedScopeCreatorTest is public, should be declared in a file named TypedScopeCreatorTest.java
+    [javac] public class TypedScopeCreatorTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TypedScopeCreatorTest.java:48: error: duplicate class: com.google.javascript.jscomp.TypedScopeCreatorTest
+    [javac] public class TypedScopeCreatorTest extends CompilerTestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_150/test/com/google/javascript/jscomp/TargetClassTest.java:29: error: cannot find symbol
+    [javac]     options.setCheckTypes(true);
+    [javac]            ^
+    [javac]   symbol:   method setCheckTypes(boolean)
+    [javac]   location: variable options of type CompilerOptions
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_150/build.xml:106: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

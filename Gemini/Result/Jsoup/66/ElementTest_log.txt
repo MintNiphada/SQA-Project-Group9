@@ -1,0 +1,1260 @@
+=== METHOD: testConstructorsAndBasicProps ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 32 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNullTagConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNullBaseUriConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyTagName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAttributesAndDataset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParentAndChildren ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParents ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDataNodes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDataWithCommentsAndNestedElements ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildren ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildrenOutOfBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendAndPrependElementAndText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendAndPrependHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeAfterAndWrap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyAndClone ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSiblingNavigation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCssSelector ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDomSearchMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPatternSyntaxExceptionInAttrMatching ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPatternSyntaxExceptionInTextMatching ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPatternSyntaxExceptionInOwnTextMatching ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelectAndIs ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndOwnTextAndPreserveWhitespace ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClassNamesAndManipulation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHasClassBoundaryBranches ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValMethod ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testOuterHtmlAndOutputSettings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHtmlAndAppendableHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_66 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_66  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to /private/tmp/defects4j_checkout/Jsoup_66/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/nodes/ElementTest.java:455: error: setSelfClosing() is not public in Tag; cannot be accessed from outside package
+    [javac]         customSelfClosing.tag().setSelfClosing();
+    [javac]                                ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_66/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] 1 error
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_66/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

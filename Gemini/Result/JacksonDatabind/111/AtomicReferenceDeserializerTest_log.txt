@@ -1,0 +1,431 @@
+=== METHOD: testConstructorAndProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithResolved ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetNullValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetEmptyValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReferenceValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetReferenced ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUpdateReference ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSupportsUpdate ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_111 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_111  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:90: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /private/tmp/defects4j_checkout/JacksonDatabind_111/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:34: error: class FieldPropertyTest is public, should be declared in a file named FieldPropertyTest.java
+    [javac] public class FieldPropertyTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:157: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id1"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:183: error: package ObjectIdGenerator does not exist
+    [javac]         ReadableObjectId realRoid = new ReadableObjectId(new ObjectIdGenerator.IdKey(Object.class, Object.class, "id2"));
+    [javac]                                                                               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:214: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java:226: error: incompatible types: UnresolvedId cannot be converted to ReadableObjectId
+    [javac]         UnresolvedForwardReference ref = new UnresolvedForwardReference(parser, "test", new JsonLocation(null, 0, 0, 0), new UnresolvedId("id1", Object.class, new JsonLocation(null, 0, 0, 0)));
+    [javac]                                                                                                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:48: error: FakePropDef is not abstract and does not override abstract method findInclusion() in BeanPropertyDefinition
+    [javac]     public static class FakePropDef extends BeanPropertyDefinition {
+    [javac]                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/TargetClassTest.java:82: error: cannot find symbol
+    [javac]         TypeResolutionContext typeContext = new TypeResolutionContext.Basic(TypeFactory.defaultInstance(), ac.getBindings());
+    [javac]                                                                                                              ^
+    [javac]   symbol:   method getBindings()
+    [javac]   location: variable ac of type AnnotatedClass
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_111/src/test/java/com/fasterxml/jackson/databind/deser/impl/ObjectIdReferencePropertyTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 7 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_111/maven-build.xml:118: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

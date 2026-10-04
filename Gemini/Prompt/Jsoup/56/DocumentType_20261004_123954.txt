@@ -1,0 +1,104 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package org.jsoup.nodes;
+
+import java.io.IOException;
+
+import org.jsoup.helper.StringUtil;
+import org.jsoup.nodes.Document.OutputSettings.*;
+
+/**
+ * A {@code <!DOCTYPE>} node.
+ */
+public class DocumentType extends Node {
+    public static final String PUBLIC_KEY = "PUBLIC";
+    public static final String SYSTEM_KEY = "SYSTEM";
+    private static final String NAME = "name";
+    private static final String PUBLIC_ID = "publicId";
+    private static final String SYSTEM_ID = "systemId";
+    // todo: quirk mode from publicId and systemId
+
+    /**
+     * Create a new doctype element.
+     * @param name the doctype's name
+     * @param publicId the doctype's public ID
+     * @param systemId the doctype's system ID
+     * @param baseUri the doctype's base URI
+     */
+    public DocumentType(String name, String publicId, String systemId, String baseUri) {
+        super(baseUri);
+
+        attr(NAME, name);
+        attr(PUBLIC_ID, publicId);
+        attr(SYSTEM_ID, systemId);
+    }
+
+    /**
+     * Create a new doctype element.
+     * @param name the doctype's name
+     * @param publicId the doctype's public ID
+     * @param systemId the doctype's system ID
+     * @param baseUri the doctype's base URI
+     */
+
+
+    @Override
+    public String nodeName() {
+        return "#doctype";
+    }
+
+    @Override
+    void outerHtmlHead(Appendable accum, int depth, Document.OutputSettings out) throws IOException {
+        if (out.syntax() == Syntax.html && !has(PUBLIC_ID) && !has(SYSTEM_ID)) {
+            // looks like a html5 doctype, go lowercase for aesthetics
+            accum.append("<!doctype");
+        } else {
+            accum.append("<!DOCTYPE");
+        }
+        if (has(NAME))
+            accum.append(" ").append(attr(NAME));
+        if (has(PUBLIC_ID))
+            accum.append(" PUBLIC \"").append(attr(PUBLIC_ID)).append('"');
+        if (has(SYSTEM_ID))
+            accum.append(" \"").append(attr(SYSTEM_ID)).append('"');
+        accum.append('>');
+    }
+
+    @Override
+    void outerHtmlTail(Appendable accum, int depth, Document.OutputSettings out) {
+    }
+
+    private boolean has(final String attribute) {
+        return !StringUtil.isBlank(attr(attribute));
+    }
+}

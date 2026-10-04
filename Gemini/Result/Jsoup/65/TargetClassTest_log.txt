@@ -1,0 +1,1637 @@
+=== METHOD: testEnumValuesAndValueOf ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInitialStateVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeHtmlVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInHeadNoscriptVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAfterHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyTagsAndFormatting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyButtonsAndFormatting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyAdoptionAgency ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyEndTags ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableStates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableTextAndFoster ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInCaptionAndColumnGroup ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableBodyAndRowAndCell ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInSelectStates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFramesetStates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAfterBodyAndAfterAfterBody ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFragmentParsingBranches ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsIndexHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testForeignContentDirectProcess ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_65 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_65  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:77: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 11 source files to /private/tmp/defects4j_checkout/Jsoup_65/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:11: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:32: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:230: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:233: error: formattingElements has private access in HtmlTreeBuilder
+    [javac]         Assert.assertEquals(3, builder.formattingElements.size());
+    [javac]                                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:321: error: cannot find symbol
+    [javac]         comment.getData().append("test comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:512: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("form"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:513: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc.selectFirst("input"));
+    [javac]                                 ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:514: error: cannot find symbol
+    [javac]         Assert.assertEquals("Cell", doc.selectFirst("td").text());
+    [javac]                                        ^
+    [javac]   symbol:   method selectFirst(String)
+    [javac]   location: variable doc of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertNotNull(doc3.doctype());
+    [javac]                                  ^
+    [javac]   symbol:   method doctype()
+    [javac]   location: variable doc3 of type Document
+    [javac] /private/tmp/defects4j_checkout/Jsoup_65/src/test/java/org/jsoup/parser/TargetClassTest.java:390: error: incompatible types: String cannot be converted to Reader
+    [javac]         tb.initialiseParse("<div></div>", "http://example.com", ParseErrorList.noTracking(), ParseSettings.htmlDefault);
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 11 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_65/maven-build.xml:116: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

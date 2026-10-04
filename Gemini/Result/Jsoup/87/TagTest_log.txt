@@ -1,0 +1,503 @@
+=== METHOD: testKnownTagsProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUnknownTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValueOfSettings ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValueOfNullThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValueOfEmptyThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEqualsAndHashCode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsKnownTagStatic ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_87 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_87  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:84: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /private/tmp/defects4j_checkout/Jsoup_87/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:8: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] import org.jsoup.nodes.BooleanAttribute;
+    [javac]                       ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/nodes/ElementTest.java:349: error: incompatible types: Set<Object> cannot be converted to Set<String>
+    [javac]         el.classNames(Collections.emptySet());
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:87: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'normal' attribute should not be boolean", attributes.get(0) instanceof BooleanAttribute);        
+    [javac] 		                                                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:88: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertTrue("'boolean' attribute should be boolean", attributes.get(1) instanceof BooleanAttribute);        
+    [javac] 		                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/AttributeParseTest.java:89: warning: [deprecation] BooleanAttribute in org.jsoup.nodes has been deprecated
+    [javac] 		assertFalse("'empty' attribute should not be boolean", attributes.get(2) instanceof BooleanAttribute);        
+    [javac] 		                                                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:30: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveTagCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveTagCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:31: error: cannot find symbol
+    [javac]         Assert.assertFalse(settings.preserveAttributeCase());
+    [javac]                                    ^
+    [javac]   symbol:   method preserveAttributeCase()
+    [javac]   location: variable settings of type ParseSettings
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:74: error: cannot find symbol
+    [javac]         commentToken.getData().append("test comment");
+    [javac]                               ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/HtmlTreeBuilderTest.java:246: error: cannot find symbol
+    [javac]         comment.getData().append("inline comment");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_87/src/test/java/org/jsoup/parser/TagTest.java:14: warning: [deprecation] canContainBlock() in Tag has been deprecated
+    [javac]         Assert.assertTrue(p.canContainBlock());
+    [javac]                            ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 6 errors
+    [javac] 6 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_87/maven-build.xml:123: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,2046 @@
+=== METHOD: testReadBasicData ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadStartTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadEndTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReadSelfClosingTagAcknowledged ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelfClosingFlagNotAcknowledgedGeneratesError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitPendingValidation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEndTagWithAttributesGeneratesError ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmitStringAndCharBufferDraining ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testStateAndTransition ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAndEmitTagPending ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAndEmitCommentPending ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateAndEmitDoctypePending ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateTempBuffer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsAppropriateEndTagToken ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTrackErrorsFlag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCurrentNodeInHtmlNS ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceEmptyReader ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceAdditionalAllowed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceSpecialChars ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceDecimal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceHex ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceHexUppercase ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNoSemicolon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceInvalidNumber ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceSurrogateRange ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceOutOfBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNamed ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNamedNoSemicolon ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceNamedInvalid ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferenceInAttributeWithFollowingLetterOrDigitOrEqual ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConsumeCharacterReferencePrefixMatching ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_14 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_14  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /private/tmp/defects4j_checkout/Jsoup_14/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:10: error: class TokeniserTest is public, should be declared in a file named TokeniserTest.java
+    [javac] public class TokeniserTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:83: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Self closing flag not acknowledged")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:97: error: cannot find symbol
+    [javac]         tag1.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]             ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag1 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:102: error: cannot find symbol
+    [javac]             tag2.nameAttr("p", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag2 of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:124: error: cannot find symbol
+    [javac]             if (error.getErrorMessage().contains("Attributes incorrectly present on end tag")) {
+    [javac]                      ^
+    [javac]   symbol:   method getErrorMessage()
+    [javac]   location: variable error of type ParseError
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:142: error: cannot find symbol
+    [javac]         tag.nameAttr("div", new org.jsoup.nodes.Attributes());
+    [javac]            ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable tag of type StartTag
+    [javac] /private/tmp/defects4j_checkout/Jsoup_14/src/test/java/org/jsoup/parser/TargetClassTest.java:243: error: cannot find symbol
+    [javac]         startTag.nameAttr("script", new org.jsoup.nodes.Attributes());
+    [javac]                 ^
+    [javac]   symbol:   method nameAttr(String,Attributes)
+    [javac]   location: variable startTag of type StartTag
+    [javac] 7 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_14/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

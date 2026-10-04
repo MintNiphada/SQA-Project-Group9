@@ -1,0 +1,1493 @@
+=== METHOD: testBottomScopeCreationAndProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGlobalScopeWithCompiler ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildScopeHierarchyAndThisInheritance ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildScopeWithFunctionType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildScopeSameRootThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildScopeNullParentThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarDeclarationAndLookup ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParentScopeLookup ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDuplicateDeclarationThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyNameDeclarationThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNullNameDeclarationThrowsException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUndeclareVar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUndeclareVarFromDifferentScope ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarPropertiesAndMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarWithoutInputAndDeclaredType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarWithJSDocInfo ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarInitialValueAndBleedingFunction ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarEqualsAndHashCode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_155 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_155  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:185: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:191: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_155/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:255: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_155/build.xml:260: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /private/tmp/defects4j_checkout/Closure_155/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:119: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:217: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("source.js", "var CONST_VAL;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:241: error: cannot find symbol
+    [javac]     ErrorReporter reporter = compiler.getErrorReporter();
+    [javac]                                      ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:266: error: cannot find symbol
+    [javac]     var.resolveType(compiler.getErrorReporter());
+    [javac]                             ^
+    [javac]   symbol:   method getErrorReporter()
+    [javac]   location: variable compiler of type Compiler
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:278: error: setDefine(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setDefine(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:279: error: setNoShadow(boolean) is not public in JSDocInfo; cannot be accessed from outside package
+    [javac]     info.setNoShadow(true);
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:295: error: cannot find symbol
+    [javac]     Node fn = new Node(Token.FUNCTION, fnName, new Node(Token.PARAM_LIST), new Node(Token.BLOCK));
+    [javac]                                                              ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:345: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, var3);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:346: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, null);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,<null>)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_155/test/com/google/javascript/jscomp/ScopeTest.java:347: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(var1, "StringObject");
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_155/build.xml:260: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,1224 @@
+=== METHOD: testEnumValuesAndValueOf ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testForeignContentState ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInitialStateVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeHtmlVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInHeadNoscriptVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAfterHeadVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyTagsAndClosers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyHtmlAndBodyAttributesMerge ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyIsindex ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyAdoptionAgencyAlgorithm ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInBodyEndTagEdgeCases ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableStates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableEndTagsAndMisplacedTags ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInColumnGroupVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInTableBodyAndRowAndCellVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInSelectAndInSelectInTableVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAfterBodyAndAfterAfterBody ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInFramesetAndAfterFramesetVariants ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFragmentParsingAcrossStates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextStateHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFosterParentingCharactersAndElements ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPlaintextHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_38 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_38  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 28 source files to /private/tmp/defects4j_checkout/Jsoup_38/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:12: error: class HtmlTreeBuilderStateTest is public, should be declared in a file named HtmlTreeBuilderStateTest.java
+    [javac] public class HtmlTreeBuilderStateTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:442: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc1.select("script").data().contains("if (a < b)"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:445: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc2.select("style").data().contains("body > div"));
+    [javac]                                               ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] /private/tmp/defects4j_checkout/Jsoup_38/src/test/java/org/jsoup/parser/TargetClassTest.java:454: error: cannot find symbol
+    [javac]         Assert.assertTrue(doc5.select("script").data().contains("Unclosed script"));
+    [javac]                                                ^
+    [javac]   symbol:   method data()
+    [javac]   location: class Elements
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_38/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

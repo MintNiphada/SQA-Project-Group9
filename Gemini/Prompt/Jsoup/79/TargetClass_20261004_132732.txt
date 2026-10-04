@@ -1,0 +1,128 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package org.jsoup.nodes;
+
+import org.jsoup.helper.Validate;
+
+import java.util.List;
+
+abstract class LeafNode extends Node {
+
+    Object value; // either a string value, or an attribute map (in the rare case multiple attributes are set)
+
+    protected final boolean hasAttributes() {
+        return value instanceof Attributes;
+    }
+
+    @Override
+    public final Attributes attributes() {
+        ensureAttributes();
+        return (Attributes) value;
+    }
+
+    private void ensureAttributes() {
+        if (!hasAttributes()) {
+            Object coreValue = value;
+            Attributes attributes = new Attributes();
+            value = attributes;
+            if (coreValue != null)
+                attributes.put(nodeName(), (String) coreValue);
+        }
+    }
+
+    String coreValue() {
+        return attr(nodeName());
+    }
+
+    void coreValue(String value) {
+        attr(nodeName(), value);
+    }
+
+    @Override
+    public String attr(String key) {
+        Validate.notNull(key);
+        if (!hasAttributes()) {
+            return key.equals(nodeName()) ? (String) value : EmptyString;
+        }
+        return super.attr(key);
+    }
+
+    @Override
+    public Node attr(String key, String value) {
+        if (!hasAttributes() && key.equals(nodeName())) {
+            this.value = value;
+        } else {
+            ensureAttributes();
+            super.attr(key, value);
+        }
+        return this;
+    }
+
+    @Override
+    public boolean hasAttr(String key) {
+        ensureAttributes();
+        return super.hasAttr(key);
+    }
+
+    @Override
+    public Node removeAttr(String key) {
+        ensureAttributes();
+        return super.removeAttr(key);
+    }
+
+    @Override
+    public String absUrl(String key) {
+        ensureAttributes();
+        return super.absUrl(key);
+    }
+
+    @Override
+    public String baseUri() {
+        return hasParent() ? parent().baseUri() : "";
+    }
+
+    @Override
+    protected void doSetBaseUri(String baseUri) {
+        // noop
+    }
+
+    @Override
+    public int childNodeSize() {
+        return 0;
+    }
+
+    @Override
+    protected List<Node> ensureChildNodes() {
+        throw new UnsupportedOperationException("Leaf Nodes do not have child nodes.");
+    }
+}

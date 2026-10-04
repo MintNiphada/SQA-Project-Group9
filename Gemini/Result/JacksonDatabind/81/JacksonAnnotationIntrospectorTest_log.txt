@@ -1,0 +1,1586 @@
+=== METHOD: testVersionAndSerialization ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsAnnotationBundle ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEnumIntrospection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClassAnnotations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMemberAnnotations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMethodAnnotations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreatorAndConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTypeResolvers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTypeRefinements ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRefineSerializationIncompatible ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRefineDeserializationIncompatible ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVirtualProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindNullAndDefaults ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_81 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_81  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 454 source files to /private/tmp/defects4j_checkout/JacksonDatabind_81/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: cannot find symbol
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                         ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:141: error: incompatible types: Include cannot be converted to Inclusion
+    [javac]         @JsonSerialize(using = JsonSerializer.None.class, keyUsing = JsonSerializer.None.class, contentUsing = JsonSerializer.None.class, nullsUsing = JsonSerializer.None.class, as = CharSequence.class, keyAs = Object.class, contentAs = Object.class, typing = JsonSerialize.Typing.STATIC_TYPING, converter = Converter.None.class, contentConverter = Converter.None.class, include = JsonInclude.Include.NON_EMPTY)
+    [javac]                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:157: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonAnySetter
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:164: error: annotation type not applicable to this kind of declaration
+    [javac]         @JsonDeserialize(using = JsonDeserializer.None.class, keyUsing = KeyDeserializer.None.class, contentUsing = JsonDeserializer.None.class, as = String.class, keyAs = String.class, contentAs = String.class, builder = Void.class, converter = Converter.None.class, contentConverter = Converter.None.class)
+    [javac]         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:131: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:245: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("a_val", ai.findEnumValue(TestEnum.A));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:246: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("B", ai.findEnumValue(TestEnum.B));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:247: warning: [deprecation] findEnumValue(Enum<?>) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("PLAIN", ai.findEnumValue(TestEnum.PLAIN));
+    [javac]                                        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:253: error: incompatible types: Class<TestEnum> cannot be converted to Class<Enum<?>>
+    [javac]         Assert.assertEquals(TestEnum.DEFAULT_VAL, ai.findDefaultEnumValue(TestEnum.class));
+    [javac]                                                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:310: warning: [deprecation] findInjectableValueId(AnnotatedMember) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals("injName", ai.findInjectableValueId(f1));
+    [javac]                                          ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:325: error: cannot find symbol
+    [javac]         Assert.assertEquals(JsonSerialize.Typing.STATIC_TYPING, ai.findSerializationTyping(f1));
+    [javac]                                                 ^
+    [javac]   symbol:   variable STATIC_TYPING
+    [javac]   location: class Typing
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:343: warning: [deprecation] hasAsValueAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAsValueAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:345: warning: [deprecation] hasAnyGetterAnnotation(AnnotatedMethod) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasAnyGetterAnnotation(backRefMethod));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:363: warning: [deprecation] findCreatorBinding(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertEquals(JsonCreator.Mode.DELEGATING, ai.findCreatorBinding(ctorDel));
+    [javac]                                                            ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:364: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertTrue(ai.hasCreatorAnnotation(ctorDel));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:368: warning: [deprecation] hasCreatorAnnotation(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertFalse(ai.hasCreatorAnnotation(ctorDis));
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:460: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findReferenceType(getAnnotatedField(MemberTargetClass.class, "field1") != null ? (AnnotatedMember) ac : null));
+    [javac]                                                                                                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:482: error: incompatible types: AnnotatedClass cannot be converted to AnnotatedMember
+    [javac]         Assert.assertNull(ai.findImplicitPropertyName(ac));
+    [javac]                                                       ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:484: warning: [deprecation] findSerializationType(Annotated) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationType(ac));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:485: warning: [deprecation] findSerializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:486: warning: [deprecation] findSerializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findSerializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:487: warning: [deprecation] findDeserializationType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:488: warning: [deprecation] findDeserializationKeyType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationKeyType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospectorTest.java:489: warning: [deprecation] findDeserializationContentType(Annotated,JavaType) in JacksonAnnotationIntrospector has been deprecated
+    [javac]         Assert.assertNull(ai.findDeserializationContentType(ac, null));
+    [javac]                             ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: /private/tmp/defects4j_checkout/JacksonDatabind_81/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 20 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_81/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

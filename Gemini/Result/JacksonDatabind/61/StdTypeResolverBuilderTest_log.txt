@@ -1,0 +1,1903 @@
+=== METHOD: testNoTypeInfoBuilder ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInitWithNullId ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInclusionNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTypePropertyDefaultsAndCustom ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAccessorsAndMutators ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildTypeSerializerAllInclusions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildTypeDeserializerAllInclusions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildTypeDeserializerWithDefaultImplVoidAndNoClass ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildTypeSerializerWithoutInclusion ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBuildTypeDeserializerWithoutInclusion ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIdResolverWithoutInit ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIdResolverWithCustomResolver ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIdResolverWithCustomWithoutInstance ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIdResolverStandardTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_61 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_61  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:92: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 368 source files to /private/tmp/defects4j_checkout/JacksonDatabind_61/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:116: warning: [deprecation] getJsonFactory() in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.getJsonFactory());
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:219: warning: [deprecation] setFilters(FilterProvider) in ObjectMapper has been deprecated
+    [javac]         mapper.setFilters(fp);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:245: warning: [deprecation] setMixInAnnotations(Map<Class<?>,Class<?>>) in ObjectMapper has been deprecated
+    [javac]         mapper.setMixInAnnotations(sourceMap);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:246: warning: [deprecation] addMixInAnnotations(Class<?>,Class<?>) in ObjectMapper has been deprecated
+    [javac]         mapper.addMixInAnnotations(MixInTarget.class, MixInSource.class);
+    [javac]               ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:269: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:290: error: BeanDeserializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanDeserializerModifier(new BeanDeserializerModifier());
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:293: error: BeanSerializerModifier is abstract; cannot be instantiated
+    [javac]                 context.addBeanSerializerModifier(new BeanSerializerModifier());
+    [javac]                                                   ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:297: error: cannot find symbol
+    [javac]                     public JavaType modifyType(JavaType type, java.lang.reflect.Type jdkType, TypeBindings context, TypeFactory typeFactory) {
+    [javac]                                                                                               ^
+    [javac]   symbol: class TypeBindings
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:315: error: no suitable method found for registerModules(List<SimpleModule>)
+    [javac]         mapper.registerModules(Collections.singletonList(module));
+    [javac]               ^
+    [javac]     method ObjectMapper.registerModules(Module...) is not applicable
+    [javac]       (varargs mismatch; List<SimpleModule> cannot be converted to Module)
+    [javac]     method ObjectMapper.registerModules(Iterable<Module>) is not applicable
+    [javac]       (argument mismatch; List<SimpleModule> cannot be converted to Iterable<Module>)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:326: error: cannot find symbol
+    [javac]             public Version version() { return Version.unknownVersion(); }
+    [javac]                                               ^
+    [javac]   symbol: variable Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:338: error: cannot find symbol
+    [javac]             public Version version() { return null; }
+    [javac]                    ^
+    [javac]   symbol: class Version
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:563: error: cannot find symbol
+    [javac]         Assert.assertNotNull(mapper.writer((DateFormat) null));
+    [javac]                                             ^
+    [javac]   symbol:   class DateFormat
+    [javac]   location: class ObjectMapperTest
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:574: warning: [deprecation] writerWithType(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:575: warning: [deprecation] writerWithType(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:576: warning: [deprecation] writerWithType(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.writerWithType(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:590: warning: [deprecation] reader(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:591: warning: [deprecation] reader(TypeReference<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(new TypeReference<SimpleBean>() {}));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:592: warning: [deprecation] reader(JavaType) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.reader(mapper.constructType(SimpleBean.class)));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ObjectMapperTest.java:649: warning: [deprecation] generateJsonSchema(Class<?>) in ObjectMapper has been deprecated
+    [javac]         Assert.assertNotNull(mapper.generateJsonSchema(SimpleBean.class));
+    [javac]                                    ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:128: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForArrays.java:78: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         ObjectMapper m = new ObjectMapper().disable(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS);
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:243: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         assertTrue(MAPPER.isEnabled(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS));
+    [javac]                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/databind/ser/TestCollectionSerialization.java:249: warning: [deprecation] WRITE_EMPTY_JSON_ARRAYS in SerializationFeature has been deprecated
+    [javac]         m.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+    [javac]                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_61/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] 10 errors
+    [javac] 21 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_61/maven-build.xml:120: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

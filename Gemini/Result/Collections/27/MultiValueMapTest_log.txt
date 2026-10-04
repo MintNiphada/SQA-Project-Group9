@@ -1,0 +1,1155 @@
+=== METHOD: testDefaultConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] Compiling 201 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 8 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFactoryCreationMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNullFactoryConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReflectionFactoryFailure ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPutAndGetCollection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPutAllCollection ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPutAllMapNormal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPutAllMapMultiMap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveMapping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testContainsValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testContainsValueWithKey ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSize ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEntrySet ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValues ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIteratorKey ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFlattenedIterator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFlattenedIteratorSetValueUnsupported ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCreateCollectionOverride ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSerialization ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRemoveNonExistentKeyValuesIterator ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Collections_27 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Collections_27  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile.tests:
+
+init:
+     [echo] -------- commons-collections4 4.1-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [javac] Compiling 45 source files to /private/tmp/defects4j_checkout/Collections_27/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:332: error: constructor MultiValueMap in class MultiValueMap<K,V> cannot be applied to given types;
+    [javac]         }) {
+    [javac]            ^
+    [javac]   required: Map<String,? super C>,Factory<C>
+    [javac]   found: Map<String,CAP#1>,Factory<C>
+    [javac]   reason: explicit type argument C does not conform to declared bound(s) Collection<String>
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<String> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object super: C from capture of ? super C
+    [javac] /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java:327: error: incompatible types: <anonymous Factory<Collection<String>>> cannot be converted to Factory<C>
+    [javac]         final MultiValueMap<String, String> customMap = new MultiValueMap<String, String>(new HashMap<String, Object>(), new Factory<Collection<String>>() {
+    [javac]                                                                                                                          ^
+    [javac]   where C,K,V are type-variables:
+    [javac]     C extends Collection<V> declared in constructor <C>MultiValueMap(Map<K,? super C>,Factory<C>)
+    [javac]     K extends Object declared in class MultiValueMap
+    [javac]     V extends Object declared in class MultiValueMap
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Collections_27/src/test/java/org/apache/commons/collections4/map/MultiValueMapTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/Users/inzi/defects4j/framework/projects/Collections/Collections.build.xml:52: The following error occurred while executing this line:
+/private/tmp/defects4j_checkout/Collections_27/build.xml:72: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

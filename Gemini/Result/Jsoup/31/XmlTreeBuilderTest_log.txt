@@ -1,0 +1,909 @@
+=== METHOD: testSimpleXmlParse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelfClosingUnknownTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelfClosingKnownTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCommentParse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndCData ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDocTypeParse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDocTypeWithPublicAndSystem ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPopStackToCloseUnopenedTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPopStackNestedElements ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDirectProcessMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testProcessUnexpectedTokenType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParseFragment ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPopStackDeepNesting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_31 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_31  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 26 source files to /private/tmp/defects4j_checkout/Jsoup_31/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/TargetClassTest.java:8: error: class TokenTest is public, should be declared in a file named TokenTest.java
+    [javac] public class TokenTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:52: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:62: error: cannot find symbol
+    [javac]         assertEquals(1, root.childNodeSize());
+    [javac]                             ^
+    [javac]   symbol:   method childNodeSize()
+    [javac]   location: variable root of type Element
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:114: error: constructor Character in class Character cannot be applied to given types;
+    [javac]         Token.Character character = new Token.Character();
+    [javac]                                     ^
+    [javac]   required: String
+    [javac]   found: no arguments
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:115: error: cannot find symbol
+    [javac]         character.data("text");
+    [javac]                  ^
+    [javac]   symbol:   method data(String)
+    [javac]   location: variable character of type Character
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:119: error: cannot find symbol
+    [javac]         comment.getData().append("comment data");
+    [javac]                          ^
+    [javac]   symbol:   method append(String)
+    [javac]   location: class String
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:144: error: Token() has private access in Token
+    [javac]         Token invalidToken = new Token() {};
+    [javac]                              ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_31/src/test/java/org/jsoup/parser/XmlTreeBuilderTest.java:151: error: cannot find symbol
+    [javac]         List<org.jsoup.nodes.Node> nodes = tb.parseFragment("<one/><two>three</two>", "http://example.com/", ParseErrorList.noTracking());
+    [javac]                                              ^
+    [javac]   symbol:   method parseFragment(String,String,ParseErrorList)
+    [javac]   location: variable tb of type XmlTreeBuilder
+    [javac] 8 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_31/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

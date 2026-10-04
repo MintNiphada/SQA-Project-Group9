@@ -1,0 +1,738 @@
+=== METHOD: testConstructorAndKindPredicates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 185 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIsInstanceType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParametersAndArgumentCounts ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testReturnTypeAndArrowType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPrototypeOperations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInterfacesAndHierarchy ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPropertiesAndCallApply ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDefineProperty ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSuperClassConstructorAndUnknownSupertype ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTopMostDefiningType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEquivalenceAndHashCode ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSubtyping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSupAndInfHelper ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToStringAndDebugHashCodeString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSourceAndVisitorAndResolution ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTypeOfThisAndInstanceType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetInstanceTypeOnOrdinaryFunctionThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInvalidSourceNodeThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_152 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_152  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_152/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_152/build.xml:119: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 6 source files to /private/tmp/defects4j_checkout/Closure_152/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:341: error: <anonymous com.google.javascript.rhino.jstype.FunctionTypeTest$1> is not abstract and does not override abstract method caseEnumElementType(EnumElementType) in Visitor
+    [javac]     String visited = fn.visit(new Visitor<String>() {
+    [javac]                                                     ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:348: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseValueType(ValueType type) { return "value"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:355: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseParameterizedType(ParameterizedType type) { return "param"; }
+    [javac]       ^
+    [javac] /private/tmp/defects4j_checkout/Closure_152/test/com/google/javascript/rhino/jstype/FunctionTypeTest.java:356: error: method does not override or implement a method from a supertype
+    [javac]       @Override public String caseTemplateType(TemplateType type) { return "template"; }
+    [javac]       ^
+    [javac] 4 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_152/build.xml:119: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

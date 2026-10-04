@@ -1,0 +1,2227 @@
+=== METHOD: testGlobalScopeAndBasicProperties ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 404 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_162/src/com/google/javascript/jscomp/ant/CompileTask.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 4 warnings
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 218 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/DataFlowAnalysisTest.java:662: warning: as of release 9, '_' is a keyword, and may not be used as an identifier
+    [javac]         for (DiGraphEdge<Instruction, Branch> _ : outEdges) {
+    [javac]                                               ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 5 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 17 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompilerGlobalScope ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNestedScope ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNestedScopeWithFunctionType ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNestedScopeNullParentThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testNestedScopeSameRootThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeclareAndUndeclareVar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeclareDuplicateThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeclareEmptyNameThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUndeclareWrongScopeThrows ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarGetInitialValue ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarTypeHandling ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarInfoAndFlags ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVarEqualsHashCodeToString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testArgumentsVar ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testScopeInheritanceAndLookups ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeclarativelyUnboundVarsWithoutTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSourceFileAccess ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_162 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_162  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:68: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-jdk15:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/src/build.xml:87: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+properties:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/toolsrc/build.xml:55: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/lib/rhino/src/mozilla/js/rhino/deprecatedsrc/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_162/build/lib/rhino.jar
+
+svnversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:240: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:246: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_162/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:312: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_162/build.xml:317: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 62 source files to /private/tmp/defects4j_checkout/Closure_162/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:84: error: cannot find symbol
+    [javac]     fnType = registry.createFunctionTypeWithThisType(fnType, customThis);
+    [javac]                      ^
+    [javac]   symbol:   method createFunctionTypeWithThisType(FunctionType,ObjectType)
+    [javac]   location: variable registry of type JSTypeRegistry
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:112: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput input = new CompilerInput(SourceFile.fromCode("test.js", "var x;"));
+    [javac]                           ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:192: error: cannot find symbol
+    [javac]     Node otherParent = new Node(Token.PARAM_LIST);
+    [javac]                                      ^
+    [javac]   symbol:   variable PARAM_LIST
+    [javac]   location: class Token
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:225: error: incompatible types: ErrorManager cannot be converted to ErrorReporter
+    [javac]     ErrorReporter reporter = compiler.getErrorManager();
+    [javac]                                                      ^
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:275: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(v1, v2);
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:302: error: cannot find symbol
+    [javac]     Assert.assertNotEquals(args1, diffScope.getArgumentsVar());
+    [javac]           ^
+    [javac]   symbol:   method assertNotEquals(Var,Var)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:335: error: cannot find symbol
+    [javac]     Assert.assertEquals(1, childScope.getAllSymbols().size());
+    [javac]                                                      ^
+    [javac]   symbol:   method size()
+    [javac]   location: interface Iterable<Var>
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:346: error: no suitable constructor found for CompilerInput(SourceFile)
+    [javac]     CompilerInput inputNonExtern = new CompilerInput(SourceFile.fromCode("test.js", "var unbound;"));
+    [javac]                                    ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:357: error: no suitable constructor found for CompilerInput(SourceFile,boolean)
+    [javac]     CompilerInput inputExtern = new CompilerInput(SourceFile.fromCode("extern.js", "var externVar;"), true);
+    [javac]                                 ^
+    [javac]     constructor CompilerInput.CompilerInput(SourceAst,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to SourceAst)
+    [javac]     constructor CompilerInput.CompilerInput(JSSourceFile,boolean) is not applicable
+    [javac]       (argument mismatch; SourceFile cannot be converted to JSSourceFile)
+    [javac] /private/tmp/defects4j_checkout/Closure_162/test/com/google/javascript/jscomp/ScopeTest.java:360: error: cannot find symbol
+    [javac]     Node letNode = new Node(Token.LET);
+    [javac]                                  ^
+    [javac]   symbol:   variable LET
+    [javac]   location: class Token
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 10 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_162/build.xml:317: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,1357 @@
+=== METHOD: testGetBooleanOutcomes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 543 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_176/src/com/google/javascript/jscomp/CompilerOptions.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /private/tmp/defects4j_checkout/Closure_176/src/com/google/debugging/sourcemap/SourceMapConsumerV3.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 20 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLatticesAndBottomScope ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 10 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testArithmeticAndBitwiseOperations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testRelationalAndLogicalOps ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testShortCircuitingAndHook ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testArrayAndObjectLiterals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testControlStructures ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFunctionCallsAndNew ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBranchedFlowThroughForIn ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBranchedFlowThroughConditionals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBranchedFlowThroughSwitchCase ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAssertionFunctionsMapTightenTypes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCommaAndParamExpressions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCastAnnotation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 7 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPropertyInferenceOnConstructor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Closure_176 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Closure_176  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+rhino:
+
+properties:
+
+init:
+
+compile:
+
+compile-most:
+
+compile-jdk15:
+
+compile:
+
+properties:
+
+compile:
+
+xmlimplsrc-compile:
+     [echo] Calling /private/tmp/defects4j_checkout/Closure_176/lib/rhino/xmlimplsrc/build.xml
+
+compile:
+
+compile-all:
+
+compile:
+
+jar:
+
+rhino-jarjar:
+   [jarjar] Updating jar: /private/tmp/defects4j_checkout/Closure_176/build/lib/rhino.jar
+
+relversion:
+
+compile:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:262: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[propertyfile] Updating property file: /private/tmp/defects4j_checkout/Closure_176/build/classes/com/google/javascript/jscomp/parsing/ParserConfig.properties
+
+compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:336: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /private/tmp/defects4j_checkout/Closure_176/build.xml:342: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 242 source files to /private/tmp/defects4j_checkout/Closure_176/build/test
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:22: error: class TypeInferenceTest is public, should be declared in a file named TypeInferenceTest.java
+    [javac] public class TypeInferenceTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TypeInferenceTest.java:59: error: duplicate class: com.google.javascript.jscomp.TypeInferenceTest
+    [javac] public class TypeInferenceTest extends TestCase {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:37: error: cannot find symbol
+    [javac]     ControlFlowGraph<Node> cfg = ControlFlowAnalysis.computeCfg(root, true);
+    [javac]                                                     ^
+    [javac]   symbol:   method computeCfg(Node,boolean)
+    [javac]   location: class ControlFlowAnalysis
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:48: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:69: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:134: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:145: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] /private/tmp/defects4j_checkout/Closure_176/test/com/google/javascript/jscomp/TargetClassTest.java:155: error: incompatible types: Map<Object,Object> cannot be converted to Map<String,AssertionFunctionSpec>
+    [javac]     TypeInference ti = createTypeInference(root, scope, Collections.emptyMap());
+    [javac]                                                                             ^
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 8 errors
+    [javac] 1 warning
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Closure_176/build.xml:342: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

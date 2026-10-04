@@ -1,0 +1,146 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package com.fasterxml.jackson.databind.type;
+
+import com.fasterxml.jackson.databind.JavaType;
+
+/**
+ * Internal placeholder type used for self-references.
+ *
+ * @since 2.7
+ */
+public class ResolvedRecursiveType extends TypeBase
+{
+    private static final long serialVersionUID = 1L;
+
+    protected JavaType _referencedType;
+
+    public ResolvedRecursiveType(Class<?> erasedType, TypeBindings bindings) {
+        super(erasedType, bindings, null, null, 0, null, null, false);
+    }
+
+    public void setReference(JavaType ref)
+    {
+        // sanity check; should not be called multiple times
+        if (_referencedType != null) {
+            throw new IllegalStateException("Trying to re-set self reference; old value = "+_referencedType+", new = "+ref);
+        }
+        _referencedType = ref;
+    }
+   
+
+    public JavaType getSelfReferencedType() { return _referencedType; }
+
+    @Override
+    public StringBuilder getGenericSignature(StringBuilder sb) {
+        return _referencedType.getGenericSignature(sb);
+    }
+
+    @Override
+    public StringBuilder getErasedSignature(StringBuilder sb) {
+        return _referencedType.getErasedSignature(sb);
+    }
+
+    @Override
+    public JavaType withContentType(JavaType contentType) {
+        return this;
+    }
+    
+    @Override
+    public JavaType withTypeHandler(Object h) {
+        return this;
+    }
+
+    @Override
+    public JavaType withContentTypeHandler(Object h) {
+        return this;
+    }
+
+    @Override
+    public JavaType withValueHandler(Object h) {
+        return this;
+    }
+
+    @Override
+    public JavaType withContentValueHandler(Object h) {
+        return this;
+    }
+
+    @Override
+    public JavaType withStaticTyping() {
+        return this;
+    }
+
+    @Deprecated // since 2.7
+    @Override
+    protected JavaType _narrow(Class<?> subclass) {
+        return this;
+    }
+
+    @Override
+    public JavaType refine(Class<?> rawType, TypeBindings bindings,
+            JavaType superClass, JavaType[] superInterfaces) {
+        return null;
+    }
+
+    @Override
+    public boolean isContainerType() {
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(40)
+                .append("[recursive type; ");
+        if (_referencedType == null) {
+            sb.append("UNRESOLVED");
+        } else {
+            // [databind#1301]: Typically resolves to a loop so short-cut
+            //   and only include type-erased class
+            sb.append(_referencedType.getRawClass().getName());
+        }
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (o == null) return false;
+        // Do NOT ever match unresolved references
+        if (_referencedType == null) {
+            return false;
+        }
+        return (o.getClass() == getClass()
+                && _referencedType.equals(((ResolvedRecursiveType) o).getSelfReferencedType()));
+    }
+}

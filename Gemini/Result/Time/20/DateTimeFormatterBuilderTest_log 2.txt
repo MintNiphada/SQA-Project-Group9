@@ -1,0 +1,1080 @@
+=== METHOD: testBasicBuilderCreationAndClear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] Compiling 154 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 10 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testToFormatterExceptions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendNullsAndInvalidArguments ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testLiterals ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDecimalsAndNumbers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTwoDigitYear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTwoDigitNegativeYear ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAllFieldHelpers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFractions ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTimeZoneOffset ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTimeZoneNamesAndIds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndShortText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFixedDecimalErrorsAndBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMatchingParserAndOptional ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testPartialPrintingAndWriting ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCompositePrinterAndParserSingletons ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendUnknownString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Time_20 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Time_20  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- joda-time 2.0 --------
+
+getjunit:
+
+installjunit:
+
+getjodaconvert:
+
+prepare:
+
+static:
+
+compile.main:
+
+compile.zoneinfo:
+
+joda-time.compile:
+
+compile:
+     [java] Writing zoneinfo files
+     [java] Writing ZoneInfoMap
+
+joda-time.compile.tests:
+    [javac] Compiling 21 source files to /private/tmp/defects4j_checkout/Time_20/build/tests
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:234: error: cannot find symbol
+    [javac]                 .appendPaddedInteger(DateTimeFieldType.monthOfYear(), 2)
+    [javac]                 ^
+    [javac]   symbol:   method appendPaddedInteger(DateTimeFieldType,int)
+    [javac]   location: class DateTimeFormatterBuilder
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:387: error: cannot find symbol
+    [javac]         DateTimeZone zoneFull = DateTimeZone.forOffsetHoursMinutesSecondsMillis(1, 2, 3, 400);
+    [javac]                                             ^
+    [javac]   symbol:   method forOffsetHoursMinutesSecondsMillis(int,int,int,int)
+    [javac]   location: class DateTimeZone
+    [javac] /private/tmp/defects4j_checkout/Time_20/src/test/java/org/joda/time/format/DateTimeFormatterBuilderTest.java:462: error: cannot find symbol
+    [javac]         Assert.assertEquals(DateTimeConstants.BCE, parsedBce.getEra());
+    [javac]                             ^
+    [javac]   symbol:   variable DateTimeConstants
+    [javac]   location: class DateTimeFormatterBuilderTest
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 3 errors
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Time_20/build.xml:243: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

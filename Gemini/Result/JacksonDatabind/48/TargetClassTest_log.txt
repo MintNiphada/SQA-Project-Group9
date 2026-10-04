@@ -1,0 +1,1358 @@
+=== METHOD: testConstructorsAndBasics ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testMapperFeatureOperations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDeserializationFeaturesOperations ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParserFeatures ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFormatFeatures ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 6 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithBaseSettingsMutators ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithRootName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWithNodeFactory ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testProblemHandlers ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInitializeJsonParser ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAnnotationIntrospectorAndVisibilityChecker ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIntrospectionMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testUseRootWrapping ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 4 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFindTypeDeserializer ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/JacksonDatabind_48 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/JacksonDatabind_48  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jackson-databind-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:89: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jackson-databind-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 355 source files to /private/tmp/defects4j_checkout/JacksonDatabind_48/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:51: error: class DeserializationConfigTest is public, should be declared in a file named DeserializationConfigTest.java
+    [javac] public class DeserializationConfigTest {
+    [javac]        ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsonschema/TestReadJsonSchema.java:6: warning: [deprecation] JsonSchema in com.fasterxml.jackson.databind.jsonschema has been deprecated
+    [javac] import com.fasterxml.jackson.databind.jsonschema.JsonSchema;
+    [javac]                                                 ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TargetClassTest.java:232: error: no suitable method found for with(AnnotatedClass)
+    [javac]         assertNotNull(_config.with(ci.forClassAnnotations(_config, _config.constructType(String.class), _config).getClassInfo()));
+    [javac]                              ^
+    [javac]     method DeserializationConfig.with(MapperFeature...) is not applicable
+    [javac]       (varargs mismatch; AnnotatedClass cannot be converted to MapperFeature)
+    [javac]     method DeserializationConfig.with(ClassIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ClassIntrospector)
+    [javac]     method DeserializationConfig.with(AnnotationIntrospector) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to AnnotationIntrospector)
+    [javac]     method DeserializationConfig.with(VisibilityChecker<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to VisibilityChecker<?>)
+    [javac]     method DeserializationConfig.with(TypeResolverBuilder<?>) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeResolverBuilder<?>)
+    [javac]     method DeserializationConfig.with(SubtypeResolver) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to SubtypeResolver)
+    [javac]     method DeserializationConfig.with(PropertyNamingStrategy) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to PropertyNamingStrategy)
+    [javac]     method DeserializationConfig.with(TypeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TypeFactory)
+    [javac]     method DeserializationConfig.with(DateFormat) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DateFormat)
+    [javac]     method DeserializationConfig.with(HandlerInstantiator) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to HandlerInstantiator)
+    [javac]     method DeserializationConfig.with(Locale) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Locale)
+    [javac]     method DeserializationConfig.with(TimeZone) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to TimeZone)
+    [javac]     method DeserializationConfig.with(Base64Variant) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Base64Variant)
+    [javac]     method DeserializationConfig.with(ContextAttributes) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to ContextAttributes)
+    [javac]     method DeserializationConfig.with(DeserializationFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(DeserializationFeature,DeserializationFeature...) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to DeserializationFeature)
+    [javac]     method DeserializationConfig.with(Feature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to Feature)
+    [javac]     method DeserializationConfig.with(FormatFeature) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to FormatFeature)
+    [javac]     method DeserializationConfig.with(JsonNodeFactory) is not applicable
+    [javac]       (argument mismatch; AnnotatedClass cannot be converted to JsonNodeFactory)
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:142: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         public static final BigInteger   VALUE_BIGINT = new BigInteger((new Long(Long.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/TestObjectMapperBeanSerializer.java:143: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         public static final BigDecimal   VALUE_BIGDEC = new BigDecimal((new Double(Double.MAX_VALUE)).toString());
+    [javac]                                                                         ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestCreators.java:317: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]         Double exp = new Double("0.25");
+    [javac]                      ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/creators/TestValueInstantiator.java:124: warning: [deprecation] newInstance() in Class has been deprecated
+    [javac]                 return cls.newInstance();
+    [javac]                           ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/databind/jsontype/TestDefaultForScalars.java:18: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         public java.io.Serializable bar = new Integer(13);
+    [javac]                                           ^
+    [javac] /private/tmp/defects4j_checkout/JacksonDatabind_48/src/test/java/com/fasterxml/jackson/failing/TestUnknownProperty426.java:21: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]             setUserId(new Integer(id.toString()));
+    [javac]                       ^
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 2 errors
+    [javac] 7 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/JacksonDatabind_48/maven-build.xml:117: Compile failed; see the compiler error output for details.
+
+Total time: 5 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

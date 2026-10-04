@@ -1,0 +1,1081 @@
+=== METHOD: testConstructorsAndTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [mkdir] Created dir: /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 27 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testConstructorNullTag ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testEmptyTagName ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testIdAndAttributes ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testParentAndParents ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testChildrenAndFiltering ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelect ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAppendPrependAndText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildren ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildrenNull ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testInsertChildrenOutOfBounds ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSiblingNavigation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDomSearchMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsByAttributeValueMatchingInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsMatchingTextInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testGetElementsMatchingOwnTextInvalidPattern ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndOwnText ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDataMethod ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClassManipulation ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testVal ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testHtmlAndOuterHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testBeforeAfterAndWrap ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testCloneEqualsHashCodeAndToString ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_37 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_37  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 16 source files to /private/tmp/defects4j_checkout/Jsoup_37/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:155: error: incompatible types: List<Object> cannot be converted to Collection<? extends Node>
+    [javac]         div.insertChildren(2, Collections.emptyList());
+    [javac]                                                    ^
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:365: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, clone);
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,Element)
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_37/src/test/java/org/jsoup/nodes/ElementTest.java:366: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(el1, "not-an-element");
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Element,String)
+    [javac]   location: class Assert
+    [javac] Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+    [javac] 3 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_37/maven-build.xml:105: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

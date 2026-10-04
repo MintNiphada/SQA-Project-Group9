@@ -1,0 +1,110 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+package org.jsoup.nodes;
+
+import org.jsoup.helper.Validate;
+
+import java.io.IOException;
+
+/**
+ An XML Declaration.
+
+ @author Jonathan Hedley, jonathan@hedley.net */
+public class XmlDeclaration extends Node {
+    private final String name;
+    private final boolean isProcessingInstruction; // <! if true, <? if false, declaration (and last data char should be ?)
+
+    /**
+     Create a new XML declaration
+     @param name of declaration
+     @param baseUri base uri
+     @param isProcessingInstruction is processing instruction
+     */
+    public XmlDeclaration(String name, String baseUri, boolean isProcessingInstruction) {
+        super(baseUri);
+        Validate.notNull(name);
+        this.name = name;
+        this.isProcessingInstruction = isProcessingInstruction;
+    }
+
+    public String nodeName() {
+        return "#declaration";
+    }
+
+
+    /**
+     * Get the name of this declaration.
+     * @return name of this declaration.
+     */
+    public String name() {
+        return name;
+    }
+
+    /**
+     Get the unencoded XML declaration.
+     @return XML declaration
+     */
+    public String getWholeDeclaration() {
+        final String decl = this.name;
+        if(decl.equals("xml") && attributes.size() > 1 ) {
+            StringBuilder sb = new StringBuilder(decl);
+            final String version = attributes.get("version");
+            if( version != null ) {
+                sb.append(" version=\"").append(version).append("\"");
+            }
+            final String encoding = attributes.get("encoding");
+            if( encoding != null ) {
+                sb.append(" encoding=\"").append(encoding).append("\"");
+            }
+            return sb.toString();
+        }
+        else {
+            return this.name;
+        }
+    }
+
+	void outerHtmlHead(Appendable accum, int depth, Document.OutputSettings out) throws IOException {
+        accum
+            .append("<")
+            .append(isProcessingInstruction ? "!" : "?")
+                .append(getWholeDeclaration())
+            .append(">");
+    }
+
+	void outerHtmlTail(Appendable accum, int depth, Document.OutputSettings out) {}
+
+    @Override
+    public String toString() {
+        return outerHtml();
+    }
+}

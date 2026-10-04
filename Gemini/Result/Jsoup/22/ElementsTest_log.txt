@@ -1,0 +1,681 @@
+=== METHOD: testConstructorsAndCloning ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testAttributeMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testClassMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testValMethod ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTextAndHtml ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testDomManipulationMethods ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testWrapEmptyHtmlException ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testSelectionAndFiltering ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testFirstLastAndTraverse ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testTraverseNullVisitor ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.
+
+=== METHOD: testListInterfaceDelegates ===
+COMPILE ERROR:
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /private/tmp/defects4j_checkout/Jsoup_22 && /Users/inzi/defects4j/major/bin/ant -f /Users/inzi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/Users/inzi/defects4j -Dd4j.dir.projects=/Users/inzi/defects4j/framework/projects -Dbasedir=/private/tmp/defects4j_checkout/Jsoup_22  compile.tests 2>&1
+Buildfile: /Users/inzi/defects4j/framework/projects/defects4j.build.xml
+
+test-offline:
+
+get-deps:
+
+jsoup-from-maven.compile:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+jsoup-from-maven.compile-tests:
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 2 source files to /private/tmp/defects4j_checkout/Jsoup_22/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:15: error: cannot find symbol
+    [javac] import static org.junit.Assert.assertNotEquals;
+    [javac] ^
+    [javac]   symbol:   static assertNotEquals
+    [javac]   location: class Assert
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:91: error: reference to ConcreteNode is ambiguous
+    [javac]         new ConcreteNode("http://example.com/", null);
+    [javac]         ^
+    [javac]   both constructor ConcreteNode(String,Attributes) in ConcreteNode and constructor ConcreteNode(String,String) in ConcreteNode match
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:445: error: cannot find symbol
+    [javac]         assertNotEquals(0, emptyNode.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:446: error: cannot find symbol
+    [javac]         assertNotEquals(emptyNode.hashCode(), node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/nodes/NodeTest.java:450: error: cannot find symbol
+    [javac]         assertNotEquals(0, node1.hashCode());
+    [javac]         ^
+    [javac]   symbol:   method assertNotEquals(int,int)
+    [javac]   location: class NodeTest
+    [javac] /private/tmp/defects4j_checkout/Jsoup_22/src/test/java/org/jsoup/select/ElementsTest.java:338: error: cannot find symbol
+    [javac]         Assert.assertNotEquals(els, new Elements(el2));
+    [javac]               ^
+    [javac]   symbol:   method assertNotEquals(Elements,Elements)
+    [javac]   location: class Assert
+    [javac] 6 errors
+    [javac] 4 warnings
+
+BUILD FAILED
+/private/tmp/defects4j_checkout/Jsoup_22/maven-build.xml:100: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+Cannot compile tests! at /Users/inzi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /Users/inzi/defects4j/framework/bin/defects4j line 195.

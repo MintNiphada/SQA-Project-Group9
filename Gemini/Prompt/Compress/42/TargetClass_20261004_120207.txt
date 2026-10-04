@@ -1,0 +1,99 @@
+--- SYSTEM PROMPT ---
+You are an expert Software Quality Assurance Engineer specializing in Java Unit Testing with JUnit 4 and Defects4J benchmark analysis.
+
+Your task is to analyze the attached Java source file and generate a comprehensive, high-coverage JUnit 4 test suite.
+
+STRICT CONSTRAINTS & REQUIREMENTS:
+1. Target Framework & Compatibility:
+   - Use JUnit 4 ONLY (org.junit.*). Do NOT use JUnit 5/Jupiter.
+   - Use standard JUnit 4 assertions (org.junit.Assert.*).
+   - Ensure compatibility with Java 8 (JDK 1.8).
+
+2. Package & Class Naming:
+   - Extract and use the EXACT package declaration defined in the attached Java file.
+   - Name the test class as <TargetClassName>Test (e.g., if target is FastMath.java, name it FastMathTest).
+
+3. Testing Focus:
+   - Target maximum Line Coverage and Branch Coverage on the provided source code.
+   - Implement deep assertions to detect logical faults and boundary errors (not just null checks).
+   - Handle edge cases, null arguments, arithmetic boundaries, and complex branching paths.
+   - For expected exceptions, use @Test(expected = ...) or try-catch blocks with Assert.fail().
+   - Keep the suite compact: each @Test method must be short and focused.
+
+4. OUTPUT FORMAT (MANDATORY):
+   - Output ONLY the raw executable Java source code.
+   - Do NOT wrap code in markdown tags (do NOT use ```java or ```).
+   - Do NOT include any conversational text, greetings, explanations, or notes before or after the code.
+   - Do NOT write any comments or Javadoc inside the code (no //, no /* */).
+   - Do NOT describe or summarize the tests. Do NOT think out loud.
+   - Respond immediately with the code. Keep reasoning minimal.
+   - The very first line of your response MUST be the "package ..." statement.
+
+--- TARGET CODE ---
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+package org.apache.commons.compress.archivers.zip;
+
+/**
+ * Constants from stat.h on Unix systems.
+ */
+// CheckStyle:InterfaceIsTypeCheck OFF - backward compatible
+public interface UnixStat {
+
+    /**
+     * Bits used for permissions (and sticky bit)
+     */
+    int PERM_MASK = 07777;
+    /**
+     * Bits used to indicate the filesystem object type.
+     * @since 1.14
+     */
+    /**
+     * Indicates symbolic links.
+     */
+    int LINK_FLAG = 0120000;
+    /**
+     * Indicates plain files.
+     */
+    int FILE_FLAG = 0100000;
+    /**
+     * Indicates directories.
+     */
+    int DIR_FLAG = 040000;
+
+    // ----------------------------------------------------------
+    // somewhat arbitrary choices that are quite common for shared
+    // installations
+    // -----------------------------------------------------------
+
+    /**
+     * Default permissions for symbolic links.
+     */
+    int DEFAULT_LINK_PERM = 0777;
+
+    /**
+     * Default permissions for directories.
+     */
+    int DEFAULT_DIR_PERM = 0755;
+
+    /**
+     * Default permissions for plain files.
+     */
+    int DEFAULT_FILE_PERM = 0644;
+}
